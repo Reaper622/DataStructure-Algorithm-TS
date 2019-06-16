@@ -12,7 +12,7 @@ exports["default"] = (function (strs) {
     // 排序后只需比较第一位与最后一位即可
     var first = strs[0];
     var last = strs[strs.length - 1];
-    if (first === last || last.match(eval("/" + first + "/"))) {
+    if (first === last || last.match(eval("/^" + first + "/"))) {
         return first;
     }
     else {

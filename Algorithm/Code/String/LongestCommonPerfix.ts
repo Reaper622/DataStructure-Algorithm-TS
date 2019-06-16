@@ -10,7 +10,7 @@ export default (strs: string[]):string => {
   // 排序后只需比较第一位与最后一位即可
   let first:string = strs[0];
   let last:string = strs[strs.length - 1];
-  if (first === last || last.match(eval(`/${first}/`))){
+  if (first === last || last.match(eval(`/^${first}/`))){
     return first;
   }
   else {
