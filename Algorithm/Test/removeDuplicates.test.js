@@ -1,4 +1,4 @@
-import RemoveDuplicates from '../Code/Array/RemoveDuplicates.js'
+import RemoveDuplicates from '../Code/Array/数组去重/RemoveDuplicates.js'
 
 test('RemoveDuplicates: ', () => {
   expect(RemoveDuplicates([1,1,2])).toBe(2);

@@ -1,4 +1,4 @@
-import isPalindrome from '../Code/Array/PalindromeNum.js'
+import isPalindrome from '../Code/Array/回文数/PalindromeNum.js'
 
 test('isPalindrome:', () => {
   expect(isPalindrome(121)).toBe(true);

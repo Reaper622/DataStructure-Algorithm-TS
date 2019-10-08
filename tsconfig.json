@@ -1,8 +1,12 @@
 {
-  "compilerOptions": {
-    "target": "es6"
+  
+  "compilerOptins": {
+    "target": "es6",
+    "lib": ["esnext"],
+    "allowJs": false,
+    "removeComments": true,
+    "alwaysStrict": true
   },
-  "lib": [
-    "es2017"
-  ]
+  "exclude": ["node_modules"]
+  
 }

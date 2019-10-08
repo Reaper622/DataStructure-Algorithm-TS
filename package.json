@@ -4,7 +4,8 @@
   "description": "JavaScript DataStructure and Algorithm with TypeScript",
   "main": "index.js",
   "scripts": {
-    "test:al": "jest ./Algorithm/Test"
+    "test:al": "jest ./Algorithm/Test",
+    "test:ds": "jest ./DataStructure/Test"
   },
   "repository": {
     "type": "git",

@@ -1,5 +1,4 @@
-import CardsInGroup from '../Code/Array/CardsInGroup.js'
-import { exportAllDeclaration } from '@babel/types';
+import CardsInGroup from '.CardsInGroup.js'
 
 
 test('gcd', () => {

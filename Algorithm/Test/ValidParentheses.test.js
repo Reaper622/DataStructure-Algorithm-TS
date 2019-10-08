@@ -1,4 +1,4 @@
-import ValidParentheses from '../Code/Array/ValidParentheses.js'
+import ValidParentheses from '../Code/Array/有效的括号/ValidParentheses.js'
 
 test('ValidParenthese:', () => {
   expect(ValidParentheses("()")).toBe(true);
