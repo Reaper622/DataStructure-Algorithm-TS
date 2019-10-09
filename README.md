@@ -3,9 +3,10 @@ JavaScript DataStructure and Algorithm with TypeScript
 Questions on LeetCode
 
 ### 数据结构
-- 二叉树
+- [二叉树](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/DataStructure/BinaryTree/BinaryTree.md)
     - 二叉树的实现
     - 对称二叉树
+    - 二叉树镜像
 
 ### 算法
 
