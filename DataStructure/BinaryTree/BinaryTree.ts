@@ -25,7 +25,7 @@ class Tree <T> {
             nodeList.push(node);
             
             if (i > 0) {
-                // 计算节点所在层级
+                // 计算节点所在层级的指数 即每一层都是 2^k-1 个  k为层数 n = k -1
                 let n : number = Math.floor(Math.sqrt(i+1))
                 // 当前层的启始值
                 let q = Math.pow(2, n) - 1 // 索引值 减一
