@@ -38,7 +38,7 @@ class Tree <T> {
             nodeList.push(node);
             
             if (i > 0) {
-                // 计算节点所在层级
+                // 计算节点所在层级的指数 即每一层都是 2^k-1 个  k为层数 n = k -1
                 let n : number = Math.floor(Math.sqrt(i+1))
                 // 当前层的启始值
                 let q = Math.pow(2, n) - 1 // 索引值 减一
@@ -107,6 +107,15 @@ public postOrderTraversal (root: TreeNode, array: T[]) : T[] {
             array.push(root.val)
         }
         return array
+    }
+```
+
+### 二叉树的深度
+```typescript
+// 在 Tree 类中
+public treeDepth (root: TreeNode) : number {
+        // 一个二叉树的深度为 左子树深度和右子树深度的最大值 + 1
+        return !root  ? 0 : Math.max(this.treeDepth(root.left), this.treeDepth(root.right)) + 1
     }
 ```
 

@@ -27,6 +27,10 @@ test('binary', () => {
     expect(tree.postOrderTraversal(tree.root, result3)).toEqual([2,3,1])
 })
 
+test('depth', () => {
+    expect(tree.treeDepth(tree.root)).toBe(2);
+})
+
 test('isSymmetry', () => {
     expect(isSymmetry(summetryTree)).toBe(true);
 })

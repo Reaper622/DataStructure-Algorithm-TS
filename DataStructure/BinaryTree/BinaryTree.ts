@@ -74,6 +74,11 @@ class Tree <T> {
         return array
     }
     
+    // 计算二叉树的深度
+    public treeDepth (root: TreeNode) : number {
+        // 一个二叉树的深度为 左子树深度和右子树深度的最大值 + 1
+        return !root  ? 0 : Math.max(this.treeDepth(root.left), this.treeDepth(root.right)) + 1
+    }
 
 }
 

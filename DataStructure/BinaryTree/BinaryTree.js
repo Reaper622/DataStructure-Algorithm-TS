@@ -20,7 +20,7 @@ var Tree = /** @class */ (function () {
             var node = new TreeNode(data[i]);
             nodeList.push(node);
             if (i > 0) {
-                // 计算节点所在层级
+                // 计算节点所在层级的指数 即每一层都是 2^k-1 个  k为层数 n = k -1
                 var n = Math.floor(Math.sqrt(i + 1));
                 // 当前层的启始值
                 var q = Math.pow(2, n) - 1; // 索引值 减一
@@ -66,6 +66,11 @@ var Tree = /** @class */ (function () {
             array.push(root.val);
         }
         return array;
+    };
+    // 计算二叉树的深度
+    Tree.prototype.treeDepth = function (root) {
+        // 一个二叉树的深度为 左子树深度和右子树深度的最大值 + 1
+        return !root ? 0 : Math.max(this.treeDepth(root.left), this.treeDepth(root.right)) + 1;
     };
     return Tree;
 }());
