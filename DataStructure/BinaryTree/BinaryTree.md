@@ -115,7 +115,24 @@ public postOrderTraversal (root: TreeNode, array: T[]) : T[] {
 // 在 Tree 类中
 public treeDepth (root: TreeNode) : number {
         // 一个二叉树的深度为 左子树深度和右子树深度的最大值 + 1
-        return !root  ? 0 : Math.max(this.treeDepth(root.left), this.treeDepth(root.right)) + 1
+        return (root === undefined || root.val === null)  ? 0 : Math.max(this.treeDepth(root.left), this.treeDepth(root.right)) + 1
+    }
+```
+
+### 判断是否为平衡二叉树
+```typescript
+// 判断二叉树是否为平衡二叉树
+    public isBalanced (root: TreeNode) : boolean {
+        if (!root || root.val === null) {
+            return true;
+        }
+        let left = this.isBalanced(root.left)
+        let right = this.isBalanced(root.right)
+        // 如果存在不平衡情况即都不平衡
+        if (left === false || right === false || Math.abs(this.treeDepth(this.root.left) - this.treeDepth(this.root.right)) > 1) {
+            return false
+        }
+        return true
     }
 ```
 
@@ -172,6 +189,8 @@ export default isSymmetry
 
 ### 二叉树的镜像
 
+> 此部分代码在 Mirror.ts
+
 镜像即二叉树所有的的左右节点交换位置
 
 ```typescript
@@ -194,5 +213,32 @@ function Mirror (root: TreeNode) : void {
 }
 
 export default Mirror
+```
+
+
+
+### 二叉树层次遍历
+
+> 此部分代码在 Tree 类中
+
+```typescript
+// 二叉树层次遍历
+    public levelTraversal (root: TreeNode) : number[][] | number[] {
+        if (!root) return []
+        // 使用 queue 来存储当前层级的节点
+        let result = [], queue = [root]
+        while (queue.length) {
+            let levelSize = queue.length
+            let currentLevel = []
+            while (levelSize--) {
+                let node = queue.shift()
+                currentLevel.push(node.val)
+                if (node.left && node.left.val !== null) queue.push(node.left)
+                if (node.right && node.right.val !== null) queue.push(node.right)
+            }
+            result.push(currentLevel)
+        }
+        return result
+    }
 ```
 

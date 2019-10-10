@@ -29,13 +29,29 @@ test('binary', () => {
 
 test('depth', () => {
     expect(tree.treeDepth(tree.root)).toBe(2);
+    expect(summetryTree.treeDepth(summetryTree.root)).toBe(3)
+    let arr = [1,null,2,null,null,null,null]
+    let treeDep = new Tree(arr)
+    expect(treeDep.treeDepth(treeDep.root)).toBe(2)
+})
+test('balanced', () => {
+    expect(tree.isBalanced(tree.root)).toBe(true)
+    let arrNoBalance = [1,null,2,null,null,3,4]
+    let treeNoBalance = new Tree(arrNoBalance)
+    expect(treeNoBalance.isBalanced(treeNoBalance)).toBe(false)
 })
 
+test('levelTraversal', () => {
+    let arr = [3,9,20,null,null,15,7]
+    let tree = new Tree(arr)
+    expect(tree.levelTraversal(tree.root)).toEqual([[3],[9,20],[15,7]])
+})
 test('isSymmetry', () => {
-    expect(isSymmetry(summetryTree)).toBe(true);
+    expect(isSymmetry(summetryTree)).toBe(true)
 })
 
 test('Mirror', () => {
     Mirror(treeToBeMirrored.root)
     expect(treeToBeMirrored.root).toEqual(MirroredTree.root)
 })
+

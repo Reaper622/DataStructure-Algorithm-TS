@@ -19,7 +19,6 @@ class Tree <T> {
         // 临时存储所有节点，方便寻找父子节点
         let nodeList : TreeNode[] = []
         // 顶节点
-        let root : TreeNode
         for(let i = 0, len = data.length; i < len; i++) {
             let node = new TreeNode(data[i]);
             nodeList.push(node);
@@ -77,8 +76,42 @@ class Tree <T> {
     // 计算二叉树的深度
     public treeDepth (root: TreeNode) : number {
         // 一个二叉树的深度为 左子树深度和右子树深度的最大值 + 1
-        return !root  ? 0 : Math.max(this.treeDepth(root.left), this.treeDepth(root.right)) + 1
+        return (root === undefined || root.val === null)  ? 0 : Math.max(this.treeDepth(root.left), this.treeDepth(root.right)) + 1
     }
+
+    // 判断二叉树是否为平衡二叉树
+    public isBalanced (root: TreeNode) : boolean {
+        if (!root || root.val === null) {
+            return true;
+        }
+        let left = this.isBalanced(root.left)
+        let right = this.isBalanced(root.right)
+        // 如果存在不平衡情况即都不平衡
+        if (left === false || right === false || Math.abs(this.treeDepth(this.root.left) - this.treeDepth(this.root.right)) > 1) {
+            return false
+        }
+        return true
+    }
+
+    // 二叉树层次遍历
+    public levelTraversal (root: TreeNode) : number[][] | number[] {
+        if (!root) return []
+        // 使用 queue 来存储当前层级的节点
+        let result = [], queue = [root]
+        while (queue.length) {
+            let levelSize = queue.length
+            let currentLevel = []
+            while (levelSize--) {
+                let node = queue.shift()
+                currentLevel.push(node.val)
+                if (node.left && node.left.val !== null) queue.push(node.left)
+                if (node.right && node.right.val !== null) queue.push(node.right)
+            }
+            result.push(currentLevel)
+        }
+        return result
+    }
+
 
 }
 
