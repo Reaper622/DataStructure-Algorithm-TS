@@ -1,6 +1,7 @@
 import  Tree from '../BinaryTree/BinaryTree.js'
 import isSymmetry from '../BinaryTree/Symmetry.js'
 import Mirror from '../BinaryTree/Mirror.js'
+import {buildTreeByPreAndIn, buildTreeByPostAndIn} from '../BinaryTree/BuildTree.js'
 
 let arr = [1,2,3]
 let arr2 = [1,2,2,3,4,4,3]
@@ -53,5 +54,22 @@ test('isSymmetry', () => {
 test('Mirror', () => {
     Mirror(treeToBeMirrored.root)
     expect(treeToBeMirrored.root).toEqual(MirroredTree.root)
+})
+
+test('buildTree', () => {
+    let preOrder = [3,9,20,15,7]
+    let inOrder = [9,3,15,20,7]
+    let postOrder = [9,15,7,20,3]
+    let tree = new Tree([3,9,20,null,null,15,17])
+    let root1 = buildTreeByPreAndIn(preOrder, inOrder)
+    let root2 = buildTreeByPostAndIn(postOrder, inOrder)
+    let result1 = []
+    let result2 = []
+    let result3 = []
+    let result4 = []
+    expect(tree.preOrderTraversal(root1, result1)).toEqual(preOrder)
+    expect(tree.inOrderTraversal(root1, result2)).toEqual(inOrder)
+    expect(tree.inOrderTraversal(root2, result3)).toEqual(inOrder)
+    expect(tree.postOrderTraversal(root2, result4)).toEqual(postOrder)
 })
 
