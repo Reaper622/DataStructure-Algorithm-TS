@@ -322,16 +322,17 @@ function buildTreeByPostAndIn (postOrder: number[], inOrder: number[]) : TreeNod
 
 ####路径总和
 
-> 此部分代码在 RouteSum 中
+> 此部分代码在 RouteSum.ts 中
 
 ```typescript
 /**
  *  计算是否有一条路径上的总和等于目标和
  * @param {TreeNode} root 
  * @param {number} sum 
+ * @return {boolean}
  */
 function RouteSum (root : TreeNode, sum : number) : boolean {
-    const getSum =  (root: TreeNode, sum: number, total: number) => {
+    const getSum =  (root: TreeNode, sum: number, total: number) : boolean => {
         // 判断是否为叶子节点，若是叶子节点计算当前路径上的和
         if (!root.left && !root.right) {
             total += root.val
@@ -360,6 +361,86 @@ function RouteSum (root : TreeNode, sum : number) : boolean {
         return false
     }
     return getSum(root, sum, 0);
+}
+```
+
+#### 路径总和附带路径
+
+> 此部分代码在 RouteSum.ts 中
+
+```typescript
+/**
+ * 给定一个二叉树和一个目标和，找到所有从根节点到叶子节点路径总和等于给定目标和的路径。
+ * 
+ * @param {TreeNode} root 
+ * @param {number} sum 
+ * @return {number[][]}
+ */
+ function RouteSumWithRoute(root: TreeNode, sum: number) : number[][] {
+     let result = []
+     const getSumRoute = (root: TreeNode, sum: number,total: number, array: number[] = []) => {
+         // 判断是否为叶子节点，若是叶子节点计算当前路径上的和
+        if (!root.left && !root.right) {
+            total += root.val
+            
+            if (total === sum) {
+                array.push(root.val)
+                result.push(array)
+            }
+        } else {
+            array.push(root.val)
+            // 如果只存在左子树
+            if (root.left && !root.right) {
+                
+                getSumRoute(root.left, sum, total+root.val, [...array])
+            } 
+            // 如果只存在右子树
+            else if (root.right && !root.left) {
+                 getSumRoute(root.right, sum, total+root.val, [...array])
+            } 
+            else {
+                 getSumRoute(root.left, sum, total+root.val, [...array])
+                 getSumRoute(root.right, sum, total+root.val, [...array])
+            }
+        }
+    }
+    // 如果传入的是空树
+    if (!root) {
+        return []
+    }
+    getSumRoute(root, sum, 0)
+    return result
+ }
+```
+
+#### 二叉树展开为链表
+
+> 此部分代码在 TreeToList.ts中
+
+```typescript
+/**
+ * 给定一个二叉树，原地将它展开为链表。
+ * @param {TreeNode} root 
+ */
+function TreeToList(root: TreeNode) : void {
+    while (root != null) {
+        // 如果左子树为 null ，直接考虑右子树
+        if (root.left === null) {
+            root = root.right
+        } else {
+            // 寻找左子树最右的节点
+            let pre = root.left
+            while (pre.right !== null) {
+                pre = pre.right
+            }
+            // 将原来的右子树插入左子树最右边节点的右子树
+            pre.right = root.right
+            // 将左子树插入到右子树
+            root.right = root.left
+            root.left = null
+            root = root.right
+        }
+    }
 }
 ```
 

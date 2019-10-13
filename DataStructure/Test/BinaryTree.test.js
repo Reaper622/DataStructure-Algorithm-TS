@@ -2,7 +2,7 @@ import  Tree from '../BinaryTree/BinaryTree.js'
 import isSymmetry from '../BinaryTree/Symmetry.js'
 import Mirror from '../BinaryTree/Mirror.js'
 import {buildTreeByPreAndIn, buildTreeByPostAndIn} from '../BinaryTree/BuildTree.js'
-import RouteSum from '../BinaryTree/RouteSum.js'
+import {RouteSum, RouteSumWithRoute} from '../BinaryTree/RouteSum.js'
 
 let arr = [1,2,3]
 let arr2 = [1,2,2,3,4,4,3]
