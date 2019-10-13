@@ -119,6 +119,19 @@ public treeDepth (root: TreeNode) : number {
     }
 ```
 
+### 二叉树的最小深度
+```typescript
+// 在 Tree 类中
+public minDepth (root: TreeNode) : number {
+        if (root === undefined || root.val === null) {
+            return 0
+        }
+        let left = this.minDepth(root.left)
+        let right = this.minDepth(root.right)
+        return (left && right) ? 1 + Math.min(left, right) : 1 + left + right
+    }
+```
+
 ### 判断是否为平衡二叉树
 ```typescript
 // 判断二叉树是否为平衡二叉树
@@ -304,6 +317,49 @@ function buildTreeByPostAndIn (postOrder: number[], inOrder: number[]) : TreeNod
     root.right = buildTreeByPostAndIn(postRight, midRight)
 
     return root
+}
+```
+
+####路径总和
+
+> 此部分代码在 RouteSum 中
+
+```typescript
+/**
+ *  计算是否有一条路径上的总和等于目标和
+ * @param {TreeNode} root 
+ * @param {number} sum 
+ */
+function RouteSum (root : TreeNode, sum : number) : boolean {
+    const getSum =  (root: TreeNode, sum: number, total: number) => {
+        // 判断是否为叶子节点，若是叶子节点计算当前路径上的和
+        if (!root.left && !root.right) {
+            total += root.val
+            if (total === sum) {
+                return true
+            } else {
+                return false
+            }
+        } else {
+            // 如果只存在左子树
+            if (root.left && !root.right) {
+                return getSum(root.left, sum, total+root.val)
+            } 
+            // 如果只存在右子树
+            else if (root.right && !root.left) {
+                return getSum(root.right, sum, total+root.val)
+            } 
+            else {
+                return (getSum(root.left, sum, total+root.val) || getSum(root.right, sum, total+root.val))
+            }
+        }
+        
+    }
+    // 如果传入的是空树
+    if (!root || root.val === undefined) {
+        return false
+    }
+    return getSum(root, sum, 0);
 }
 ```
 

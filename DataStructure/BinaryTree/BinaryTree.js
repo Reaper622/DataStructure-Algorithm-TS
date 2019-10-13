@@ -71,6 +71,15 @@ var Tree = /** @class */ (function () {
         // 一个二叉树的深度为 左子树深度和右子树深度的最大值 + 1
         return (root === undefined || root.val === null) ? 0 : Math.max(this.treeDepth(root.left), this.treeDepth(root.right)) + 1;
     };
+    // 计算二叉树的最小深度
+    Tree.prototype.minDepth = function (root) {
+        if (root === undefined || root.val === null) {
+            return 0;
+        }
+        var left = this.minDepth(root.left);
+        var right = this.minDepth(root.right);
+        return (left && right) ? 1 + Math.min(left, right) : 1 + left + right;
+    };
     // 判断二叉树是否为平衡二叉树
     Tree.prototype.isBalanced = function (root) {
         if (!root || root.val === null) {

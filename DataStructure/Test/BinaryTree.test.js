@@ -2,6 +2,7 @@ import  Tree from '../BinaryTree/BinaryTree.js'
 import isSymmetry from '../BinaryTree/Symmetry.js'
 import Mirror from '../BinaryTree/Mirror.js'
 import {buildTreeByPreAndIn, buildTreeByPostAndIn} from '../BinaryTree/BuildTree.js'
+import RouteSum from '../BinaryTree/RouteSum.js'
 
 let arr = [1,2,3]
 let arr2 = [1,2,2,3,4,4,3]
@@ -34,10 +35,13 @@ test('depth', () => {
     let arr = [1,null,2,null,null,null,null]
     let treeDep = new Tree(arr)
     expect(treeDep.treeDepth(treeDep.root)).toBe(2)
+    arr = [3,9,20,null,null,15,7]
+    let treeDep2 = new Tree(arr)
+    expect(treeDep2.minDepth(tree.root)).toBe(2)
 })
 test('balanced', () => {
     expect(tree.isBalanced(tree.root)).toBe(true)
-    let arrNoBalance = [1,null,2,null,null,3,4]
+    let arrNoBalance = [1,2,2,3,3,null,null,4,4]
     let treeNoBalance = new Tree(arrNoBalance)
     expect(treeNoBalance.isBalanced(treeNoBalance)).toBe(false)
 })
@@ -71,5 +75,12 @@ test('buildTree', () => {
     expect(tree.inOrderTraversal(root1, result2)).toEqual(inOrder)
     expect(tree.inOrderTraversal(root2, result3)).toEqual(inOrder)
     expect(tree.postOrderTraversal(root2, result4)).toEqual(postOrder)
+})
+
+
+test('RouteSum', () => {
+    let arr = [5,4,5,11,null,13,4,7,2,null,null,null,1]
+    let tree = new Tree(arr)
+    expect(RouteSum(tree.root, 22)).toBe(true)
 })
 

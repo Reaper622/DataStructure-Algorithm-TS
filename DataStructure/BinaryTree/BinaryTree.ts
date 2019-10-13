@@ -79,6 +79,16 @@ class Tree <T> {
         return (root === undefined || root.val === null)  ? 0 : Math.max(this.treeDepth(root.left), this.treeDepth(root.right)) + 1
     }
 
+    // 计算二叉树的最小深度
+    public minDepth (root: TreeNode) : number {
+        if (root === undefined || root.val === null) {
+            return 0
+        }
+        let left = this.minDepth(root.left)
+        let right = this.minDepth(root.right)
+        return (left && right) ? 1 + Math.min(left, right) : 1 + left + right
+    }
+
     // 判断二叉树是否为平衡二叉树
     public isBalanced (root: TreeNode) : boolean {
         if (!root || root.val === null) {
