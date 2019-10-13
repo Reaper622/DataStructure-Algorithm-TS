@@ -320,7 +320,7 @@ function buildTreeByPostAndIn (postOrder: number[], inOrder: number[]) : TreeNod
 }
 ```
 
-####路径总和
+### 路径总和
 
 > 此部分代码在 RouteSum.ts 中
 
@@ -364,7 +364,7 @@ function RouteSum (root : TreeNode, sum : number) : boolean {
 }
 ```
 
-#### 路径总和附带路径
+### 路径总和附带路径
 
 > 此部分代码在 RouteSum.ts 中
 
@@ -413,7 +413,7 @@ function RouteSum (root : TreeNode, sum : number) : boolean {
  }
 ```
 
-#### 二叉树展开为链表
+### 二叉树展开为链表
 
 > 此部分代码在 TreeToList.ts中
 
