@@ -1,6 +1,7 @@
 import {List, ListNode} from './LinkList'
 
 /**
+ * 合并两个有序链表
  * 
  * @param {ListNode} pHead 
  * @param {ListNode} qHead 

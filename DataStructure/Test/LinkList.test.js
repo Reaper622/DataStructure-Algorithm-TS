@@ -1,6 +1,7 @@
 import { List } from '../LinkList/LinkList.js'
 import ReverseList from '../LinkList/ReverseList.js'
 import MergeList from '../LinkList/MergeList.js'
+import DeleteNFromEnd from '../LinkList/DeleteN'
 
 test('LinkList', () => {
     let list = new List([1,2,3])
@@ -22,4 +23,10 @@ test('MergeList', () => {
     let list2 = new List([2,4,6])
     let list3 = MergeList(list1.head, list2.head)
     expect(list3.PositiveTraverse()).toEqual([1,2,3,4,5,6])
+})
+
+test('DeleteNFromEnd', () => {
+    let list = new List([1,2,3,4,5])
+    list.head = DeleteNFromEnd(list.head, 2)
+    expect(list.PositiveTraverse()).toEqual([1,2,3,5])
 })

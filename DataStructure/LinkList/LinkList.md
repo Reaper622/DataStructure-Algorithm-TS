@@ -137,6 +137,8 @@ class List  {
 
 ### 反转链表
 
+> 此部分代码在 ReverseList.ts 中
+
 将链表进行翻转，尾节点变为新的头节点，输入一个链表的头节点，返回反转后的新的头节点
 
 ```typescript
@@ -164,5 +166,99 @@ function ReverseList (head: ListNode): ListNode {
 }
 ```
 
+### 合并链表
+
+> 此部分代码在 MergeList.ts 中
+
+传入两个有序链表的头节点，返回一个合并两个链表的有序链表
 
 
+
+```typescript
+/**
+ * 合并两个有序链表
+ * 
+ * @param {ListNode} pHead 
+ * @param {ListNode} qHead 
+ * @return {List}
+ */
+function MergeList(pHead: ListNode, qHead: ListNode): List {
+    let list = new List()
+    if (!pHead) {
+        list.head = qHead
+        return list
+    } else  if (!qHead) {
+        list.head = pHead
+        return list
+    }
+    let node = list.head
+    // 当两个链表均为完全合并时
+    while(pHead && qHead) {
+        if (pHead.val < qHead.val) {
+            node.next = pHead
+            pHead = pHead.next
+        } else {
+            node.next = qHead
+            qHead = qHead.next
+        }
+
+        node = node.next
+    }
+    // 链接未完全合并链表的后序节点
+    if (!pHead) {
+        node.next = qHead
+    } else {
+        node.next = pHead
+    }
+    list.head = list.head.next
+
+    return list
+    
+}
+```
+
+### 删除链表的倒数第N个节点
+
+> 这部分代码在 DeleteN.ts 中
+
+给定一个链表，删除链表的倒数第 *n* 个节点，并且返回链表的头结点。
+
+```typescript
+/**
+ * 删除链表的倒数第N个节点
+ * 
+ * @param {ListNode} head 
+ * @param {number} n 
+ * @return {ListNode}
+ */
+function DeleteNFromEnd (head: ListNode, n: number) :ListNode {
+    if (!head || n <= 0) {
+        return null
+    }
+    let node = new ListNode(0, null)
+    node.next = head
+    // 利用双指针法，首先领 a b 节点都指向头节点
+    let a: ListNode = node
+    let b: ListNode = node
+    let c: ListNode = null
+    // a提前移动 n 个节点
+    for(let i = 0; i < n; i++) {
+        a = a.next
+        // 如果链表长度不超过 n
+        if (!a) {
+            return null
+        }
+    }
+    // 向后遍历直到a到达尾部，此时b就为要删除的节点，c始终为b的前一个节点
+    while(a) {
+        c = b
+        b = b.next
+        a = a.next
+    }
+    // 删除b节点
+    c.next = c.next.next
+
+    return node.next
+}
+
+```
