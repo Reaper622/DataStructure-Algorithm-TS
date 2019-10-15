@@ -16,7 +16,7 @@ class ListNode {
 
 class List  {
     head: ListNode
-    constructor(arr ? : any[]) {
+    constructor(arr? : any[]) {
         if (arr) {
             this.head = new ListNode(arr[0], null)
             let current = this.head

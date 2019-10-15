@@ -135,3 +135,34 @@ class List  {
     }
 ```
 
+### 反转链表
+
+将链表进行翻转，尾节点变为新的头节点，输入一个链表的头节点，返回反转后的新的头节点
+
+```typescript
+/**
+ * 反转链表
+ * 
+ * @param {ListNode} head 
+ * @return {ListNode}
+ */
+function ReverseList (head: ListNode): ListNode {
+    let headNode = head
+    let preNode = null
+    let next = null
+    // 遍历所有的节点
+    while(headNode) {
+        // 暂存原来的next 用于遍历
+        next = headNode.next
+        // 将节点的next指向反转
+        headNode.next = preNode
+        preNode = headNode
+        headNode = next
+    }
+
+    return preNode
+}
+```
+
+
+
