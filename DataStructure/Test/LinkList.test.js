@@ -16,6 +16,9 @@ test('LinkList', () => {
     let reverseList = new List()
     reverseList.head = reverseListHead
     expect(reverseList.PositiveTraverse()).toEqual([4,3,1])
+    let list2 = new List([1,2,3,3,4,5])
+    list2.DeleteDuplicates()
+    expect(list2.PositiveTraverse()).toEqual([1,2,3,4,5])
 })
 
 

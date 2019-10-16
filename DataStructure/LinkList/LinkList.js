@@ -99,6 +99,28 @@ var List = /** @class */ (function () {
         }
         return arr;
     };
+    /**
+     * 删除重复元素
+     */
+    List.prototype.DeleteDuplicates = function () {
+        var current = this.head;
+        // 暂存值前一个节点的值
+        var temp;
+        // 要删除节点的
+        var toDelete;
+        while (current && current.next !== null) {
+            temp = current.val;
+            // 如果重复, 删除重复节点
+            if (current.next.val === temp) {
+                toDelete = current.next;
+                current.next = toDelete.next;
+            }
+            else {
+                current = current.next;
+                temp = current.val;
+            }
+        }
+    };
     return List;
 }());
 exports.List = List;

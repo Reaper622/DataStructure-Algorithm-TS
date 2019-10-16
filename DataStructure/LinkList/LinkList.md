@@ -98,6 +98,41 @@ class List  {
 }
 ```
 
+### 链表去重
+
+> 此部分代码在 List 类中
+
+给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。
+
+```typescript
+/**
+     * 删除重复元素
+     */
+    public DeleteDuplicates(): void {
+        let current = this.head
+        // 暂存值前一个节点的值
+        let temp: any
+        // 要删除节点的
+        let toDelete: ListNode
+
+        while(current && current.next !== null) {
+            temp = current.val
+            // 如果重复, 删除重复节点
+            if (current.next.val === temp) {
+                toDelete = current.next
+                current.next = toDelete.next
+            } else {
+                current = current.next
+                temp = current.val
+            }
+        }
+    }
+```
+
+
+
+
+
 ### 正向遍历与反向遍历
 
 > 此部分代码在 List 类中

@@ -102,6 +102,29 @@ class List  {
         }
         return arr
     }
+    
+    /**
+     * 删除重复元素
+     */
+    public DeleteDuplicates(): void {
+        let current = this.head
+        // 暂存值前一个节点的值
+        let temp: any
+        // 要删除节点的
+        let toDelete: ListNode
+
+        while(current && current.next !== null) {
+            temp = current.val
+            // 如果重复, 删除重复节点
+            if (current.next.val === temp) {
+                toDelete = current.next
+                current.next = toDelete.next
+            } else {
+                current = current.next
+                temp = current.val
+            }
+        }
+    }
 }
 
 export {ListNode, List}
