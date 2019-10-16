@@ -1,7 +1,8 @@
-import { List } from '../LinkList/LinkList.js'
-import ReverseList from '../LinkList/ReverseList.js'
-import MergeList from '../LinkList/MergeList.js'
+import { List } from '../LinkList/LinkList'
+import ReverseList from '../LinkList/ReverseList'
+import MergeList from '../LinkList/MergeList'
 import DeleteNFromEnd from '../LinkList/DeleteN'
+import RotateRight from '../LinkList/RotateRight'
 
 test('LinkList', () => {
     let list = new List([1,2,3])
@@ -29,4 +30,10 @@ test('DeleteNFromEnd', () => {
     let list = new List([1,2,3,4,5])
     list.head = DeleteNFromEnd(list.head, 2)
     expect(list.PositiveTraverse()).toEqual([1,2,3,5])
+})
+
+test('RotateRight', () => {
+    let list = new List([1,2,3,4,5])
+    list.head = RotateRight(list.head, 2)
+    expect(list.PositiveTraverse()).toEqual([4,5,1,2,3])
 })

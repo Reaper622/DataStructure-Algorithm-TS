@@ -262,3 +262,73 @@ function DeleteNFromEnd (head: ListNode, n: number) :ListNode {
 }
 
 ```
+
+
+
+### 旋转链表指定的长度
+
+> 此部分代码在 RotateRight.ts 中
+
+给定一个链表，让每个节点向右移动k个位置。
+
+例如:
+
+```
+输入: 1->2->3->4->5->NULL, k = 2
+输出: 4->5->1->2->3->NULL
+解释:
+向右旋转 1 步: 5->1->2->3->4->NULL
+向右旋转 2 步: 4->5->1->2->3->NULL
+```
+
+```
+输入: 0->1->2->NULL, k = 4
+输出: 2->0->1->NULL
+解释:
+向右旋转 1 步: 2->0->1->NULL
+向右旋转 2 步: 1->2->0->NULL
+向右旋转 3 步: 0->1->2->NULL
+向右旋转 4 步: 2->0->1->NULL
+```
+
+```typescript
+/**
+ * 给定一个链表，旋转链表，将链表每个节点向右移动 k 个位置，其中 k 是非负数。
+ * 
+ * @param {ListNode} head 
+ * @param {number} k 
+ * @return {ListNode}
+ */
+function RotateRight (head: ListNode, k: number):ListNode {
+    // 判断链表是否为空或只有一个节点
+    if (head === null || head.next === null) {
+        return head
+    }
+    // 定义n为链表长度
+    let n : number
+    // 定义一个节点用来遍历链表
+    let old_tail = head
+    // 首先获取链表内节点个数
+    for(n = 1; old_tail.next !== null; n++) {
+        old_tail = old_tail.next
+    }
+    // 形成闭环
+    old_tail.next = head
+
+    // 新的尾节点为 (n - k % n - 1) 个节点
+    // 新的头节点为 (n - k % n) 个节点
+    // 定义新的尾节点
+    let new_tail = head
+    for(let i = 0; i < (n - k % n - 1); i++) {
+        new_tail = new_tail.next
+    }
+    // 定义新的头节点
+    let new_head = new_tail.next;
+    // 断开新的尾节点与后面的连接
+    new_tail.next = null
+
+    return new_head
+
+}
+```
+
