@@ -3,6 +3,7 @@ import ReverseList from '../LinkList/ReverseList'
 import MergeList from '../LinkList/MergeList'
 import DeleteNFromEnd from '../LinkList/DeleteN'
 import RotateRight from '../LinkList/RotateRight'
+import Exchange from '../LinkList/Exchange'
 
 test('LinkList', () => {
     let list = new List([1,2,3])
@@ -39,4 +40,10 @@ test('RotateRight', () => {
     let list = new List([1,2,3,4,5])
     list.head = RotateRight(list.head, 2)
     expect(list.PositiveTraverse()).toEqual([4,5,1,2,3])
+})
+
+test('Exchange', () => {
+    let list = new List([1,2,3,4])
+    list.head = Exchange(list.head)
+    expect(list.PositiveTraverse()).toEqual([2,1,4,3])
 })
