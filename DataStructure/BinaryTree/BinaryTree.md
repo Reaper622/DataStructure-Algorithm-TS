@@ -155,7 +155,7 @@ public minDepth (root: TreeNode) : number {
 
 对称二叉树的要求:
 
-- 两个根结点相等
+- 根结点相等
 - 左子树的右节点和右子树的左节点相同。
 - 右子树的左节点和左子树的右节点相同。
 
@@ -165,7 +165,7 @@ import Tree, {TreeNode} from './BinaryTree'
 /**
  * 判断是否为对称二叉树
  * 对称二叉树条件为：
- * - 两个根节点相等
+ * - 根节点相等
  * - 左子树的右节点和右子树的左节点相同
  * - 右子树的左节点和左子树的右节点相同
  * 
@@ -180,15 +180,15 @@ function isSymmetry (tree: Tree<Number>) : Boolean {
  * @param {TreeNode} node2
  */
 function isSymmetryTree (node1 : TreeNode, node2: TreeNode ) : Boolean {
-    // 如果两个根节点都不存在
+    // 如果两个节点都不存在
     if (!node1 && !node2) {
         return true;
     } 
-    // 如果只有一个根节点不存在
+    // 如果只有一个节点不存在
     else if (!node1 || !node2) {
         return false;
     }
-    // 如果根节点值不相同
+    // 如果节点值不相同
     else if (node1.val !== node2.val) {
         return false;
     }
