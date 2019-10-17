@@ -4,6 +4,7 @@ import MergeList from '../LinkList/MergeList'
 import DeleteNFromEnd from '../LinkList/DeleteN'
 import RotateRight from '../LinkList/RotateRight'
 import Exchange from '../LinkList/Exchange'
+import SeparateList from '../LinkList/SeparateList'
 
 test('LinkList', () => {
     let list = new List([1,2,3])
@@ -46,4 +47,10 @@ test('Exchange', () => {
     let list = new List([1,2,3,4])
     list.head = Exchange(list.head)
     expect(list.PositiveTraverse()).toEqual([2,1,4,3])
+})
+
+test('SeparateList', () => {
+    let list = new List([1,4,3,2,5,2])
+    list.head = SeparateList(list.head, 3)
+    expect(list.PositiveTraverse()).toEqual([1,2,2,4,3,5])
 })
