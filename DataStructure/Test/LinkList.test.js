@@ -1,5 +1,5 @@
 import { List } from '../LinkList/LinkList'
-import ReverseList from '../LinkList/ReverseList'
+import {ReverseList, ReverseBetween} from '../LinkList/ReverseList'
 import MergeList from '../LinkList/MergeList'
 import DeleteNFromEnd from '../LinkList/DeleteN'
 import RotateRight from '../LinkList/RotateRight'
@@ -53,4 +53,11 @@ test('SeparateList', () => {
     let list = new List([1,4,3,2,5,2])
     list.head = SeparateList(list.head, 3)
     expect(list.PositiveTraverse()).toEqual([1,2,2,4,3,5])
+})
+
+
+test('ReverseBetween', () => {
+    let list = new List([1,2,3,4,5])
+    list.head = ReverseBetween(list.head, 2, 4)
+    expect(list.PositiveTraverse()).toEqual([1,4,3,2,5])
 })
