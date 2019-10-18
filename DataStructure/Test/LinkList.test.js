@@ -5,6 +5,7 @@ import DeleteNFromEnd from '../LinkList/DeleteN'
 import RotateRight from '../LinkList/RotateRight'
 import Exchange from '../LinkList/Exchange'
 import SeparateList from '../LinkList/SeparateList'
+import ReorderList from '../LinkList/ReorderList'
 
 test('LinkList', () => {
     let list = new List([1,2,3])
@@ -60,4 +61,10 @@ test('ReverseBetween', () => {
     let list = new List([1,2,3,4,5])
     list.head = ReverseBetween(list.head, 2, 4)
     expect(list.PositiveTraverse()).toEqual([1,4,3,2,5])
+})
+
+test('ReorderList', () => {
+    let list = new List([1,2,3,4])
+    list.head = ReorderList(list.head)
+    expect(list.PositiveTraverse()).toEqual([1,4,2,3])
 })
