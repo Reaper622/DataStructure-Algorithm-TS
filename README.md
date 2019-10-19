@@ -26,6 +26,11 @@ Questions on LeetCode
     - 反转链表 II
     - 重排链表
 
+- [栈](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/DataStructure/Stack/Stack.md)
+    - 栈的实现
+    - 栈的基础操作
+    - 栈的入序和出序序列匹配检测
+
 ### 算法
 
 #### 时间复杂度
