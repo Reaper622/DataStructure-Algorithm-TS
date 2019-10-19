@@ -1,4 +1,5 @@
 import Stack from '../Stack/Stack'
+import StackCheck from '../Stack/StackCheck'
 
 
 test('Stack', () => {
@@ -14,4 +15,11 @@ test('Stack', () => {
     stack.clear()
     expect(stack.pop()).toBe(undefined)
     
+})
+
+
+test('StackCheck', () => {
+    expect(StackCheck([1,2,3,4],[4,3,2,1])).toBe(true)
+    expect(StackCheck([1,2,3,4,5],[4,5,3,2,1])).toBe(true)
+    expect(StackCheck([1,2,3,4,5],[4,3,5,1,2])).toBe(false)
 })
