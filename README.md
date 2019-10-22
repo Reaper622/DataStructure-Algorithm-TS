@@ -2,7 +2,7 @@
 JavaScript DataStructure and Algorithm with TypeScript
 Questions on LeetCode
 
-### 数据结构
+## 数据结构
 - [二叉树](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/DataStructure/BinaryTree/BinaryTree.md)
     - 二叉树的实现
     - 对称二叉树
@@ -40,7 +40,7 @@ Questions on LeetCode
 - [堆](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/DataStructure/Heap/Heap.md)
     - 堆的实现
     - 堆的基础操作
-### 算法
+## 算法
 
 #### 时间复杂度
 
@@ -61,19 +61,7 @@ Questions on LeetCode
 一个程序执行时除了需要存储空间和存储本身所使用的指令、常数、变量和输入数据外，还需要一些对数据进行操作的工作单元和存储一些为实现计算所需信息的辅助空间。
 
 
-#### 算法目录
-- 字符串类
-  - 字符串翻转
-  - 二进制子串
-  - 最长公共前缀
-
-- 数组类
-  - 手机键盘对应字母组合
-  - 两数之和
-  - 整数翻转
-  - 回文数
-  - 罗马数字转整数
-  - 卡牌分组
-  - 合并链表
-  - 数组去重
-  - 有效的括号
+### 算法目录
+- [排序](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/Algorithm/Sort/Sort.md)
+    - 插入排序  
+    - 冒泡排序
