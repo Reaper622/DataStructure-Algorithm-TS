@@ -37,6 +37,9 @@ Questions on LeetCode
     - 循环队列的实现和基础操作
     - 循环双端队列
 
+- [堆](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/DataStructure/Heap/Heap.md)
+    - 堆的实现
+    - 堆的基础操作
 ### 算法
 
 #### 时间复杂度
