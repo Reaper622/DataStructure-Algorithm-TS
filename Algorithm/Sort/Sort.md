@@ -52,3 +52,35 @@ function BubbleSort(array: number[]): number[] {
     return array
 }
 ```
+
+## 选择排序
+
+> 此部分代码在 SelectSort.ts 中
+
+- 空间复杂度：`O(1)`
+- 时间复杂度：`O(n^2)`
+
+每次循环都找到一个最小的值放在最前面有序序列中，没找到一个下次循环的序列长度就向后减一即可。
+
+```typescript
+/**
+ * 选择排序，每次循环找到一个最小的数放在前面的有序队列中
+ * @param {number[]} array 
+ * @return {number[]}
+ */
+function SelectSort(array: number[]): number[] {
+    for(let i = 0; i < array.length; i++) {
+        let minIndex = i
+        for(let j = i + 1; j < array.length; j++) {
+            if (array[j] < array[minIndex]) {
+                minIndex = j
+            }
+        }
+        [array[i], array[minIndex]] = [array[minIndex], array[i]]
+    }
+    return array
+}
+```
+
+
+
