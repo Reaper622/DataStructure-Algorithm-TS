@@ -1,10 +1,5 @@
 "use strict";
 exports.__esModule = true;
-var Type;
-(function (Type) {
-    Type["Min"] = "min";
-    Type["Max"] = "max";
-})(Type || (Type = {}));
 var Heap = /** @class */ (function () {
     function Heap(type) {
         this.type = type;
@@ -26,12 +21,12 @@ var Heap = /** @class */ (function () {
         for (var i = 2 * index + 1; i < length; i = 2 * i + 1) {
             if (i + 1 < length) {
                 // 如果符合堆的规则
-                if ((this.type === Type.Max && array[i + 1] > array[i]) || (this.type === Type.Min && array[i + 1] < array[i])) {
+                if ((this.type === 'max' && array[i + 1] > array[i]) || (this.type === 'min' && array[i + 1] < array[i])) {
                     i++;
                 }
             }
             // 如果不符合规则 则进行交换
-            if ((this.type === Type.Max && array[index] < array[i]) || (this.type === Type.Min && array[index] > array[i])) {
+            if ((this.type === 'max' && array[index] < array[i]) || (this.type === 'min' && array[index] > array[i])) {
                 _a = [array[i], array[index]], array[index] = _a[0], array[i] = _a[1];
                 index = i;
             }
@@ -52,7 +47,7 @@ var Heap = /** @class */ (function () {
             var index = array.length - 1;
             var target = Math.floor((index - 1) / 2);
             while (target >= 0) {
-                if ((this.type === Type.Min && array[index] < array[target]) || (this.type === Type.Max && array[index] > array[target])) {
+                if ((this.type === 'min' && array[index] < array[target]) || (this.type === 'max' && array[index] > array[target])) {
                     _a = [array[target], array[index]], array[index] = _a[0], array[target] = _a[1];
                     index = target;
                     target = Math.floor((index - 1) / 2);
