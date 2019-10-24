@@ -100,7 +100,7 @@ var List = /** @class */ (function () {
         return arr;
     };
     /**
-     * 删除重复元素
+     * 删除排序链表中的重复元素
      */
     List.prototype.DeleteDuplicates = function () {
         var current = this.head;

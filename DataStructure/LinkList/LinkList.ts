@@ -104,7 +104,7 @@ class List  {
     }
     
     /**
-     * 删除重复元素
+     * 删除排序链表中的重复元素
      */
     public DeleteDuplicates(): void {
         let current = this.head

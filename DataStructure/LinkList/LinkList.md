@@ -106,7 +106,7 @@ class List  {
 
 ```typescript
 /**
-     * 删除重复元素
+     * 删除排序链表重复元素
      */
     public DeleteDuplicates(): void {
         let current = this.head
