@@ -1,14 +1,9 @@
-enum Type { 
-    Min = 'min', 
-    Max = 'max'
-}
-
 class Heap {
     // 堆的类型
-    type: Type
+    type: string
     value: number[]
 
-    constructor(type: Type) {
+    constructor(type: string) {
         this.type = type
         this.value = []
     }
@@ -29,12 +24,12 @@ class Heap {
         for(let i = 2 * index + 1; i < length; i = 2 * i + 1) {
             if (i + 1 < length) {
                 // 如果符合堆的规则
-                if ((this.type === Type.Max && array[i + 1] > array[i]) || (this.type === Type.Min && array[i+1] < array[i])) {
+                if ((this.type === 'max' && array[i + 1] > array[i]) || (this.type === 'min' && array[i+1] < array[i])) {
                     i++
                 }
             }
             // 如果不符合规则 则进行交换
-            if ((this.type === Type.Max && array[index] < array[i]) || (this.type === Type.Min && array[index] > array[i])) {
+            if ((this.type === 'max' && array[index] < array[i]) || (this.type === 'min' && array[index] > array[i])) {
                 [array[index], array[i]] = [array[i], array[index]]
                 index = i
             }
@@ -55,7 +50,7 @@ class Heap {
             let index = array.length - 1
             let target = Math.floor((index - 1) / 2)
             while(target >= 0) {
-                if ((this.type === Type.Min && array[index] < array[target]) || (this.type === Type.Max && array[index] > array[target])) {
+                if ((this.type === 'min' && array[index] < array[target]) || (this.type === 'max' && array[index] > array[target])) {
                     [array[index], array[target]] = [array[target], array[index]]
                     index = target
                     target = Math.floor((index - 1) / 2)
