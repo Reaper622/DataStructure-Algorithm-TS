@@ -186,5 +186,61 @@ function QuickSort2(array: number[], start:number, end: number): number[] | null
  }
 ```
 
+## 归并排序
 
+> 此部分代码在 MergeSort.ts 中
+
+- 时间复杂度: `O(nlogn)`
+- 空间复杂度: `O(n)
+
+归并排序一般分为两步：分离和合并
+
+- 分离：将数组从中点进行分割，分为左、右两个数组，之后递归分割直到长度小于2
+- 合并：合并时创建一个临时数组，比较两数组「此时数组均已有序」第一个元素的大小，将较小的插入临时数组，之后直到一方为空，将另一个不为空的数组全部插入临时数组。
+
+```typescript
+/**
+ * 归并排序，将数组分割成前后两个数组，之后递归分割直到数组长度小于2，进行归并
+ * @param {number[]} array 
+ * @return {number[]}
+ */
+function MergeSort(array: number[]): number[] {
+    if (array.length < 2) {
+        return array
+    }
+    // 获取中点
+    const mid = Math.floor(array.length / 2)
+    // 前半段和后半段
+    let front = array.slice(0, mid)
+    let end = array.slice(mid)
+    return merge(MergeSort(front), MergeSort(end))
+}
+
+/**
+ * 归并操作
+ * @param {number[]} front 
+ * @param {number[]} end 
+ */
+function merge(front: number[], end: number[]): number[] {
+    // 创建一个临时存储数组
+    const temp = []
+    while(front.length && end.length) {
+        // 比较两数组第一个元素,将较小的元素加入临时数组
+        if (front[0] < end[0]) {
+            temp.push(front.shift())
+        } else {
+            temp.push(end.shift())
+        }
+    }
+    // 若左右数组有一个为空，那么此时另一个数组一定大于temp中的所有元素，直接将所哟元素加入temp
+    while(front.length) {
+        temp.push(front.shift())
+    }
+    while(end.length) {
+        temp.push(end.shift())
+    }
+
+    return temp
+}
+```
 
