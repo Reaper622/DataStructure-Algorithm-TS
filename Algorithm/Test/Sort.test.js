@@ -3,6 +3,7 @@ import BubbleSort from '../Sort/BubbleSort'
 import SelectSort from '../Sort/SelectSort'
 import {QuickSort, QuickSort2} from '../Sort/QuickSort'
 import MergeSort from '../Sort/MergeSort'
+import HeapSort from '../Sort/HeapSort'
 
 
 test('InsertSort', () => {
@@ -29,4 +30,11 @@ test('QuickSort', () => {
 test('MergeSort', () => {
     let arr = [6,4,2,1,3,5]
     expect(MergeSort(arr)).toEqual([1,2,3,4,5,6])
+})
+
+test('HeapSort', () => {
+    let arr = [6,2,4,3,1,5]
+    let arr2 = [6,3,2,1,4,5]
+    expect(HeapSort(arr, 'min')).toEqual([1,2,3,4,5,6])
+    expect(HeapSort(arr2, 'max')).toEqual([6,5,4,3,2,1])
 })
