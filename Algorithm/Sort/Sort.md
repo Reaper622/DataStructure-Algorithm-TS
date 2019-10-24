@@ -82,5 +82,109 @@ function SelectSort(array: number[]): number[] {
 }
 ```
 
+## 快速排序
+
+> 此部分代码在 QuickSort.ts 中
+
+- 空间复杂度：`O(logn)`
+- 时间复杂度：`O(n^2)`
+
+一趟排序将要排序的数据分割成独立的两部分，之后递归排序分割出的两部分，完成排序。
+
+```typescript
+/**
+ * 快速排序，单独开辟两个存储空间，左边存放比中介值小的，右边存放比中介值大的
+ * 递归排序
+ * 
+ * @param {number[]} array
+ * @return {number[]}
+ */
+function QuickSort (array: number[]): number[] {
+    // 递归的终点判断
+    if (array.length < 2) {
+        return array
+    }
+    // 快排的中介值
+    let target = array[0]
+    // 小于中介值的数组
+    let left = []
+    // 大于中介值的数组
+    let right = []
+    for(let i = 1; i < array.length; i++) {
+        if (array[i] < target) {
+            left.push(array[i])
+        } else {
+            right.push(array[i])
+        }
+    }
+
+    return QuickSort(left).concat([target], QuickSort(right))
+}
+```
+
+## 快速排序II
+
+> 此部分代码在 QuickSort.ts 中
+
+- 时间复杂度：`O(nlogn)`
+- 空间复杂度：`O(logn)`
+
+快速排序，使用索引记录的方法，不需要额外空间
+
+记录一个索引`l`从数组最左侧开始，记录一个索引`r`从数组右侧开始
+
+在`l的条件下，找到右侧小于`target`的值`array[r]`，并将其赋值到`array[l]
+
+在`l的条件下，找到左侧大于`target`的值`array[l]`，并将其赋值到`array[r]
+
+这样让`l=r`时，左侧的值全部小于`target`，右侧的值全部小于`target`，将`target`放到该位置
+
+```typescript
+/**
+ * 快速排序，使用索引记录的方法，不需要额外空间
+ * 递归排序
+ * 
+ * @param {number[]} array 
+ * @param {number} start 
+ * @param {number} end 
+ * @return {number[] | null}
+ */
+function QuickSort2(array: number[], start:number, end: number): number[] | null {
+    // 当要排序段为0
+    if (end - start < 1) {
+        return null
+    }
+    // 选择中介值 即第一个值
+    const target = array[start]
+    // 左、右索引
+    let l = start
+    let r = end
+    while(l < r) {
+        // 先从后向前找小于中介值的节点
+        while(l < r && array[r] >= target) {
+            r--
+        }
+        // 交换位置
+        if (l < r) {
+            array[l++] = array[r]
+        }
+        // 从前向后找大于中介值的节点
+        while(l < r && array[l] < target) {
+            l++
+        }
+        // 交换位置
+        if (l < r) {
+            array[r--] = array[l]
+        }
+    }
+    // 当结束时 l = r 此时此处即为中介值位置
+    array[l] = target
+    // 之后递归排序左边和右边数组
+    QuickSort2(array, start, l - 1)
+    QuickSort2(array, l + 1, end)
+    return array
+ }
+```
+
 
 
