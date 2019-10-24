@@ -65,3 +65,5 @@ Questions on LeetCode
 - [排序](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/Algorithm/Sort/Sort.md)
     - 插入排序  
     - 冒泡排序
+    - 选择排序
+    - 快速排序
