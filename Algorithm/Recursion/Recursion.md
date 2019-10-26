@@ -58,6 +58,31 @@ function FibonacciWithMemory(n: number, memory: number[]): number {
 但同时，因为存在重叠，并且在计算大数时调用次数过多，因此斐波那契数列其实也并不是完美适合于递归的，每一次函数的调用在内存中都要分配空间，然而每个进程中的栈的容量是有限的，递归层次过多就会造成溢出。因此也可以使用动态规划的方法来实现斐波那契数列
 
 ```typescript
-
+/**
+ * 使用非递归的动态规划实现斐波那契数列
+ * @param {number} n 
+ * @return {number}
+ */
+function Fibonacci(n: number): number {
+    if (n < 2) {
+        return n
+    }
+    // 记录索引值
+    let i = 2
+    // 记录前一个值
+    let pre = 1
+    // 记录当前值
+    let current = 1
+    // 记录结果
+    let result = 0
+    while(i++ < n) {
+        result = pre + current
+        pre = current
+        current = result
+    }
+    return result
+}
 ```
+
+## 
 
