@@ -5,37 +5,37 @@ Questions on LeetCode
 ## 数据结构
 - [二叉树](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/DataStructure/BinaryTree/BinaryTree.md)
     - 二叉树的实现
-    - 对称二叉树
+    - 对称二叉树 ｜ LeetCode[101]
     - 二叉树镜像
     - 检测二叉平衡树
     - 二叉树的层次遍历
     - 根据先序遍历和中序遍历结果重建二叉树
     - 根据中序遍历和后序遍历结果重建二叉树
     - 路径总和
-    - 二叉树展开为链表
+    - 二叉树展开为链表 | LeetCode [114]
 
 - [链表](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/DataStructure/LinkList/LinkList.md)
     - 链表的实现
     - 链表的查询，插入，删除
     - 链表的正向遍历与反向遍历
-    - 反转链表
-    - 合并链表
-    - 删除链表的倒数第N个节点
-    - 链表节点交换
-    - 分隔链表
-    - 反转链表 II
-    - 重排链表
+    - 反转链表 | LeetCode [206]
+    - 合并链表 | LeetCode [21]
+    - 删除链表的倒数第N个节点 | LeetCode [19]
+    - 链表节点交换 | LeetCode [24]
+    - 分隔链表 | LeetCode [86]
+    - 反转链表 II | LeetCode [206]
+    - 重排链表 | LeetCode [143]
 
 - [栈](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/DataStructure/Stack/Stack.md)
     - 栈的实现
     - 栈的基础操作
-    - 栈的入序和出序序列匹配检测
+    - 栈的入序和出序序列匹配检测 ｜ LeetCode [946]
 
 - [队列](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/DataStructure/Queue/Queue.md)
     - 队列的实现
     - 队列的基础操作
-    - 循环队列的实现和基础操作
-    - 循环双端队列
+    - 循环队列的实现和基础操作 | LeetCode [622]
+    - 循环双端队列 | LeetCode [641]
 
 - [堆](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/DataStructure/Heap/Heap.md)
     - 堆的实现
@@ -71,4 +71,9 @@ Questions on LeetCode
     - 堆排序
 
 - [递归](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/Algorithm/Recursion/Recursion.md)
-    - 斐波那契数列
+    - 斐波那契数列 | LeetCode [509]
+
+- [动态规划](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/Algorithm/DynamicProgramming/DynamicProgramming.md)
+    - 斐波那契数列 ｜ LeetCode [509]
+    - 泰波那契数列 | LeetCode [1137]
+    - 杨辉三角 | LeetCode [118]
