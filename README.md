@@ -72,6 +72,8 @@ Questions on LeetCode
 
 - [递归](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/Algorithm/Recursion/Recursion.md)
     - 斐波那契数列 | LeetCode [509]
+    - 爬楼梯 | LeetCode [70]
+    - Pow 「求x的n次幂」 | LeetCode [50]
 
 - [动态规划](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/Algorithm/DynamicProgramming/DynamicProgramming.md)
     - 斐波那契数列 ｜ LeetCode [509]
