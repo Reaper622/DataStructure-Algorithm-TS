@@ -134,3 +134,36 @@ function ClimbStairsWithMemory(n: number, memory: number[]) :number {
 }
 ```
 
+## Pow
+
+> 此部分代码在 Pow.ts 中
+
+手动实现一个求幂的函数，同时要求尽可能少的利用调用栈，我们可以通过每次将`Pow(x,n)`变为`Pow(x^2, n/2)`来计算，能够指数级地减少调用的栈。
+
+```typescript
+/**
+ * 实现求幂的功能
+ * @param {number} x 
+ * @param {number} n 
+ */
+function Pow(x: number, n: number): number {
+    // 对特殊情况和边界进行处理
+    if (n === 0) {
+        return 1
+    } else if (n === 1) {
+        return x
+    }
+    // 如果指数为负数
+    if (n < 0) {
+        x = 1/x
+        n = -n
+    }
+
+    if (n % 2 === 0) {
+        return Pow(x*x, n/2)
+    } else {
+        return Pow(x*x, Math.floor(n/2))*x
+    }
+}
+```
+
