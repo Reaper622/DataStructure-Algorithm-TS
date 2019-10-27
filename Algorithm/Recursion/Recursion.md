@@ -84,5 +84,53 @@ function Fibonacci(n: number): number {
 }
 ```
 
-## 
+## 爬楼梯
+
+> 此部分代码在 ClimbStairs.ts 中
+
+假设你正在爬楼梯。需要 *n* 阶你才能到达楼顶。
+
+每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
+
+我们使用递归的解法，其实这和 斐波那契数列很像，后面的结果依赖于前面的结果。比如我们要上十层台阶，因为一次只能上一层或者两层台阶，那么到达第十层台阶的方法就是**第八层台阶的上法**和**第九层台阶的上法**，依次方法递推，一直到边界 「一层台阶」和「两层台阶」，然后根据结果一步步计算就可以得到第十层台阶的上法。
+
+```typescript
+/**
+ * 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
+ * 每次你可以爬 1 或 2 个台阶，求有多少种方法到达楼顶
+ * 递归实现爬楼梯问题
+ * @param {number} n 
+ * @return {number}
+ */
+function ClimbStairs (n: number): number {
+    if (n <= 2) {
+        return n
+    } else {
+        return ClimbStairs(n-1) + ClimbStairs(n-2)
+    }
+}
+```
+
+我们直接使用递归也会存在大量的**重复计算**,因此我们可以引入记忆化来优化算法。
+
+```typescript
+/**
+ * 使用记忆化存储避免重复计算
+ * @param {number} n
+ * @param {number[]} memory
+ * @return {number}
+ */
+function ClimbStairsWithMemory(n: number, memory: number[]) :number {
+    if (!memory) {
+        memory = []
+    }
+    if (n <= 2) {
+        return n
+    }
+    if (!memory[n]) {
+        memory[n] = ClimbStairsWithMemory(n-1, memory) + ClimbStairsWithMemory(n-2, memory)
+    }
+    return memory[n]
+}
+```
 
