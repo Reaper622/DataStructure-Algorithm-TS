@@ -105,3 +105,59 @@ function YanghuiTriangle (n: number) {
 }
 ```
 
+## 打家劫舍
+
+> 此部分代码在 Theif.ts 中
+
+你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金，影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统，如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。
+
+给定一个代表每个房屋存放金额的非负整数数组，计算你在不触动警报装置的情况下，能够偷窃到的最高金额。
+
+例如输入`[2,7,9,3,1]` 则会返回`12`，即进入 1号房屋、三号房屋和五号房屋得到的最高金额。
+
+```typescript
+/**
+ * 打家劫舍
+ * @param {number[]} houses 每家能得到多少钱
+ * @return {number}
+ */
+function Rob(houses: number[]): number {
+    const len = houses.length
+    // 特殊情况 只有一个房子
+    if(len <= 1) {
+        return houses[len - 1] ? houses[len - 1] : 0
+    }
+    // 记录到第几家可以获得的最高价值
+    let arr = [houses[0], Math.max(houses[0], houses[1])]
+    for(let i = 2; i < len; i++) {
+        arr[i] = Math.max(arr[i-2]+ houses[i], arr[i-1])
+    }
+    // 获得能得到的最高价值
+    return arr[len - 1]
+}
+```
+
+## 打家劫舍 II
+
+> 此部分代码在 Theif.ts 中
+
+与上题相同，只是此时的小区的房子是一个环形，意味着「最后一个」房子和「第一个」房子也是相连的。此时我们可以将问题分解。即我们可以将问题分成求不带最后一个房子的最大值和不带第一个房子的最大者，最后取其中较大者即可。
+
+```typescript
+/**
+ * 打家劫舍 II
+ * @param {number[]} houses 每家能得到多少钱
+ * @return {number}
+ */
+function Rob2(houses: number[]): number {
+    // 特殊情况 只有一个房子
+    if (houses.length <= 1) {
+        return houses[0] ? houses[0] : 0
+    }
+    // 分成两个问题 求houses[0 - n-1] 和 houses[1, n]的较大者
+    let arr1 = houses.slice(0, -1)
+    let arr2 = houses.slice(1)
+    return Math.max(Rob(arr1), Rob(arr2)) //Rob的定义在上部
+}
+```
+

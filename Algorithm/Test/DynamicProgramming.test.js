@@ -1,5 +1,6 @@
 import Tribonacci from '../DynamicProgramming/Tribonacci'
 import {YanghuiTriangle} from '../DynamicProgramming/YanghuiTriangle'
+import {Rob, Rob2} from '../DynamicProgramming/Theif'
 
 
 test('Tribonacci', () => {
@@ -14,4 +15,9 @@ test('YanghuiTriangle', () => {
      [1,3,3,1],
     [1,4,6,4,1]
    ])
+})
+
+test('Theif', () => {
+    expect(Rob([2,7,9,3,1])).toBe(12)
+    expect(Rob2([2,7,9,3,1])).toBe(11)
 })
