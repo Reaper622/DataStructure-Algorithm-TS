@@ -2,6 +2,8 @@
 
 > 对问题求解时，总是做出当前最好的做法。「即不实在整体的情况下考虑，而是做局部最优解」
 
+`贪心算法`和`动态规划`的不同之处在于：`贪心算法`对于它的每个子问题的解决方案都会做出选择，不能回退，`动态规划`则会保存之前的元素案结果，根据当前结果堆当前进行选择，存在回退功能。
+
 适用场景：
 
 - 所求问题能够分解为子问题。
@@ -46,7 +48,7 @@ function maxProfitOnce (prices: number[]): number {
 
 ## 买卖股票的最佳时机 II
 
-> 此部分代码在 stock.ts
+> 此部分代码在 stock.ts 中
 
 大体与上题相似，只是这次不限制购买次数，为了获取最大利益，可以尽可能地完成更多的交易。可以尽可能完成更多的交易。
 
@@ -72,6 +74,35 @@ function maxProfitMore (prices: number[]): number {
     }
 
     return profit
+}
+```
+
+## 买卖股票的最佳时机（含手续费）
+
+> 此部分代码在 stock.ts 中
+
+大体还是如同第一题，但是此次增加了非负整数`fee`作为交易股票的手续费用。此时我们依旧可以无限次地进行交易，但一次交易就要付手续费。
+
+这次我们借助一部分动态规划的思想，我们保存两个变量`cash`和`hold`来分别表示不持有股票时的最大利润和持有股票时的最大利润，最后完成最后一笔交易后我们返回不持有股票时的最大利润即可。
+
+```typescript
+/**
+ * 买卖股票的最佳时机 含手续费
+ * @param {number[]} prices 
+ * @param {number} fee 
+ */
+function maxProfitWithFee (prices: number[], fee: number): number {
+    // 定义变量存储当我们不持有股票的最大利润
+    let cash = 0
+    // 定义变量存储当我们持有股票时最大利润
+    let hold = -prices[0]
+    for(let i = 1; i < prices.length; i++) {
+        // 当天可选择不进行交易或者卖出手头持有股票变现
+        cash = Math.max(cash, hold + prices[i] - fee)
+        // 当天可选择不急行交易或者购入股票
+        hold = Math.max(hold, cash - prices[i])
+    }
+    return cash
 }
 ```
 

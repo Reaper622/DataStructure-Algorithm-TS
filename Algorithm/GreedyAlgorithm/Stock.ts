@@ -38,4 +38,23 @@ function maxProfitMore (prices: number[]): number {
     return profit
 }
 
-export {maxProfitOnce, maxProfitMore}
+/**
+ * 买卖股票的最佳时机 含手续费
+ * @param {number[]} prices 
+ * @param {number} fee 
+ */
+function maxProfitWithFee (prices: number[], fee: number): number {
+    // 定义变量存储当我们不持有股票的最大利润
+    let cash = 0
+    // 定义变量存储当我们持有股票时最大利润
+    let hold = -prices[0]
+    for(let i = 1; i < prices.length; i++) {
+        // 当天可选择不进行交易或者卖出手头持有股票变现
+        cash = Math.max(cash, hold + prices[i] - fee)
+        // 当天可选择不急行交易或者购入股票
+        hold = Math.max(hold, cash - prices[i])
+    }
+    return cash
+}
+
+export {maxProfitOnce, maxProfitMore, maxProfitWithFee}
