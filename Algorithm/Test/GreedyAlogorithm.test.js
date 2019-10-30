@@ -1,4 +1,5 @@
 import {maxProfitOnce, maxProfitMore, maxProfitWithFee} from '../GreedyAlgorithm/Stock'
+import { DeliverBiscuits } from '../GreedyAlgorithm/Biscuits'
 
 test('maxProfit', () => {
     expect(maxProfitOnce([7,1,5,3,6,4])).toBe(5)
@@ -6,3 +7,9 @@ test('maxProfit', () => {
     expect(maxProfitMore([7,1,5,3,6,4])).toBe(7)
     expect(maxProfitWithFee([1, 3, 2, 8, 4, 9], 2)).toBe(8)
 })
+
+test('Biscuit', () => {
+    expect(DeliverBiscuits([1,2,3], [1,1])).toBe(1)
+    expect(DeliverBiscuits([1,2,3], [1,2])).toBe(2)
+    expect(DeliverBiscuits([1,2,3,4], [3,3,3])).toBe(3)
+}) 

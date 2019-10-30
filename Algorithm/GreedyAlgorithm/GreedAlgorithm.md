@@ -106,3 +106,37 @@ function maxProfitWithFee (prices: number[], fee: number): number {
 }
 ```
 
+## 分发饼干
+
+> 此部分代码在 Biscuits.ts中
+
+假设我们是一位家长，我们现在要给一堆孩子分饼干，不同的孩子有不同的胃口，不同的饼干有不同的分量，当这个饼干的分量大于该孩子的胃口时，这个孩子才会得到满足，我们要尽可能多的满足孩子，得到能满足的孩子的最大数值。
+
+```typescript
+/**
+ * 分发饼干，尽可能多的满足孩子
+ * @param {number[]} children 孩子们的胃口值
+ * @param {number[]} biscuits 饼干的大小
+ */
+function DeliverBiscuits (children: number[], biscuits: number[]): number {
+    // 对饼干和孩子胃口进行排序「从小到大」
+    children = children.sort((a,b) => a - b)
+    biscuits = biscuits.sort((a,b) => a - b)
+    // 满足孩子的总量
+    let result = 0;
+    // 分别定义孩子和饼干的指针
+    let chi = 0
+    let bis = 0
+    while(chi < children.length && bis < biscuits.length) {
+        // 优先满足孩子
+        if (children[chi] <= biscuits[bis]) {
+            result++
+            chi++
+        }
+        // 如果当前不满足孩子 向后寻找更大的饼干满足，满足孩子也向后开始下一块饼干
+        bis++
+    }
+    return result
+}
+```
+
