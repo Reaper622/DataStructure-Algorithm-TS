@@ -13,7 +13,8 @@ function BinarySearch(nums, target) {
     var mid = 0;
     // 循环查找
     while (low <= high) {
-        mid = Math.floor((low + high) / 2);
+        // 防止 low + high 过大
+        mid = low + Math.floor((high - low) / 2);
         if (target === nums[mid]) {
             return mid;
         }
