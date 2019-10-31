@@ -81,3 +81,12 @@ Questions on LeetCode
     - 杨辉三角 | LeetCode [118]
     - 打家劫舍 | LeetCode [198]
     - 打家劫舍 II | LeetCode [213]
+- [贪心算法](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/Algorithm/GreedyAlgorithm/GreedAlgorithm.md)
+    - 买卖股票的最佳时机 | LeetCode [121]
+    - 买卖股票的最佳时机II | LeetCode [122]
+    - 买卖股票的最佳时机（含手续费） | LeetCode [714]
+    - 分发饼干 | LeetCode [455]
+- [二分查找](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/Algorithm/Search/Search.md)
+    - 二分查找的实现 | LeetCode [704]
+    - 二分求解`x`的平方根 | LeetCode [69]
+    - 搜索旋转排序数组 | LeetCode [33]
