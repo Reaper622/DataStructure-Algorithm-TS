@@ -90,3 +90,5 @@ Questions on LeetCode
     - 二分查找的实现 | LeetCode [704]
     - 二分求解`x`的平方根 | LeetCode [69]
     - 搜索旋转排序数组 | LeetCode [33]
+    - 寻找峰值 | LeetCode [162]
+    - 寻找旋转排序数组中的最小值 | LeetCode [153]
