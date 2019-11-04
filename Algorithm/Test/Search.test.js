@@ -4,6 +4,7 @@ import {GetIndexFromRotateArray} from '../Search/GetIndexFromRotateArray'
 import {FindPeakElement} from '../Search/FindPeakElement'
 import {FindMinInRotateArray} from '../Search/FindMinInRotateArray'
 import {SearchRange} from '../Search/SearchRange'
+import {FindClosestElements} from '../Search/FindClosestElements'
 
 test('BinarySearch', () => {
     expect(BinarySearch([-1,0,3,5,9,12], 9)).toBe(4)
@@ -29,4 +30,8 @@ test('FindMin', () => {
 test('SearchRange', () => {
     expect(SearchRange([5,7,7,8,8,10], 8)).toEqual([3,4])
     expect(SearchRange([5,7,7,8,8,10], 6)).toEqual([-1,-1])
+})
+
+test('FindClosestElements', () => {
+    expect(FindClosestElements([1,2,3,4,5], 4, 3)).toEqual([1,2,3,4])
 })
