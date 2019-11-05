@@ -5,6 +5,7 @@ import {FindPeakElement} from '../Search/FindPeakElement'
 import {FindMinInRotateArray} from '../Search/FindMinInRotateArray'
 import {SearchRange} from '../Search/SearchRange'
 import {FindClosestElements} from '../Search/FindClosestElements'
+import {NextGreatestLetter} from '../Search/NextGreatestLetter'
 
 test('BinarySearch', () => {
     expect(BinarySearch([-1,0,3,5,9,12], 9)).toBe(4)
@@ -34,4 +35,10 @@ test('SearchRange', () => {
 
 test('FindClosestElements', () => {
     expect(FindClosestElements([1,2,3,4,5], 4, 3)).toEqual([1,2,3,4])
+})
+
+test('NextGreatestLetter', () => {
+    expect(NextGreatestLetter(['c', 'f', 'j'], 'a')).toBe('c')
+    expect(NextGreatestLetter(['c', 'f', 'j'], 'd')).toBe('f')
+    expect(NextGreatestLetter(['c', 'f', 'j'], 'g')).toBe('j')
 })
