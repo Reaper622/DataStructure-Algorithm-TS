@@ -94,3 +94,4 @@ Questions on LeetCode
     - 寻找旋转排序数组中的最小值 | LeetCode [153]
     - 在排序数组中查找元素的第一个和最后一个位置 | LeetCode [34]
     - 找到K个最接近的元素 | LeetCode [658]
+    - 寻找比目标字母大的最小字母 | LeetCode [744]
