@@ -40,6 +40,9 @@ Questions on LeetCode
 - [堆](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/DataStructure/Heap/Heap.md)
     - 堆的实现
     - 堆的基础操作
+- [数组](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/DataStructure/Array/Array.md)
+    - 和为Sum的两个数字
+    - 和为Sum的连续整数序列
 ## 算法
 
 #### 时间复杂度
