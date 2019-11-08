@@ -85,5 +85,144 @@ function FindContinousSequence(sum: number): number[] {
 }
 ```
 
+## N数之和问题
 
+> 主要考虑如何相比于暴力解法降低时间复杂度。
+
+### 两数之和
+
+> 此部分代码在 SumTwoNumbers.ts 中
+
+给定一个整数数组 `nums` 和一个目标值 `target`，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。
+
+```typescript
+/**
+ * 给定一个整数数组 arr 和一个目标值 target，在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。
+ * 
+ * @param {number[]} arr 
+ * @param {number} target 
+ * @return {number[]}
+ */
+function SumTwoNumbers (arr: number[], target: number ):number[]  {
+  let len:number = arr.length;
+  let result: number[] = [];
+  for(let i = 0; i < len-1; i++) {
+    for(let j = i+1; j < len; j++){
+      if(arr[i] + arr[j] === target) {
+        result.push(i,j);
+      }
+    }
+  }
+  return result;
+}
+```
+
+### 三数之和
+
+> 此部分代码在 SumThreeNumbers.ts 中
+
+给定一个包含 n 个整数的数组 arr，判断 arr 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？找出所有满足条件且不重复的三元组。
+
+```typescript
+/**
+ * 给定一个包含n个整数的数组，找出其中和为0的不重复的三元组
+ * @param {number[]} arr 
+ * @return {number[]}
+ */
+function SumThreeNumbers (arr: number[]): number[][] {
+    // 存储结果
+    const result = []
+    // 首先进行排序，便于去重
+    arr.sort((a,b) => a-b)
+    for(let i = 0; i < arr.length; i++) {
+        // 跳过重复
+        if (i && arr[i] === arr [i - 1]) {
+            continue
+        }
+        // 从此位向后为寻找数组 找到 left 和 right 索引加上 i 位为 所求目标值
+        let left = i + 1
+        let right = arr.length - 1
+        while (left < right) {
+            let sum = arr[i] + arr[left] + arr[right]
+            // 大于0 右变量向左移动
+            if(sum > 0) {
+                right--
+            }
+            // 小于0 左变量向右移动
+            else if (sum < 0) {
+                left++
+            }
+            // 符合条件存储结果
+            else {
+                result.push([arr[i], arr[left], arr[right]])
+                left++
+                right--
+                // 跳过重复值
+                while(arr[left] === arr[left - 1]) {
+                    left++
+                }
+                while(arr[right] === arr[right + 1]) {
+                    right--
+                }
+            }
+        }
+    }
+    return result
+}
+```
+
+### 四数之和
+
+> 此部分代码在 SumFourNumbers.ts
+
+给定一个包含 n 个整数的数组 arr 和一个目标值 target，判断 arr 中是否存在四个元素 a，b，c 和 d ，使得 a + b + c + d 的值与 target 相等？找出所有满足条件且不重复的四元组。
+
+```typescript
+/**
+ * 给定一个包含 n 个整数的数组 arr 和一个目标值 target，
+ * 判断 arr 中是否存在四个元素 a，b，c 和 d ，使得 a + b + c + d 的值与 target 相等？找出所有满足条件且不重复的四元组。
+ * @param {number[]} arr 
+ * @param {number} target 
+ */
+function SumFourNumbers(arr: number[], target: number): number[][] {
+        // 存储结果
+        const result = []
+        if (arr.length < 4) {
+            return result
+        }
+        // 排序，便于去重
+        arr.sort((a,b) => a-b)
+        for(let i = 0; i < arr.length - 3; i++) {
+            // 跳过重复
+            if (i > 0 && arr[i] === arr[i - 1]) {
+                continue
+            }
+            // 如果当前连续四个已经超过目标值 则后面已无符合条件的子序列，直接退出循环
+            if (arr[i] + arr[i + 1] + arr[i + 2] + arr[i + 3] > target) {
+                break
+            }
+            // 下部分类似于三数之和
+            for(let j = i + 1; j < arr.length - 2; j++) {
+                // 去除重复情况
+                if (j > i + 1 && arr[j] === arr[j - 1]) {
+                    continue
+                }
+                let left = j + 1
+                let right = arr.length - 1
+                while (left < right) {
+                    let sum = arr[i] + arr[j] + arr[left] + arr[right]
+                    if (sum === target) {
+                        result.push([arr[i], arr[j], arr[left], arr[right]])
+                    } 
+                    if (sum <= target) {
+                        while (arr[left] === arr[++left]);
+                    } else {
+                        while (arr[right] === arr[--right]);
+                    }
+                }
+            }
+        }
+        return result
+}
+```
 
