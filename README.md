@@ -43,6 +43,10 @@ Questions on LeetCode
 - [数组](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/DataStructure/Array/Array.md)
     - 和为Sum的两个数字
     - 和为Sum的连续整数序列
+    - 两数之和 | LeetCode [1]
+    - 三数之和 | LeetCode [15]
+    - 四数之和 | LeetCode [18]
+
 ## 算法
 
 #### 时间复杂度
