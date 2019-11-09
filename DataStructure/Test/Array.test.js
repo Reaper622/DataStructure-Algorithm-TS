@@ -3,6 +3,7 @@ import {FindContinousSequence} from '../Array/FindContinousSequence'
 import {SumTwoNumbers} from '../Array/SumTwoNumbers'
 import {SumThreeNumbers} from '../Array/SumThreeNumbers'
 import {SumFourNumbers} from '../Array/SumFourNumbers'
+import {PrintMatrix} from '../Array/PrintMatrix'
 
 test('FindNumWithSum', () => {
     expect(FindNumWithSum([1,2,3,4,5,6,7,8], 11)).toEqual([3,8])
@@ -23,3 +24,8 @@ test('SumThreeNumbers', () => {
 test('SumFourNumbers', () => {
     expect(SumFourNumbers([-1,0,-5,-2,-2,-4,0,1,-2],-9)).toEqual([[-5,-4,-1,1],[-5,-4,0,0],[-5,-2,-2,0],[-4,-2,-2,-1]])
 })
+
+test('PrintMartix', () => {
+    expect(PrintMatrix([[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]])).toEqual([1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10])
+})
+
