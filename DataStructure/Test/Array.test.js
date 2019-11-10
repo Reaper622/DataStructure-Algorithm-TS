@@ -4,6 +4,7 @@ import {SumTwoNumbers} from '../Array/SumTwoNumbers'
 import {SumThreeNumbers} from '../Array/SumThreeNumbers'
 import {SumFourNumbers} from '../Array/SumFourNumbers'
 import {PrintMatrix} from '../Array/PrintMatrix'
+import {PrintDiagonal} from '../Array/PrintDiagonal'
 
 test('FindNumWithSum', () => {
     expect(FindNumWithSum([1,2,3,4,5,6,7,8], 11)).toEqual([3,8])
@@ -27,5 +28,9 @@ test('SumFourNumbers', () => {
 
 test('PrintMartix', () => {
     expect(PrintMatrix([[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]])).toEqual([1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10])
+})
+
+test('PrintDiagonal', () => {
+    expect(PrintDiagonal([[ 1, 2, 3 ],[ 4, 5, 6 ],[ 7, 8, 9 ]])).toEqual([1,2,4,7,5,3,6,8,9])
 })
 
