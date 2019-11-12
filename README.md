@@ -48,6 +48,8 @@ Questions on LeetCode
     - 四数之和 | LeetCode [18]
     - 顺时针打印矩阵
     - 对角线遍历矩阵 | LeetCode [498]
+    - 数组中出现次数超过数组一半的数字
+    - 连续子数组的最大和
 
 ## 算法
 
