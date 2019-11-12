@@ -6,6 +6,7 @@ import {SumFourNumbers} from '../Array/SumFourNumbers'
 import {PrintMatrix} from '../Array/PrintMatrix'
 import {PrintDiagonal} from '../Array/PrintDiagonal'
 import {MoreThanHalfNum} from '../Array/MoreThanHalf'
+import {FindGreatestSum} from '../Array/FindGreatestSum'
 
 test('FindNumWithSum', () => {
     expect(FindNumWithSum([1,2,3,4,5,6,7,8], 11)).toEqual([3,8])
@@ -37,5 +38,9 @@ test('PrintDiagonal', () => {
 
 test('MoreThanHalf', () => {
     expect(MoreThanHalfNum([1,2,2,2,2,3,4])).toBe(2)
+})
+
+test('FindGreatestSum', () => {
+    expect(FindGreatestSum([6,-3,-2,7,-15,1,2,2])).toBe(8)
 })
 
