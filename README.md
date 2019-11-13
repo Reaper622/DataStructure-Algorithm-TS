@@ -50,6 +50,8 @@ Questions on LeetCode
     - 对角线遍历矩阵 | LeetCode [498]
     - 数组中出现次数超过数组一半的数字
     - 连续子数组的最大和
+- [字符串](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/DataStructure/String/String.md)
+    - 最长公共前缀 | LeetCode [14]
 
 ## 算法
 
