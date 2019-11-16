@@ -53,6 +53,7 @@ Questions on LeetCode
 - [字符串](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/DataStructure/String/String.md)
     - 最长公共前缀 | LeetCode [14]
     - 计数二进制子串 | LeetCode [696]
+    - 二进制求和 | LeetCode [67]
 
 ## 算法
 
