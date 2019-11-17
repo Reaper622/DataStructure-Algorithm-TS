@@ -7,6 +7,7 @@ import {PrintMatrix} from '../Array/PrintMatrix'
 import {PrintDiagonal} from '../Array/PrintDiagonal'
 import {MoreThanHalfNum} from '../Array/MoreThanHalf'
 import {FindGreatestSum} from '../Array/FindGreatestSum'
+import {ReverseString} from '../Array/Reverse'
 
 test('FindNumWithSum', () => {
     expect(FindNumWithSum([1,2,3,4,5,6,7,8], 11)).toEqual([3,8])
@@ -44,3 +45,6 @@ test('FindGreatestSum', () => {
     expect(FindGreatestSum([6,-3,-2,7,-15,1,2,2])).toBe(8)
 })
 
+test('ReverseString', () => {
+    expect(ReverseString(["h","e","l","l","o"])).toEqual(["o","l","l","e","h"])
+})
