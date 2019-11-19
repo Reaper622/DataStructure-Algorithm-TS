@@ -8,6 +8,7 @@ module.exports = {
         nav: [
             {text: '数据结构', link: '/ds/'},
             {text: '算法', link: '/al/'},
+            {text: '设计模式', link: 'https://reaperlee.cn/dp/'},
             {text: '博客', link: 'https://reaperlee.cn'},
         ],
         // 为以下路由添加侧边栏
