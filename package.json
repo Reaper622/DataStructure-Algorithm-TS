@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test:al": "jest ./Algorithm/Test",
-    "test:ds": "jest ./DataStructure/Test"
+    "test:ds": "jest ./DataStructure/Test",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
@@ -35,7 +37,8 @@
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-node": "8.0.0",
     "eslint-plugin-promise": "4.0.1",
-    "eslint-plugin-standard": "4.0.0"
+    "eslint-plugin-standard": "4.0.0",
+    "vuepress": "^1.2.0"
   },
   "directories": {
     "test": "test"
