@@ -81,8 +81,7 @@ Questions on LeetCode
 一个程序执行时除了需要存储空间和存储本身所使用的指令、常数、变量和输入数据外，还需要一些对数据进行操作的工作单元和存储一些为实现计算所需信息的辅助空间。
 
 
-### 算法目录
-#### [排序](./al/Sort.md)
+### [排序](./al/Sort.md)
     - 插入排序  
     - 冒泡排序
     - 选择排序
@@ -90,23 +89,23 @@ Questions on LeetCode
     - 归并排序
     - 堆排序
 
-#### [递归](./al/Recursion.md)
+### [递归](./al/Recursion.md)
     - 斐波那契数列 | LeetCode [509]
     - 爬楼梯 | LeetCode [70]
     - Pow 「求x的n次幂」 | LeetCode [50]
 
-#### [动态规划](./al/DynamicProgramming.md)
+### [动态规划](./al/DynamicProgramming.md)
     - 斐波那契数列 ｜ LeetCode [509]
     - 泰波那契数列 | LeetCode [1137]
     - 杨辉三角 | LeetCode [118]
     - 打家劫舍 | LeetCode [198]
     - 打家劫舍 II | LeetCode [213]
-#### [贪心算法](./al/GreedAlgorithm.md)
+### [贪心算法](./al/GreedAlgorithm.md)
     - 买卖股票的最佳时机 | LeetCode [121]
     - 买卖股票的最佳时机II | LeetCode [122]
     - 买卖股票的最佳时机（含手续费） | LeetCode [714]
     - 分发饼干 | LeetCode [455]
-#### [二分查找](./al/Search.md)
+### [二分查找](./al/Search.md)
     - 二分查找的实现 | LeetCode [704]
     - 二分求解`x`的平方根 | LeetCode [69]
     - 搜索旋转排序数组 | LeetCode [33]
