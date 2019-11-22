@@ -88,6 +88,39 @@ function FindContinousSequence(sum: number): number[] {
 }
 ```
 
+###移动零
+
+>  此部分代码在 MoveZero.ts 中
+
+给定一个数组 `nums`，编写一个函数将所有 `0` 移动到数组的末尾，同时保持非零元素的相对顺序。必须在原数组上操作，不能拷贝额外的数组。
+
+```typescript
+/**
+ * 将0移动到数组后部，同时内部不为0的元素相对位置不变。
+ * @param {number[]} nums
+ * @return {number[]} 
+ */
+function MoveZero (nums: number[]): number[] {
+    let len = nums.length
+    // 使用双指针法
+    let i = 0, j = 0
+    while (i < len) {
+        // 非零元素提前放入
+        if (nums[i] !== 0) {
+            nums[j++] = nums[i]
+        }
+        i++
+    }
+    // 填充剩余的0
+    while(j < len) {
+        nums[j++] = 0
+    }
+    return nums
+}
+```
+
+
+
 ## N数之和问题
 
 > 主要考虑如何相比于暴力解法降低时间复杂度。
