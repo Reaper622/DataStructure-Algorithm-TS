@@ -4,7 +4,7 @@ Questions on LeetCode
 
 在线阅读地址： [数据结构和算法](https://reaperlee.cn/ds-al/)
 ## 数据结构
-- [二叉树](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/DataStructure/BinaryTree/BinaryTree.md)
+- [二叉树](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/ds/BinaryTree.md)
     - 二叉树的实现
     - 对称二叉树 ｜ LeetCode[101]
     - 二叉树镜像
@@ -15,7 +15,7 @@ Questions on LeetCode
     - 路径总和
     - 二叉树展开为链表 | LeetCode [114]
 
-- [链表](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/DataStructure/LinkList/LinkList.md)
+- [链表](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/ds/LinkList.md)
     - 链表的实现
     - 链表的查询，插入，删除
     - 链表的正向遍历与反向遍历
@@ -27,21 +27,21 @@ Questions on LeetCode
     - 反转链表 II | LeetCode [206]
     - 重排链表 | LeetCode [143]
 
-- [栈](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/DataStructure/Stack/Stack.md)
+- [栈](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/ds/Stack.md)
     - 栈的实现
     - 栈的基础操作
     - 栈的入序和出序序列匹配检测 ｜ LeetCode [946]
 
-- [队列](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/DataStructure/Queue/Queue.md)
+- [队列](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/ds/Queue.md)
     - 队列的实现
     - 队列的基础操作
     - 循环队列的实现和基础操作 | LeetCode [622]
     - 循环双端队列 | LeetCode [641]
 
-- [堆](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/DataStructure/Heap/Heap.md)
+- [堆](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/ds/Heap.md)
     - 堆的实现
     - 堆的基础操作
-- [数组](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/DataStructure/Array/Array.md)
+- [数组](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/ds/Array.md)
     - 和为Sum的两个数字
     - 和为Sum的连续整数序列
     - 两数之和 | LeetCode [1]
@@ -52,7 +52,7 @@ Questions on LeetCode
     - 数组中出现次数超过数组一半的数字
     - 连续子数组的最大和
     - 反转字符串 | LeetCode [344]
-- [字符串](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/DataStructure/String/String.md)
+- [字符串](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/ds/String.md)
     - 最长公共前缀 | LeetCode [14]
     - 计数二进制子串 | LeetCode [696]
     - 二进制求和 | LeetCode [67]
@@ -79,7 +79,7 @@ Questions on LeetCode
 
 
 ### 算法目录
-- [排序](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/Algorithm/Sort/Sort.md)
+- [排序](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/al/Sort.md)
     - 插入排序  
     - 冒泡排序
     - 选择排序
@@ -87,23 +87,23 @@ Questions on LeetCode
     - 归并排序
     - 堆排序
 
-- [递归](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/Algorithm/Recursion/Recursion.md)
+- [递归](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/al/Recursion.md)
     - 斐波那契数列 | LeetCode [509]
     - 爬楼梯 | LeetCode [70]
     - Pow 「求x的n次幂」 | LeetCode [50]
 
-- [动态规划](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/Algorithm/DynamicProgramming/DynamicProgramming.md)
+- [动态规划](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/al/DynamicProgramming.md)
     - 斐波那契数列 ｜ LeetCode [509]
     - 泰波那契数列 | LeetCode [1137]
     - 杨辉三角 | LeetCode [118]
     - 打家劫舍 | LeetCode [198]
     - 打家劫舍 II | LeetCode [213]
-- [贪心算法](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/Algorithm/GreedyAlgorithm/GreedAlgorithm.md)
+- [贪心算法](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/GreedyAlgorithm/GreedAlgorithm.md)
     - 买卖股票的最佳时机 | LeetCode [121]
     - 买卖股票的最佳时机II | LeetCode [122]
     - 买卖股票的最佳时机（含手续费） | LeetCode [714]
     - 分发饼干 | LeetCode [455]
-- [二分查找](https://github.com/Reaper622/DataStructure-Algorithm-TS/blob/master/Algorithm/Search/Search.md)
+- [二分查找](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/Search/Search.md)
     - 二分查找的实现 | LeetCode [704]
     - 二分求解`x`的平方根 | LeetCode [69]
     - 搜索旋转排序数组 | LeetCode [33]
