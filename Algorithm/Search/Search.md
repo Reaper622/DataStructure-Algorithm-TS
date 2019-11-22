@@ -8,6 +8,84 @@
 - 二分查找——使用循环或者递归每次比较后将查找空间变为原来的一半
 - 后处理——在剩余空间中确定可行的候选者
 
+## 二分查找的类型
+
+一般地二分查找有三种模板类型：
+
+类型一：
+
+```javascript
+// 预处理....
+left = 0, right = length - 1
+while(left <= right) {
+	mid = left + (right - left)/2
+	if (nums[mid] === target) {
+		return mid
+	} else if (nums[mid] < target) {
+    left = mid + 1
+  } else {
+    right = mid - 1
+  }
+}
+// 不需要后处理
+```
+
+`left <= right`
+
+- 二分查找的基础形式。
+- 查找条件可以不和元素的左右两侧进行比较进行确定「例如找特定值」
+- 不需要进行后处理，因为每一步都在寻找特定值，若执行到末尾，证明无次值。
+
+类型二:
+
+```JavaScript
+// 预处理...
+left = 0, right = length
+while (left < right) {
+  mid = left + (right - left) / 2
+  if (nums[mid] < target) {
+    left = mid + 1
+  } else {
+    right = mid
+  }
+}
+// left === right
+// 还有一种待处理情况
+// 进行后处理
+```
+
+`left < right`
+
+- 需要访问元素的直接右邻居。
+- 需要根据元素的右邻居来判断使用左子序列还是右子序列。
+- 保证查找空间中至少存在两个元素。
+- 需要进行后处理的情况：剩下一个元素时，循环 / 递归结束，判断此元素是否符合条件。
+
+类型三:
+
+```javascript
+// 预处理...
+left = 0, right = length - 1
+while (left + 1 < right) {
+  mid = left + (right - left) / 2
+  if (nums[mid] < target) {
+    left = mid
+  } else {
+    right = mid
+  }
+}
+// left + 1 === right
+// 两种待处理情况
+// 后处理.....
+```
+
+`left + 1 < right`
+
+- 需要访问元素的左右邻居。
+- 根据元素的邻居判定使用左子序列还是右子序列。
+- 保证查找空间中至少存在三个元素。
+- 需要进行后处理的情况：剩下两个元素时，循环/递归结束。需要判断剩余元素是否符合条件。
+
 ## 二分查找的实现
 
 > 此部分代码在 BinarySearch.ts 中
