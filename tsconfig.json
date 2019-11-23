@@ -1,11 +1,22 @@
 {
   
   "compilerOptins": {
+    // 严格模式, 强烈建议开启
+    "strict": true,
+    // 目标JS的版本
     "target": "es6",
+    // 编译过程中需要引入的库文件的列表
     "lib": ["esnext"],
+    // 是否允许编译JS文件
     "allowJs": false,
+    // 移除注释
     "removeComments": true,
-    "alwaysStrict": true
+    // 以严格模式解析 strict 默认开启 alwaysStrict
+    // "alwaysStrict": true,
+    // 不报告执行不到的代码错误
+    "allowUnreachableCode": true,
+    // 保留 const和 enum声明
+    "preserveConstEnums": false,
   },
   "exclude": ["node_modules"]
   
