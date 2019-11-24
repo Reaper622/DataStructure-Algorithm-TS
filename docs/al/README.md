@@ -57,3 +57,5 @@ sidebar: auto
     - 在排序数组中查找元素的第一个和最后一个位置 | LeetCode [34]
     - 找到K个最接近的元素 | LeetCode [658]
     - 寻找比目标字母大的最小字母 | LeetCode [744]
+### [二进制](./Binary.md)
+    - 二进制中1的个数 | LeetCode [191] | 剑指Offer [10]
