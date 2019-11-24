@@ -98,12 +98,12 @@ Questions on LeetCode
     - 杨辉三角 | LeetCode [118]
     - 打家劫舍 | LeetCode [198]
     - 打家劫舍 II | LeetCode [213]
-- [贪心算法](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/GreedyAlgorithm/GreedAlgorithm.md)
+- [贪心算法](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/al/GreedAlgorithm.md)
     - 买卖股票的最佳时机 | LeetCode [121]
     - 买卖股票的最佳时机II | LeetCode [122]
     - 买卖股票的最佳时机（含手续费） | LeetCode [714]
     - 分发饼干 | LeetCode [455]
-- [二分查找](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/Search/Search.md)
+- [二分查找](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/al/Search.md)
     - 二分查找的实现 | LeetCode [704]
     - 二分求解`x`的平方根 | LeetCode [69]
     - 搜索旋转排序数组 | LeetCode [33]
@@ -112,3 +112,5 @@ Questions on LeetCode
     - 在排序数组中查找元素的第一个和最后一个位置 | LeetCode [34]
     - 找到K个最接近的元素 | LeetCode [658]
     - 寻找比目标字母大的最小字母 | LeetCode [744]
+- [二进制](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/al/Binary.md)
+    - 二进制中1的个数 | LeetCode [191] | 剑指Offer [10]
