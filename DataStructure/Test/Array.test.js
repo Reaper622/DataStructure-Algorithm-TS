@@ -9,6 +9,7 @@ import {MoreThanHalfNum} from '../Array/MoreThanHalf'
 import {FindGreatestSum} from '../Array/FindGreatestSum'
 import {ReverseString} from '../Array/Reverse'
 import {MoveZero} from '../Array/MoveZero'
+import {ReorderOddEven} from '../Array/ReorderOddEven'
 
 test('FindNumWithSum', () => {
     expect(FindNumWithSum([1,2,3,4,5,6,7,8], 11)).toEqual([3,8])
@@ -52,4 +53,8 @@ test('ReverseString', () => {
 
 test('MoveZero', () => {
     expect(MoveZero([1,0,12,3,4,0,5,2])).toEqual([1,12,3,4,5,2,0,0])
+})
+
+test('ReorderOddEven', () => {
+    expect(ReorderOddEven([1,3,4,5,6,7,8])).toEqual([1,3,7,5,6,4,8])
 })
