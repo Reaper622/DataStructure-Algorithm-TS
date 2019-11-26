@@ -20,11 +20,12 @@ sidebar: auto
     - 链表的正向遍历与反向遍历
     - 反转链表 | LeetCode [206]
     - 合并链表 | LeetCode [21]
-    - 删除链表的倒数第N个节点 | LeetCode [19]
-    - 链表节点交换 | LeetCode [24]
+    - 删除链表的倒数第N个结点 | LeetCode [19]
+    - 链表结点交换 | LeetCode [24]
     - 分隔链表 | LeetCode [86]
     - 反转链表 II | LeetCode [206]
     - 重排链表 | LeetCode [143]
+    - 链表的中间结点 | LeetCode [876]
 
 ## [栈](./Stack.md)
     - 栈的实现

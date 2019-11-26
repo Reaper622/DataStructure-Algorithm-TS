@@ -90,7 +90,7 @@ class CircleQueue<T> {
         if (this.tail === this.head && this.tail === -1) {
             this.head++
         }
-        // 判断是否尾节点是否是队列最后一个节点，如果是，通过改变为第一个来实现循环
+        // 判断是否尾结点是否是队列最后一个结点，如果是，通过改变为第一个来实现循环
         this.tail = this.tail === this.k -1 ? 0 : this.tail + 1
         this.size++
         this.data[this.tail] = item
@@ -102,7 +102,7 @@ class CircleQueue<T> {
             return false
         }
         delete this.data[this.head]
-        // 头节点向后移动
+        // 头结点向后移动
         this.head = this.head === this.k - 1 ? 0 : this.head + 1
         this.size--
         // 如果清空后为空

@@ -4,17 +4,17 @@ sidebar: auto
 
 # 二叉树
 
-> 二叉树是一种典型的树状结构，二叉树是每个节点最多有两个子树的树结构，通常被称为“左子树”与“右子树”。
+> 二叉树是一种典型的树状结构，二叉树是每个结点最多有两个子树的树结构，通常被称为“左子树”与“右子树”。
 
 ## 二叉树的数据结构
 
-首先我们定义二叉树节点的数据结构
+首先我们定义二叉树结点的数据结构
 
 > 以下相关代码在 BinaryTree.ts 中
 
 ```typescript
 class TreeNode {
-    val: any //节点内容
+    val: any //结点内容
     left: TreeNode //左子树
     right: TreeNode // 右子树
 
@@ -33,24 +33,24 @@ class Tree <T> {
     root : TreeNode
 
     constructor (data: T[]){
-        // 临时存储所有节点，方便寻找父子节点
+        // 临时存储所有结点，方便寻找父子结点
         let nodeList : TreeNode[] = []
-        // 顶节点
+        // 顶结点
         let root : TreeNode
         for(let i = 0, len = data.length; i < len; i++) {
             let node = new TreeNode(data[i]);
             nodeList.push(node);
             
             if (i > 0) {
-                // 计算节点所在层级的指数 即每一层都是 2^k-1 个  k为层数 n = k -1
+                // 计算结点所在层级的指数 即每一层都是 2^k-1 个  k为层数 n = k -1
                 let n : number = Math.floor(Math.sqrt(i+1))
                 // 当前层的启始值
                 let q = Math.pow(2, n) - 1 // 索引值 减一
                 // 记录上一层的起始点
                 let p = Math.pow(2, n-1) - 1 //索引值 减一
-                // 找到当前节点的父节点
+                // 找到当前结点的父结点
                 let parent: TreeNode = nodeList[p + Math.floor((i - q) / 2)]
-                // 将当前节点和上一次节点做关联
+                // 将当前结点和上一次结点做关联
                 if (parent.left !== undefined) {
                     parent.right = node
                 } else {
@@ -68,7 +68,7 @@ class Tree <T> {
 
 ## 二叉树的中序遍历	
 
-遍历顺序 左子树 >> 节点 >> 右子树
+遍历顺序 左子树 >> 结点 >> 右子树
 
 ```typescript
 // 在 Tree 类中
@@ -84,7 +84,7 @@ inOrderTraversal (root : TreeNode, array : T[]) : T[] {
 
 ## 二叉树的先序遍历 
 
-遍历顺序 节点 >> 左子树 >> 右子树
+遍历顺序 结点 >> 左子树 >> 右子树
 
 ```typescript
 // 在 Tree 类中
@@ -100,7 +100,7 @@ public preOrderTraversal (root : TreeNode, array: T[]) : T[] {
 
  ##  二叉树的后序遍历 
 
-遍历顺序 左子树 >> 右子树 >> 节点
+遍历顺序 左子树 >> 右子树 >> 结点
 
 ```typescript
 // 在 Tree 类中
@@ -160,8 +160,8 @@ public minDepth (root: TreeNode) : number {
 对称二叉树的要求:
 
 - 根结点相等
-- 左子树的右节点和右子树的左节点相同。
-- 右子树的左节点和左子树的右节点相同。
+- 左子树的右结点和右子树的左结点相同。
+- 右子树的左结点和左子树的右结点相同。
 
 ```typescript
 import Tree, {TreeNode} from './BinaryTree'
@@ -169,9 +169,9 @@ import Tree, {TreeNode} from './BinaryTree'
 /**
  * 判断是否为对称二叉树
  * 对称二叉树条件为：
- * - 根节点相等
- * - 左子树的右节点和右子树的左节点相同
- * - 右子树的左节点和左子树的右节点相同
+ * - 根结点相等
+ * - 左子树的右结点和右子树的左结点相同
+ * - 右子树的左结点和左子树的右结点相同
  * 
  * @param {Tree} tree
  */
@@ -184,15 +184,15 @@ function isSymmetry (tree: Tree<Number>) : Boolean {
  * @param {TreeNode} node2
  */
 function isSymmetryTree (node1 : TreeNode, node2: TreeNode ) : Boolean {
-    // 如果两个节点都不存在
+    // 如果两个结点都不存在
     if (!node1 && !node2) {
         return true;
     } 
-    // 如果只有一个节点不存在
+    // 如果只有一个结点不存在
     else if (!node1 || !node2) {
         return false;
     }
-    // 如果节点值不相同
+    // 如果结点值不相同
     else if (node1.val !== node2.val) {
         return false;
     }
@@ -208,14 +208,14 @@ export default isSymmetry
 
 > 此部分代码在 Mirror.ts
 
-镜像即二叉树所有的的左右节点交换位置
+镜像即二叉树所有的的左右结点交换位置
 
 ```typescript
 import {TreeNode} from './BinaryTree'
 
 /**
  * 使一个二叉树变化为他的镜像
- * 即交换左右节点位置
+ * 即交换左右结点位置
  * 
  * @param {TreeNode} root 
  */
@@ -242,7 +242,7 @@ export default Mirror
 // 二叉树层次遍历
     public levelTraversal (root: TreeNode) : number[][] | number[] {
         if (!root) return []
-        // 使用 queue 来存储当前层级的节点
+        // 使用 queue 来存储当前层级的结点
         let result = [], queue = [root]
         while (queue.length) {
             let levelSize = queue.length
@@ -279,15 +279,15 @@ function buildTreeByPreAndIn (preorder: number[], inorder: number[]): TreeNode {
     if (!preorder.length && !inorder.length) {
         return null;
     }
-    // 前序遍历的第一个节点即为二叉树根节点
+    // 前序遍历的第一个结点即为二叉树根结点
     let root = new TreeNode(preorder[0])
-    // 获取根节点在中序序列中的位置
+    // 获取根结点在中序序列中的位置
     let position = inorder.indexOf(root.val)
-    // 中序遍历中根节点之前的节点为左子树节点
+    // 中序遍历中根结点之前的结点为左子树结点
     let midLeft = inorder.slice(0, position)
-    // 中序遍历中根节点之后的节点为右子树节点
+    // 中序遍历中根结点之后的结点为右子树结点
     let midRight = inorder.slice(position+1)
-    // 前序序列中根节点之后与中序遍历左子树节点相同长度为左子树
+    // 前序序列中根结点之后与中序遍历左子树结点相同长度为左子树
     let preLeft = preorder.slice(1, position + 1)
     // 前序序列中的右子树
     let preRight = preorder.slice(position + 1)
@@ -305,13 +305,13 @@ function buildTreeByPostAndIn (postOrder: number[], inOrder: number[]) : TreeNod
     if (!postOrder.length && !inOrder.length) {
         return null
     }
-    // 后序遍历的最后一个节点为根节点
+    // 后序遍历的最后一个结点为根结点
     let root = new TreeNode(postOrder[postOrder.length - 1])
-    // 获取根节点在中序遍历中的位置
+    // 获取根结点在中序遍历中的位置
     let position = inOrder.indexOf(root.val)
-    // 中序序列根节点之前的均为左子树
+    // 中序序列根结点之前的均为左子树
     let midLeft = inOrder.slice(0, position)
-    // 中序序列根节点之后的均为右子树
+    // 中序序列根结点之后的均为右子树
     let midRight = inOrder.slice(position+1)
     // 后序序列从前开始的左子树长度与中序序列相同
     let postLeft = postOrder.slice(0, position)
@@ -337,7 +337,7 @@ function buildTreeByPostAndIn (postOrder: number[], inOrder: number[]) : TreeNod
  */
 function RouteSum (root : TreeNode, sum : number) : boolean {
     const getSum =  (root: TreeNode, sum: number, total: number) : boolean => {
-        // 判断是否为叶子节点，若是叶子节点计算当前路径上的和
+        // 判断是否为叶子结点，若是叶子结点计算当前路径上的和
         if (!root.left && !root.right) {
             total += root.val
             if (total === sum) {
@@ -374,7 +374,7 @@ function RouteSum (root : TreeNode, sum : number) : boolean {
 
 ```typescript
 /**
- * 给定一个二叉树和一个目标和，找到所有从根节点到叶子节点路径总和等于给定目标和的路径。
+ * 给定一个二叉树和一个目标和，找到所有从根结点到叶子结点路径总和等于给定目标和的路径。
  * 
  * @param {TreeNode} root 
  * @param {number} sum 
@@ -383,7 +383,7 @@ function RouteSum (root : TreeNode, sum : number) : boolean {
  function RouteSumWithRoute(root: TreeNode, sum: number) : number[][] {
      let result = []
      const getSumRoute = (root: TreeNode, sum: number,total: number, array: number[] = []) => {
-         // 判断是否为叶子节点，若是叶子节点计算当前路径上的和
+         // 判断是否为叶子结点，若是叶子结点计算当前路径上的和
         if (!root.left && !root.right) {
             total += root.val
             
@@ -432,12 +432,12 @@ function TreeToList(root: TreeNode) : void {
         if (root.left === null) {
             root = root.right
         } else {
-            // 寻找左子树最右的节点
+            // 寻找左子树最右的结点
             let pre = root.left
             while (pre.right !== null) {
                 pre = pre.right
             }
-            // 将原来的右子树插入左子树最右边节点的右子树
+            // 将原来的右子树插入左子树最右边结点的右子树
             pre.right = root.right
             // 将左子树插入到右子树
             root.right = root.left

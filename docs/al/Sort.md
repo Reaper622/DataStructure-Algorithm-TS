@@ -163,7 +163,7 @@ function QuickSort2(array: number[], start:number, end: number): number[] | null
     let l = start
     let r = end
     while(l < r) {
-        // 先从后向前找小于中介值的节点
+        // 先从后向前找小于中介值的结点
         while(l < r && array[r] >= target) {
             r--
         }
@@ -171,7 +171,7 @@ function QuickSort2(array: number[], start:number, end: number): number[] | null
         if (l < r) {
             array[l++] = array[r]
         }
-        // 从前向后找大于中介值的节点
+        // 从前向后找大于中介值的结点
         while(l < r && array[l] < target) {
             l++
         }

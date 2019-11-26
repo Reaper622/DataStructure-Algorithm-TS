@@ -16,7 +16,7 @@ sidebar: auto
 
 > 此部分代码在 LinkList.ts 中
 
-首先我们定义链表内节点的数据结构
+首先我们定义链表内结点的数据结构
 
 ```typescript
 class ListNode {
@@ -57,7 +57,7 @@ class List  {
     }
 
     /**
-     * 从 0 开始计算，找到包括head 头节点 在哪的位于 index 位置的节点
+     * 从 0 开始计算，找到包括head 头结点 在哪的位于 index 位置的结点
      * @param { Number } index
      * @return {ListNode}
      */
@@ -69,30 +69,30 @@ class List  {
         return current;
     }
     /**
-     * 在指定位置插入节点
+     * 在指定位置插入结点
      * 
      * @param {any} value 
      * @param {number} index 
      */
     public insert(value: any, index: number): void {
-        // 获取当前位置前一个节点
+        // 获取当前位置前一个结点
         let prev = this.find(index-1)
         let next = new ListNode(value, prev.next)
         prev.next = next
     }
     /**
-     *  删除指定位置的节点
+     *  删除指定位置的结点
      * 
      * @param {number} index 
      */
     public delete(index: number): void {
-        // 如果要删除头节点
+        // 如果要删除头结点
         if (index === 0) {
             this.head = this.head.next
         } else if (this.find(index) === null || this.find(index).val === null) {
-            throw Error('输入节点不存在')
+            throw Error('输入结点不存在')
         } else {
-            // 获取要删除节点的前一个节点
+            // 获取要删除结点的前一个结点
             let prev = this.find(index-1)
             prev.next = prev.next.next
         }
@@ -113,14 +113,14 @@ class List  {
      */
     public DeleteDuplicates(): void {
         let current = this.head
-        // 暂存值前一个节点的值
+        // 暂存值前一个结点的值
         let temp: any
-        // 要删除节点的
+        // 要删除结点的
         let toDelete: ListNode
 
         while(current && current.next !== null) {
             temp = current.val
-            // 如果重复, 删除重复节点
+            // 如果重复, 删除重复结点
             if (current.next.val === temp) {
                 toDelete = current.next
                 current.next = toDelete.next
@@ -177,7 +177,7 @@ class List  {
 
 > 此部分代码在 ReverseList.ts 中
 
-将链表进行翻转，尾节点变为新的头节点，输入一个链表的头节点，返回反转后的新的头节点
+将链表进行翻转，尾结点变为新的头结点，输入一个链表的头结点，返回反转后的新的头结点
 
 ```typescript
 /**
@@ -190,11 +190,11 @@ function ReverseList (head: ListNode): ListNode {
     let headNode = head
     let preNode = null
     let next = null
-    // 遍历所有的节点
+    // 遍历所有的结点
     while(headNode) {
         // 暂存原来的next 用于遍历
         next = headNode.next
-        // 将节点的next指向反转
+        // 将结点的next指向反转
         headNode.next = preNode
         preNode = headNode
         headNode = next
@@ -225,18 +225,18 @@ function ReverseList (head: ListNode): ListNode {
     }
     let current = head
     let prev = null
-    // 首先向后遍历使 current 为要反转的首个节点
+    // 首先向后遍历使 current 为要反转的首个结点
     while ( m > 1) {
         prev = current
         current = current.next
         m--
         n--
     }
-    // 保存要反转节点的前一个节点
+    // 保存要反转结点的前一个结点
     let prevTail = prev
-    // 保存第 m 个节点，即反转后的尾节点
+    // 保存第 m 个结点，即反转后的尾结点
     let theTail = current
-    // 保存next节点用于遍历
+    // 保存next结点用于遍历
     let theNext = null
     while (n > 0) {
         theNext = current.next
@@ -245,15 +245,15 @@ function ReverseList (head: ListNode): ListNode {
         current = theNext
         n--
     }
-    // 如果从首个节点开始反转
+    // 如果从首个结点开始反转
     if (prevTail === null) {
         head = prev
     } 
-    // 否则反转前一个节点连接反转后的头节点
+    // 否则反转前一个结点连接反转后的头结点
     else {
         prevTail.next = prev
     }
-    // 连接反转尾节点与原链表后序节点
+    // 连接反转尾结点与原链表后序结点
     theTail.next = current
     
     return head
@@ -267,7 +267,7 @@ function ReverseList (head: ListNode): ListNode {
 
 > 此部分代码在 MergeList.ts 中
 
-传入两个有序链表的头节点，返回一个合并两个链表的有序链表
+传入两个有序链表的头结点，返回一个合并两个链表的有序链表
 
 
 
@@ -301,7 +301,7 @@ function MergeList(pHead: ListNode, qHead: ListNode): List {
 
         node = node.next
     }
-    // 链接未完全合并链表的后序节点
+    // 链接未完全合并链表的后序结点
     if (!pHead) {
         node.next = qHead
     } else {
@@ -314,15 +314,15 @@ function MergeList(pHead: ListNode, qHead: ListNode): List {
 }
 ```
 
-## 删除链表的倒数第N个节点
+## 删除链表的倒数第N个结点
 
 > 这部分代码在 DeleteN.ts 中
 
-给定一个链表，删除链表的倒数第 *n* 个节点，并且返回链表的头结点。
+给定一个链表，删除链表的倒数第 *n* 个结点，并且返回链表的头结点。
 
 ```typescript
 /**
- * 删除链表的倒数第N个节点
+ * 删除链表的倒数第N个结点
  * 
  * @param {ListNode} head 
  * @param {number} n 
@@ -335,11 +335,11 @@ function DeleteNFromEnd (head: ListNode, n: number) :ListNode {
   	// 创建一个临时头指针 解决要删除头指针的问题
     let node = new ListNode(0, null)
     node.next = head
-    // 利用双指针法，首先领 a b 节点都指向头节点
+    // 利用双指针法，首先领 a b 结点都指向头结点
     let a: ListNode = node
     let b: ListNode = node
     let c: ListNode = null
-    // a提前移动 n 个节点
+    // a提前移动 n 个结点
     for(let i = 0; i < n; i++) {
         a = a.next
         // 如果链表长度不超过 n
@@ -347,13 +347,13 @@ function DeleteNFromEnd (head: ListNode, n: number) :ListNode {
             return null
         }
     }
-    // 向后遍历直到a到达尾部，此时b就为要删除的节点，c始终为b的前一个节点
+    // 向后遍历直到a到达尾部，此时b就为要删除的结点，c始终为b的前一个结点
     while(a) {
         c = b
         b = b.next
         a = a.next
     }
-    // 删除b节点
+    // 删除b结点
     c.next = c.next.next
 
     return node.next
@@ -367,7 +367,7 @@ function DeleteNFromEnd (head: ListNode, n: number) :ListNode {
 
 > 此部分代码在 RotateRight.ts 中
 
-给定一个链表，让每个节点向右移动k个位置。
+给定一个链表，让每个结点向右移动k个位置。
 
 例如:
 
@@ -391,38 +391,38 @@ function DeleteNFromEnd (head: ListNode, n: number) :ListNode {
 
 ```typescript
 /**
- * 给定一个链表，旋转链表，将链表每个节点向右移动 k 个位置，其中 k 是非负数。
+ * 给定一个链表，旋转链表，将链表每个结点向右移动 k 个位置，其中 k 是非负数。
  * 
  * @param {ListNode} head 
  * @param {number} k 
  * @return {ListNode}
  */
 function RotateRight (head: ListNode, k: number):ListNode {
-    // 判断链表是否为空或只有一个节点
+    // 判断链表是否为空或只有一个结点
     if (head === null || head.next === null) {
         return head
     }
     // 定义n为链表长度
     let n : number
-    // 定义一个节点用来遍历链表
+    // 定义一个结点用来遍历链表
     let old_tail = head
-    // 首先获取链表内节点个数
+    // 首先获取链表内结点个数
     for(n = 1; old_tail.next !== null; n++) {
         old_tail = old_tail.next
     }
     // 形成闭环
     old_tail.next = head
 
-    // 新的尾节点为 (n - k % n - 1) 个节点
-    // 新的头节点为 (n - k % n) 个节点
-    // 定义新的尾节点
+    // 新的尾结点为 (n - k % n - 1) 个结点
+    // 新的头结点为 (n - k % n) 个结点
+    // 定义新的尾结点
     let new_tail = head
     for(let i = 0; i < (n - k % n - 1); i++) {
         new_tail = new_tail.next
     }
-    // 定义新的头节点
+    // 定义新的头结点
     let new_head = new_tail.next;
-    // 断开新的尾节点与后面的连接
+    // 断开新的尾结点与后面的连接
     new_tail.next = null
 
     return new_head
@@ -430,27 +430,27 @@ function RotateRight (head: ListNode, k: number):ListNode {
 }
 ```
 
-## 两两交换链表中的节点
+## 两两交换链表中的结点
 
 > 此部分代码在 Exchange.ts 中
 
-给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。
+给定一个链表，两两交换其中相邻的结点，并返回交换后的链表。
 
-**你不能只是单纯的改变节点内部的值**，而是需要实际的进行节点交换。
+**你不能只是单纯的改变结点内部的值**，而是需要实际的进行结点交换。
 
 ```typescript
 /**
- * 递归两两交换相邻的节点
+ * 递归两两交换相邻的结点
  * 
  * @param {ListNode} head 
  * @return {ListNode}
  */
 function Exchange(head: ListNode) : ListNode {
-    // 如果遍历到最后一个或最后为单数节点
+    // 如果遍历到最后一个或最后为单数结点
     if (head === null || head.next === null) {
         return head
     }
-    // 找到后面要交换的节点
+    // 找到后面要交换的结点
     let next = head.next
     // head链接后面已经完成的子链
     head.next = Exchange(next.next)
@@ -464,13 +464,13 @@ function Exchange(head: ListNode) : ListNode {
 
 > 此部分代码在 SeparateList.ts 中
 
-给定一个链表和一个特定值 *x*，对链表进行分隔，使得所有小于 *x* 的节点都在大于或等于 *x* 的节点之前。
+给定一个链表和一个特定值 *x*，对链表进行分隔，使得所有小于 *x* 的结点都在大于或等于 *x* 的结点之前。
 
-同时保留两个分区中每个节点的初始相对位置。
+同时保留两个分区中每个结点的初始相对位置。
 
 ```typescript
 /**
- * 给定一个链表和一个特定值 x，对链表进行分隔，使得所有小于 x 的节点都在大于或等于 x 的节点之前。
+ * 给定一个链表和一个特定值 x，对链表进行分隔，使得所有小于 x 的结点都在大于或等于 x 的结点之前。
  * 
  * @param {ListNode} head 
  * @param {number} x 
@@ -492,11 +492,47 @@ function SeparateList (head: ListNode, x: number) {
         }
         head = head.next
     }
-    // 结束尾节点
+    // 结束尾结点
     after_x.next = null
     // 合并原链表
     before_x.next = after_head.next
     return before_head.next
+}
+```
+
+## 链表的中点
+
+> 此部分代码在 LinkListMiddle.ts 中
+
+给定一个带有头结点 `head` 的链表，返回链表的中间结点。
+
+如果有两个中间结点，则返回第二个中间结点。
+
+```typescript
+/**
+ * 寻找链表的中点，如果是偶数链表返回中间结点中的后一个中间结点。
+ * @param {ListNode} head 
+ * @return {ListNode}
+ */
+function LinkListMiddle (head: ListNode): ListNode {
+    if (head === null) {
+        return null
+    }
+    // 定义一个快指针 一次走2个
+    let fast = head
+    // 定义一个慢指针 一次走一个
+    let slow = head
+    // 快指针慢指针同时出发 当快指针到达末尾时慢指针指向的正是中点
+    while (fast) {
+        // 如果已经为末尾元素 直接跳出循环
+        if (!fast.next) {
+            break
+        }
+        slow = slow.next
+        fast = fast.next.next
+    }
+    // 判断奇偶 选择是否输出第二个结点
+    return slow
 }
 ```
 

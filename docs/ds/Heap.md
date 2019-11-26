@@ -7,8 +7,8 @@ sidebar: auto
 
 堆有两种情形，`最大堆`和`最小堆`
 
-- 最大堆：每个节点的元素值不小于其子节点
-- 最小堆：每个节点的元素值不大于其子节点
+- 最大堆：每个结点的元素值不小于其子结点
+- 最小堆：每个结点的元素值不大于其子结点
 
 
 
@@ -31,7 +31,7 @@ class Heap {
     public create(numbers: number[]): void {
         this.value = numbers
         const length = this.value.length
-        // 从第一个非叶子节点开始调整结构
+        // 从第一个非叶子结点开始调整结构
         for(let i = Math.floor((length/2) -1); i>=0;i--) {
             this.adjust(i, length)
         }
