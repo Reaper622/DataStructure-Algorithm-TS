@@ -35,7 +35,7 @@ sidebar: auto
 ### [递归](./Recursion.md)
     - 斐波那契数列 | LeetCode [509]
     - 爬楼梯 | LeetCode [70]
-    - Pow 「求x的n次幂」 | LeetCode [50]
+    - Pow 「求x的n次幂」 | 剑指Offer [11] | LeetCode [50] 
 
 ### [动态规划](./DynamicProgramming.md)
     - 斐波那契数列 ｜ LeetCode [509]

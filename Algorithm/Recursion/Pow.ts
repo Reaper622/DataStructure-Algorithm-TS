@@ -13,8 +13,12 @@ function Pow(x: number, n: number): number {
     }
     // 如果指数为负数
     if (n < 0) {
-        x = 1/x
-        n = -n
+        if (x === 0) {
+            throw new Error('0不能求倒数')
+        } else {
+            x = 1/x
+            n = -n
+        }   
     }
 
     if (n % 2 === 0) {
