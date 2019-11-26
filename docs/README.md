@@ -24,7 +24,7 @@ Questions on LeetCode
     - 链表的正向遍历与反向遍历
     - 反转链表 | LeetCode [206]
     - 合并链表 | LeetCode [21]
-    - 删除链表的倒数第N个节点 | LeetCode [19]
+    - 删除链表的倒数第N个节点 | LeetCode [19] | 剑指Offer [15]
     - 链表节点交换 | LeetCode [24]
     - 分隔链表 | LeetCode [86]
     - 反转链表 II | LeetCode [206]
@@ -56,7 +56,7 @@ Questions on LeetCode
     - 连续子数组的最大和
     - 反转字符串 | LeetCode [344]
     - 按奇偶排序数组 | LeetCode [905] | 剑指Offer [14]
-    
+
 ### [字符串](./ds/String.md)
     - 最长公共前缀 | LeetCode [14]
     - 计数二进制子串 | LeetCode [696]

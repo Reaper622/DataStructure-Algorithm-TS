@@ -12,6 +12,7 @@ function DeleteNFromEnd(head, n) {
     if (!head || n <= 0) {
         return null;
     }
+    // 创建一个临时头指针 解决要删除头指针的问题
     var node = new LinkList_1.ListNode(0, null);
     node.next = head;
     // 利用双指针法，首先领 a b 节点都指向头节点
