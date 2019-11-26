@@ -6,6 +6,7 @@ import RotateRight from '../LinkList/RotateRight'
 import Exchange from '../LinkList/Exchange'
 import SeparateList from '../LinkList/SeparateList'
 import ReorderList from '../LinkList/ReorderList'
+import {LinkListMiddle} from '../LinkList/LinkListMiddle'
 
 test('LinkList', () => {
     let list = new List([1,2,3])
@@ -67,4 +68,11 @@ test('ReorderList', () => {
     let list = new List([1,2,3,4])
     list.head = ReorderList(list.head)
     expect(list.PositiveTraverse()).toEqual([1,4,2,3])
+})
+
+test('LinkListMiddle', () => {
+    let list = new List([1,2,3,4,5])
+    let list2 = new List([1,2,3,4,5,6])
+    expect(LinkListMiddle(list.head).val).toBe(3)
+    expect(LinkListMiddle(list2.head).val).toBe(4)
 })
