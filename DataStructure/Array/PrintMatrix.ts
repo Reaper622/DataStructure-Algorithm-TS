@@ -10,7 +10,7 @@ function PrintMatrix(arr: number[][]): number[] {
     // 获取行数
     let rows = arr.length
     // 获取列数
-    let columns = arr[0].length
+    let columns = arr[0] ? arr[0].length : 0
     // 存储结果
     const result = []
     // 如果数组不存在或者不为二维数组 直接返回

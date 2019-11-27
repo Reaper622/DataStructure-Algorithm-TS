@@ -11,7 +11,7 @@ function PrintMatrix(arr) {
     // 获取行数
     var rows = arr.length;
     // 获取列数
-    var columns = arr[0].length;
+    var columns = arr[0] ? arr[0].length : 0;
     // 存储结果
     var result = [];
     // 如果数组不存在或者不为二维数组 直接返回
