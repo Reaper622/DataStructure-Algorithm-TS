@@ -90,7 +90,7 @@ function StackCheck<T> (pushOrder: Array<T>, popOrder: Array<T>): Boolean {
         for(; push < pushOrder.length && popOrder[pop] !== stack.peek(); push++) {
             stack.push(pushOrder[push])
         }
-        // 如果插入完毕但无匹配 则证明部位匹配的序列
+        // 如果插入完毕但无匹配 则证明不为匹配的序列
         if (popOrder[pop] !== stack.peek()) {
             return false
         }
