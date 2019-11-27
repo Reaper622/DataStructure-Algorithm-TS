@@ -1,8 +1,9 @@
-import  Tree from '../BinaryTree/BinaryTree.js'
+import  Tree, {TreeNode} from '../BinaryTree/BinaryTree.js'
 import isSymmetry from '../BinaryTree/Symmetry.js'
 import Mirror from '../BinaryTree/Mirror.js'
 import {buildTreeByPreAndIn, buildTreeByPostAndIn} from '../BinaryTree/BuildTree.js'
 import {RouteSum, RouteSumWithRoute} from '../BinaryTree/RouteSum.js'
+import {HasSubTree} from '../BinaryTree/HasSubTree'
 
 let arr = [1,2,3]
 let arr2 = [1,2,2,3,4,4,3]
@@ -82,5 +83,11 @@ test('RouteSum', () => {
     let arr = [5,4,5,11,null,13,4,7,2,null,null,null,1]
     let tree = new Tree(arr)
     expect(RouteSum(tree.root, 22)).toBe(true)
+})
+
+test('HasSubTree', () => {
+    let tree1 = new Tree([1,2,3,4,5,6])
+    let tree2 = new Tree([2,4,5])
+    expect(HasSubTree(tree1.root, tree2.root)).toBe(true)
 })
 

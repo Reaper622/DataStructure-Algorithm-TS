@@ -17,6 +17,7 @@ Questions on LeetCode
     - 根据中序遍历和后序遍历结果重建二叉树
     - 路径总和
     - 二叉树展开为链表 | LeetCode [114]
+    - 判断一个二叉树是否为另一个二叉树的子树 | LeetCode [572] | 剑指Offer [18]
 
 ### [链表](./ds/LinkList.md)
     - 链表的实现
