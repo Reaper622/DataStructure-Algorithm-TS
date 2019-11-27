@@ -10,9 +10,9 @@ Questions on LeetCode
 ### [二叉树](./ds/BinaryTree.md)
     - 二叉树的实现
     - 对称二叉树 ｜ LeetCode[101]
-    - 二叉树镜像
+    - 二叉树镜像 ｜ 剑指Offer [19]
     - 检测二叉平衡树
-    - 二叉树的层次遍历
+    - 二叉树的层次遍历 | 剑指Offer [23]
     - 根据先序遍历和中序遍历结果重建二叉树
     - 根据中序遍历和后序遍历结果重建二叉树
     - 路径总和
@@ -35,7 +35,7 @@ Questions on LeetCode
 ### [栈](./ds/Stack.md)
     - 栈的实现
     - 栈的基础操作
-    - 栈的入序和出序序列匹配检测 ｜ LeetCode [946]
+    - 栈的入序和出序序列匹配检测 ｜ LeetCode [946] ｜ 剑指Offer [22]
 
 ### [队列](./ds/Queue.md)
     - 队列的实现
@@ -52,7 +52,7 @@ Questions on LeetCode
     - 两数之和 | LeetCode [1]
     - 三数之和 | LeetCode [15]
     - 四数之和 | LeetCode [18]
-    - 顺时针打印矩阵
+    - 顺时针打印矩阵 ｜ 剑指Offer [20]
     - 对角线遍历矩阵 | LeetCode [498]
     - 数组中出现次数超过数组一半的数字
     - 连续子数组的最大和

@@ -242,7 +242,7 @@ export default Mirror
 // 二叉树层次遍历
     public levelTraversal (root: TreeNode) : number[][] | number[] {
         if (!root) return []
-        // 使用 queue 来存储当前层级的结点
+        // 使用 queue 来存储当前层级的节点
         let result = [], queue = [root]
         while (queue.length) {
             let levelSize = queue.length
@@ -250,6 +250,7 @@ export default Mirror
             while (levelSize--) {
                 let node = queue.shift()
                 currentLevel.push(node.val)
+                // 在当前层级推入一个结点时，把它的左右子结点推入队列中
                 if (node.left && node.left.val !== null) queue.push(node.left)
                 if (node.right && node.right.val !== null) queue.push(node.right)
             }
