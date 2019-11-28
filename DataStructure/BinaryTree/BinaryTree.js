@@ -105,6 +105,7 @@ var Tree = /** @class */ (function () {
             while (levelSize--) {
                 var node = queue.shift();
                 currentLevel.push(node.val);
+                // 在当前层级推入一个结点时，把它的左右子结点推入队列中
                 if (node.left && node.left.val !== null)
                     queue.push(node.left);
                 if (node.right && node.right.val !== null)
