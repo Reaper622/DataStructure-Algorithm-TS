@@ -4,6 +4,7 @@ import Mirror from '../BinaryTree/Mirror.js'
 import {buildTreeByPreAndIn, buildTreeByPostAndIn} from '../BinaryTree/BuildTree.js'
 import {RouteSum, RouteSumWithRoute} from '../BinaryTree/RouteSum.js'
 import {HasSubTree} from '../BinaryTree/HasSubTree'
+import {verifySquenceOfBTS} from '../BinaryTree/VerifySquenceOfBST'
 
 let arr = [1,2,3]
 let arr2 = [1,2,2,3,4,4,3]
@@ -89,5 +90,10 @@ test('HasSubTree', () => {
     let tree1 = new Tree([1,2,3,4,5,6])
     let tree2 = new Tree([2,4,5])
     expect(HasSubTree(tree1.root, tree2.root)).toBe(true)
+})
+
+test('VerifySquenceOfBST', () => {
+    expect(verifySquenceOfBTS([5,7,6,9,11,10,8])).toBe(true)
+    expect(verifySquenceOfBTS([7,4,6,5])).toBe(false)
 })
 

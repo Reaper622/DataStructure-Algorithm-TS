@@ -373,6 +373,8 @@ function RouteSum (root : TreeNode, sum : number) : boolean {
 
 > 此部分代码在 RouteSum.ts 中
 
+输入一棵二叉树和一个整数，打印出二叉树中结点值的和为输入整数的所有路径。从树的根结点开始往下一直到叶结点所经过的结点形成一条路径。
+
 ```typescript
 /**
  * 给定一个二叉树和一个目标和，找到所有从根结点到叶子结点路径总和等于给定目标和的路径。
@@ -496,4 +498,56 @@ function HasSubTreeHelper(tree1: TreeNode, tree2: TreeNode): boolean {
     return false
 }
 ```
+
+## 二叉搜索树的后序遍历序列
+
+> 此部分代码在 VerifySquenceOfBTS.ts 中
+
+输入一个整数数组，判断该数组是不是某二叉搜索树的后序遍历的结果。如果是则返回 true，否则返回 false。假设输入的数组的任意两个数字都互不相同。
+
+```typescript
+/**
+ * 判断输入序列是否为一颗二叉搜索树的后序遍历序列。
+ * @param {number} sequence 
+ * @return {boolean}
+ */
+function verifySquenceOfBTS(sequence: number[]): boolean {
+    // 判断是否为空
+    if (!sequence) {
+        return false;
+    }
+    let len = sequence.length;
+    // 获取根结点，由于是后序遍历序列，最后一个节点即为根结点
+    let root = sequence[len - 1];
+    // 在二叉搜索树中，左子树的结点都小于根结点
+    let l = 0;
+    for(; l < len - 1; l++) {
+        // 如果有比根结点大的则停止
+        if (sequence[l] > root) {
+            break;
+        }
+    }
+    // 在二叉搜索树中，右子树的结点都大于根结点
+    let r = l;
+    for(; r < len - 1; r++) {
+        // 如果右子树中有比根结点小的 则证明这不是一个二叉搜索树的后序遍历序列
+        if (sequence[r] < root) {
+            return false;
+        }
+    }
+    let left = true, right = true;
+    // 如果有左子树 递归判断左子树是否为二叉搜索树
+    if (l > 0) {
+        left = verifySquenceOfBTS(sequence.slice(0, l));
+    }
+    // 如果有右子树 递归判断右子树是否为二叉搜索树
+    if (l < len - 1) {
+        right = verifySquenceOfBTS(sequence.slice(l, len - 1));
+    }
+
+    return (left && right);
+}
+```
+
+
 
