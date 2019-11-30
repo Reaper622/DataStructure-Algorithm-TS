@@ -1,6 +1,7 @@
 import Tribonacci from '../DynamicProgramming/Tribonacci'
 import {YanghuiTriangle} from '../DynamicProgramming/YanghuiTriangle'
 import {Rob, Rob2} from '../DynamicProgramming/Theif'
+import {TheNOfTheUglyNumber} from '../DynamicProgramming/TheNOfTheUglyNumber'
 
 
 test('Tribonacci', () => {
@@ -20,4 +21,8 @@ test('YanghuiTriangle', () => {
 test('Theif', () => {
     expect(Rob([2,7,9,3,1])).toBe(12)
     expect(Rob2([2,7,9,3,1])).toBe(11)
+})
+
+test('TheNOfTheUglyNumber', () => {
+    expect(TheNOfTheUglyNumber(10)).toBe(12)
 })

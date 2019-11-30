@@ -105,6 +105,7 @@ Questions on LeetCode
     - 杨辉三角 | LeetCode [118]
     - 打家劫舍 | LeetCode [198]
     - 打家劫舍 II | LeetCode [213]
+    - 第N个丑数 | LeetCode [264] | 剑指Offer [34]
 ### [贪心算法](./al/GreedAlgorithm.md)
     - 买卖股票的最佳时机 | LeetCode [121]
     - 买卖股票的最佳时机II | LeetCode [122]
