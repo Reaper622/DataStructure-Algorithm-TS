@@ -513,10 +513,6 @@ function MoreThanHalfNum2(numbers: number[]): number {
 }
 ```
 
-
-
-
-
 ### 连续子数组的最大和
 
 > 此部分代码在 FindGreatestSum.ts 中

@@ -56,7 +56,7 @@ Questions on LeetCode
     - 顺时针打印矩阵 ｜ 剑指Offer [20]
     - 对角线遍历矩阵 | LeetCode [498]
     - 数组中出现次数超过数组一半的数字 | 剑指Offer [29]
-    - 连续子数组的最大和
+    - 连续子数组的最大和 | 剑指Offer [31]
     - 反转字符串 | LeetCode [344]
     - 按奇偶排序数组 | LeetCode [905] | 剑指Offer [14]
 
@@ -110,6 +110,7 @@ Questions on LeetCode
     - 买卖股票的最佳时机II | LeetCode [122]
     - 买卖股票的最佳时机（含手续费） | LeetCode [714]
     - 分发饼干 | LeetCode [455]
+    - 连续子数组的最大和 | 剑指Offer [31]
 ### [二分查找](./al/Search.md)
     - 二分查找的实现 | LeetCode [704]
     - 二分求解`x`的平方根 | LeetCode [69]
