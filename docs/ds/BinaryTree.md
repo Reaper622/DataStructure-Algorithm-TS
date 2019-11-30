@@ -397,8 +397,7 @@ function RouteSum (root : TreeNode, sum : number) : boolean {
         } else {
             array.push(root.val)
             // 如果只存在左子树
-            if (root.left && !root.right) {
-                
+            if (root.left && !root.right) {               
                 getSumRoute(root.left, sum, total+root.val, [...array])
             } 
             // 如果只存在右子树

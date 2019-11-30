@@ -5,7 +5,7 @@ import {SumThreeNumbers} from '../Array/SumThreeNumbers'
 import {SumFourNumbers} from '../Array/SumFourNumbers'
 import {PrintMatrix} from '../Array/PrintMatrix'
 import {PrintDiagonal} from '../Array/PrintDiagonal'
-import {MoreThanHalfNum} from '../Array/MoreThanHalf'
+import {MoreThanHalfNum, MoreThanHalfNum2} from '../Array/MoreThanHalf'
 import {FindGreatestSum} from '../Array/FindGreatestSum'
 import {ReverseString} from '../Array/Reverse'
 import {MoveZero} from '../Array/MoveZero'
@@ -41,6 +41,7 @@ test('PrintDiagonal', () => {
 
 test('MoreThanHalf', () => {
     expect(MoreThanHalfNum([1,2,2,2,2,3,4])).toBe(2)
+    expect(MoreThanHalfNum2([1,2,2,2,2,3,4])).toBe(2)
 })
 
 test('FindGreatestSum', () => {
