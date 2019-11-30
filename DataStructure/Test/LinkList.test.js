@@ -7,6 +7,7 @@ import Exchange from '../LinkList/Exchange'
 import SeparateList from '../LinkList/SeparateList'
 import ReorderList from '../LinkList/ReorderList'
 import {LinkListMiddle} from '../LinkList/LinkListMiddle'
+import {FirstSameNode} from '../LinkList/FirstSameNode'
 
 test('LinkList', () => {
     let list = new List([1,2,3])
@@ -75,4 +76,10 @@ test('LinkListMiddle', () => {
     let list2 = new List([1,2,3,4,5,6])
     expect(LinkListMiddle(list.head).val).toBe(3)
     expect(LinkListMiddle(list2.head).val).toBe(4)
+})
+
+test('FirstSameNode', () => {
+    let list1 = new List([7,8,9,10,5])
+    let list2 = new List([1,2,3,4,5])
+    expect(FirstSameNode(list1.head, list2.head).val).toBe(5)
 })

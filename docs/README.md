@@ -32,6 +32,7 @@ Questions on LeetCode
     - 反转链表 II | LeetCode [206]
     - 重排链表 | LeetCode [143]
     - 链表的中间结点 | LeetCode [876]
+    - 两个链表的第一个公共结点 | 剑指Offer [37]
 
 ### [栈](./ds/Stack.md)
     - 栈的实现
