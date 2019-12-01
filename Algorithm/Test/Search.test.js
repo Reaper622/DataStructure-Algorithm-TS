@@ -6,6 +6,7 @@ import {FindMinInRotateArray} from '../Search/FindMinInRotateArray'
 import {SearchRange} from '../Search/SearchRange'
 import {FindClosestElements} from '../Search/FindClosestElements'
 import {NextGreatestLetter} from '../Search/NextGreatestLetter'
+import {GetNumberOfK} from '../Search/GetNumberOfK'
 
 test('BinarySearch', () => {
     expect(BinarySearch([-1,0,3,5,9,12], 9)).toBe(4)
@@ -41,4 +42,9 @@ test('NextGreatestLetter', () => {
     expect(NextGreatestLetter(['c', 'f', 'j'], 'a')).toBe('c')
     expect(NextGreatestLetter(['c', 'f', 'j'], 'd')).toBe('f')
     expect(NextGreatestLetter(['c', 'f', 'j'], 'g')).toBe('j')
+})
+
+test('GetNumberOfK', () => {
+    expect(GetNumberOfK([1,2,3,4,5,5,5,5,6,7,8,9], 5)).toBe(4);
+    expect(GetNumberOfK([1,2,3,4,5,5,5,5,6,7,8,9], 10)).toBe(0);
 })
