@@ -7,6 +7,9 @@ exports.__esModule = true;
  * @return {number[]}
  */
 function FindNumWithSum(array, sum) {
+    if (!array || sum < 0) {
+        return [];
+    }
     // 因为返回乘积最小的 即和相同，越分散乘积越小，则从两侧开始查找
     // 设置左索引
     var left = 0;

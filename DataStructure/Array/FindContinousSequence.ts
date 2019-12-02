@@ -5,6 +5,9 @@
  * @return {number[]}
  */
 function FindContinousSequence(sum: number): number[] {
+    if (sum < 1) {
+        return []
+    }
     // 存储结果的数组
     let result = []
     // 表示当前的子序列

@@ -49,8 +49,8 @@ Questions on LeetCode
     - 堆的实现
     - 堆的基础操作
 ### [数组](./ds/Array.md)
-    - 和为Sum的两个数字
-    - 和为Sum的连续整数序列
+    - 和为Sum的两个数字 | 剑指Offer [41]
+    - 和为Sum的连续整数序列 | 剑指Offer [41]
     - 两数之和 | LeetCode [1]
     - 三数之和 | LeetCode [15]
     - 四数之和 | LeetCode [18]

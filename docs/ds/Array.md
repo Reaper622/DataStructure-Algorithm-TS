@@ -23,6 +23,9 @@ sidebar: auto
  * @return {number[]}
  */
 function FindNumWithSum(array: number[], sum: number): number[] {
+    if (!array || sum < 0) {
+        return [];
+    }
     // 因为返回乘积最小的 即和相同，越分散乘积越小，则从两侧开始查找
     // 设置左索引
     let left = 0
@@ -57,6 +60,9 @@ function FindNumWithSum(array: number[], sum: number): number[] {
  * @return {number[]}
  */
 function FindContinousSequence(sum: number): number[] {
+    if (sum < 1) {
+        return []
+    }
     // 存储结果的数组
     let result = []
     // 表示当前的子序列

@@ -6,6 +6,9 @@ exports.__esModule = true;
  * @return {number[]}
  */
 function FindContinousSequence(sum) {
+    if (sum < 1) {
+        return [];
+    }
     // 存储结果的数组
     var result = [];
     // 表示当前的子序列
