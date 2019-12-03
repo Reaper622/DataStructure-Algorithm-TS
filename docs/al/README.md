@@ -35,7 +35,7 @@ sidebar: auto
 ### [递归](./Recursion.md)
     - 斐波那契数列 | LeetCode [509]
     - 爬楼梯 | LeetCode [70]
-    - Pow 「求x的n次幂」 | 剑指Offer [11] | LeetCode [50] 
+    - Pow 「求x的n次幂」 | LeetCode [50]
 
 ### [动态规划](./DynamicProgramming.md)
     - 斐波那契数列 ｜ LeetCode [509]
@@ -43,11 +43,13 @@ sidebar: auto
     - 杨辉三角 | LeetCode [118]
     - 打家劫舍 | LeetCode [198]
     - 打家劫舍 II | LeetCode [213]
+    - 第N个丑数 | LeetCode [264] | 剑指Offer [34]
 ### [贪心算法](./GreedAlgorithm.md)
     - 买卖股票的最佳时机 | LeetCode [121]
     - 买卖股票的最佳时机II | LeetCode [122]
     - 买卖股票的最佳时机（含手续费） | LeetCode [714]
     - 分发饼干 | LeetCode [455]
+    - 连续子数组的最大和 | 剑指Offer [31]
 ### [二分查找](./Search.md)
     - 二分查找的实现 | LeetCode [704]
     - 二分求解`x`的平方根 | LeetCode [69]
@@ -57,5 +59,8 @@ sidebar: auto
     - 在排序数组中查找元素的第一个和最后一个位置 | LeetCode [34]
     - 找到K个最接近的元素 | LeetCode [658]
     - 寻找比目标字母大的最小字母 | LeetCode [744]
+    - 数字在排序数组中出现的次数 | LeetCode [34] | 剑指Offer [38]
 ### [二进制](./Binary.md)
     - 二进制中1的个数 | LeetCode [191] | 剑指Offer [10]
+    - 数组中只出现一次的数字 | 剑指Offer [40]
+    - 不用加减乘除做加法 | 剑指Offer [47]
