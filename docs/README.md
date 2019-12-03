@@ -60,6 +60,7 @@ Questions on LeetCode
     - 连续子数组的最大和 | 剑指Offer [31]
     - 反转字符串 | LeetCode [344]
     - 按奇偶排序数组 | LeetCode [905] | 剑指Offer [14]
+    - 扑克牌的顺子 | 剑指Offer [44]
 
 ### [字符串](./ds/String.md)
     - 最长公共前缀 | LeetCode [14]
