@@ -7,14 +7,15 @@ Questions on LeetCode
 - [二叉树](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/ds/BinaryTree.md)
     - 二叉树的实现
     - 对称二叉树 ｜ LeetCode[101]
-    - 二叉树镜像
+    - 二叉树镜像 ｜ 剑指Offer [19]
     - 检测二叉平衡树
-    - 二叉树的层次遍历
+    - 二叉树的层次遍历 | 剑指Offer [23]
     - 根据先序遍历和中序遍历结果重建二叉树
     - 根据中序遍历和后序遍历结果重建二叉树
-    - 路径总和
+    - 路径总和 ｜ 剑指Offer [25]
     - 二叉树展开为链表 | LeetCode [114]
     - 判断一个二叉树是否为另一个二叉树的子树 | LeetCode [572] | 剑指Offer [18]
+    - 二叉搜索树的后序遍历序列 | 剑指Offer[24]
 
 - [链表](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/ds/LinkList.md)
     - 链表的实现
@@ -22,17 +23,18 @@ Questions on LeetCode
     - 链表的正向遍历与反向遍历
     - 反转链表 | LeetCode [206]
     - 合并链表 | LeetCode [21]
-    - 删除链表的倒数第N个结点 | LeetCode [19]
+    - 删除链表的倒数第N个结点 | LeetCode [19] | 剑指Offer [15]
     - 链表结点交换 | LeetCode [24]
     - 分隔链表 | LeetCode [86]
     - 反转链表 II | LeetCode [206]
     - 重排链表 | LeetCode [143]
     - 链表的中间结点 | LeetCode [876]
+    - 两个链表的第一个公共结点 | 剑指Offer [37]
 
 - [栈](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/ds/Stack.md)
     - 栈的实现
     - 栈的基础操作
-    - 栈的入序和出序序列匹配检测 ｜ LeetCode [946]
+    - 栈的入序和出序序列匹配检测 ｜ LeetCode [946] ｜ 剑指Offer [22]
 
 - [队列](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/ds/Queue.md)
     - 队列的实现
@@ -44,17 +46,18 @@ Questions on LeetCode
     - 堆的实现
     - 堆的基础操作
 - [数组](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/ds/Array.md)
-    - 和为Sum的两个数字
-    - 和为Sum的连续整数序列
+    - 和为Sum的两个数字 | 剑指Offer [41]
+    - 和为Sum的连续整数序列 | 剑指Offer [41]
     - 两数之和 | LeetCode [1]
     - 三数之和 | LeetCode [15]
     - 四数之和 | LeetCode [18]
-    - 顺时针打印矩阵
+    - 顺时针打印矩阵 ｜ 剑指Offer [20]
     - 对角线遍历矩阵 | LeetCode [498]
-    - 数组中出现次数超过数组一半的数字
-    - 连续子数组的最大和
+    - 数组中出现次数超过数组一半的数字 | 剑指Offer [29]
+    - 连续子数组的最大和 | 剑指Offer [31]
     - 反转字符串 | LeetCode [344]
     - 按奇偶排序数组 | LeetCode [905] | 剑指Offer [14]
+    - 扑克牌的顺子 | 剑指Offer [44]
 
 - [字符串](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/ds/String.md)
     - 最长公共前缀 | LeetCode [14]
@@ -102,11 +105,13 @@ Questions on LeetCode
     - 杨辉三角 | LeetCode [118]
     - 打家劫舍 | LeetCode [198]
     - 打家劫舍 II | LeetCode [213]
+    - 第N个丑数 | LeetCode [264] | 剑指Offer [34]
 - [贪心算法](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/al/GreedAlgorithm.md)
     - 买卖股票的最佳时机 | LeetCode [121]
     - 买卖股票的最佳时机II | LeetCode [122]
     - 买卖股票的最佳时机（含手续费） | LeetCode [714]
     - 分发饼干 | LeetCode [455]
+    - 连续子数组的最大和 | 剑指Offer [31]
 - [二分查找](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/al/Search.md)
     - 二分查找的实现 | LeetCode [704]
     - 二分求解`x`的平方根 | LeetCode [69]
@@ -116,5 +121,8 @@ Questions on LeetCode
     - 在排序数组中查找元素的第一个和最后一个位置 | LeetCode [34]
     - 找到K个最接近的元素 | LeetCode [658]
     - 寻找比目标字母大的最小字母 | LeetCode [744]
+    - 数字在排序数组中出现的次数 | LeetCode [34] | 剑指Offer [38]
 - [二进制](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/al/Binary.md)
     - 二进制中1的个数 | LeetCode [191] | 剑指Offer [10]
+    - 数组中只出现一次的数字 | 剑指Offer [40]
+    - 不用加减乘除做加法 | 剑指Offer [47]
