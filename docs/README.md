@@ -67,6 +67,7 @@ Questions on LeetCode
     - 计数二进制子串 | LeetCode [696]
     - 二进制求和 | LeetCode [67]
     - 无重复字符的最长子串 | LeetCode [3]
+    - 字符串的排列 | LeetCode [567]
 ## 算法
 
 #### 时间复杂度
