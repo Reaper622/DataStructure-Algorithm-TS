@@ -1,10 +1,10 @@
 /**
  * 给定两个以字符串形式表示的非负整数 num1 和 num2，返回 num1 和 num2 的乘积，它们的乘积也表示为字符串形式。
- * @param {String} num1
- * @param {String} num2
+ * @param {string} num1
+ * @param {string} num2
  * @return {string}
  */
-function StringMultiply(num1:String, num2:String): string {
+function StringMultiply(num1:string, num2:string): string {
     if (typeof num1 !== 'string' || typeof num2 !== 'string' || num1.length === 0 || num2.length === 0) {
         return ""
     }
