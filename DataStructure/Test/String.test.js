@@ -3,6 +3,7 @@ import {CountBinarySubstrings} from '../String/CountBinarySubstrings'
 import {SumBinary} from '../String/SumBinary'
 import {LengthOfLongestSubstring} from '../String/LengthOfLongestSubstring'
 import {CheckInclusion} from '../String/CheckInclusion'
+import {StringMultiply} from '../String/MultiplyString'
  
 test('LongestCommonPerfix', () => {
     expect(LongestCommonPerfix(["flower","flow","flight"])).toBe('fl')
@@ -25,4 +26,9 @@ test('LengthOfLongestSubstring', () => {
 test('CheckInclusion', () => {
     expect(CheckInclusion('ab', 'eidbaooo')).toBe(true);
     expect(CheckInclusion('ab', 'eidbdaooo')).toBe(false);
+})
+
+test('StringMultiply', () => {
+    expect(StringMultiply('123', '456')).toBe('56088');
+    expect(StringMultiply('2', '3')).toBe('6');
 })

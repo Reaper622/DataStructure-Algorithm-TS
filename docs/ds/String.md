@@ -227,3 +227,48 @@ function CheckInclusion (s1: string, s2: string) : boolean {
 }
 ```
 
+## 字符串的数字运算
+
+### 字符串相乘
+
+> 此部分代码在 MultiplyString.ts 中
+
+给定两个以字符串形式表示的非负整数 `num1` 和 `num2`，返回 `num1` 和 `num2` 的乘积，它们的乘积也表示为字符串形式。
+
+我们使用数组存储每一位上的计算结果，将num1的第i位(高位从0开始)和num2的第j位相乘的结果在乘积中的位置是[i+j, i+j+1]，之后合并数组即可获得结果。
+
+```typescript
+/**
+ * 给定两个以字符串形式表示的非负整数 num1 和 num2，返回 num1 和 num2 的乘积，它们的乘积也表示为字符串形式。
+ * @param {String} num1
+ * @param {String} num2
+ * @return {string}
+ */
+function StringMultiply(num1:String, num2:String): string {
+    if (typeof num1 !== 'string' || typeof num2 !== 'string' || num1.length === 0 || num2.length === 0) {
+        return ""
+    }
+    // num1的第i位和num2的第j位相乘，结果放在乘积中的位置是[i+j, i+j+1]
+    let len1 = num1.length;
+    let len2 = num2.length;
+    
+    let result = new Array(len1+len2).fill(0)
+    for(let i = len1 - 1; i >= 0; --i) {
+        for(let j = len2 - 1; j >= 0; --j) {
+            let bitmul = (parseInt(num1[i])) * (parseInt(num2[j]));
+            
+            bitmul += result[i+j+1]; // 加低位判断是否有新的进位
+            result[i+j] += Math.floor(bitmul / 10); // 添加十位
+            result[i+j+1] = bitmul % 10; // 添加后置个位
+        }
+    }
+    let index = 0;
+    // 去掉前置0
+    while(index < result.length-1 && result[index] === 0) {
+        index++;
+    }
+    
+    return result.slice(index).join('');
+}
+```
+
