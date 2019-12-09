@@ -5,6 +5,7 @@ import {LengthOfLongestSubstring} from '../String/LengthOfLongestSubstring'
 import {CheckInclusion} from '../String/CheckInclusion'
 import {StringMultiply} from '../String/MultiplyString'
 import {StringAdd} from '../String/StringAdd'
+import {RestoreipAddress} from '../String/RestoreIpAddress'
  
 test('LongestCommonPerfix', () => {
     expect(LongestCommonPerfix(["flower","flow","flight"])).toBe('fl')
@@ -36,4 +37,8 @@ test('StringMultiply', () => {
 test('StringAdd', () => {
     expect(StringAdd('123', '456')).toBe('579');
     expect(StringAdd('123', 123)).toBe('')
+})
+
+test('RestoreIpAddress', () => {
+    expect(RestoreipAddress("25525511135")).toEqual(["255.255.11.135", "255.255.111.35"])
 })
