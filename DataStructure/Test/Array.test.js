@@ -11,6 +11,7 @@ import {ReverseString} from '../Array/Reverse'
 import {MoveZero} from '../Array/MoveZero'
 import {ReorderOddEven} from '../Array/ReorderOddEven'
 import {IsContinuous} from '../Array/IsContinous'
+import {maxAreaOfIsland} from '../Array/MaxAreaOfIsland'
 
 test('FindNumWithSum', () => {
     expect(FindNumWithSum([1,2,3,4,5,6,7,8], 11)).toEqual([3,8])
@@ -65,4 +66,17 @@ test('IsContinous', () => {
     expect(IsContinuous([1,3,4,5,0])).toBe(true)
     expect(IsContinuous([1,3,4,5,7])).toBe(false)
     expect(IsContinuous([0,1,4,2,4])).toBe(false)
+})
+
+test('MaxAreaOfIsland', () => {
+    expect(maxAreaOfIsland(
+        [[0,0,1,0,0,0,0,1,0,0,0,0,0],
+        [0,0,0,0,0,0,0,1,1,1,0,0,0],
+        [0,1,1,0,1,0,0,0,0,0,0,0,0],
+        [0,1,0,0,1,1,0,0,1,0,1,0,0],
+        [0,1,0,0,1,1,0,0,1,1,1,0,0],
+        [0,0,0,0,0,0,0,0,0,0,1,0,0],
+        [0,0,0,0,0,0,0,1,1,1,0,0,0],
+        [0,0,0,0,0,0,0,1,1,0,0,0,0]])).toBe(6);
+    expect(maxAreaOfIsland([[0,0,0,0,0,0,0,0]])).toBe(0);
 })
