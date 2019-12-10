@@ -45,6 +45,7 @@ Questions on LeetCode
 - [堆](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/ds/Heap.md)
     - 堆的实现
     - 堆的基础操作
+    
 - [数组](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/ds/Array.md)
     - 和为Sum的两个数字 | 剑指Offer [41]
     - 和为Sum的连续整数序列 | 剑指Offer [41]
@@ -58,6 +59,7 @@ Questions on LeetCode
     - 反转字符串 | LeetCode [344]
     - 按奇偶排序数组 | LeetCode [905] | 剑指Offer [14]
     - 扑克牌的顺子 | 剑指Offer [44]
+    - 岛屿的最大面积 | LeetCode [695]
 
 - [字符串](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/ds/String.md)
     - 最长公共前缀 | LeetCode [14]
@@ -65,7 +67,9 @@ Questions on LeetCode
     - 二进制求和 | LeetCode [67]
     - 无重复字符的最长子串 | LeetCode [3]
     - 字符串的排列 | LeetCode [567]
-
+    - 字符串相加 | LeetCode [415]
+    - 字符串相乘 | LeetCode [43]
+    - 复原IP地址 | LeetCode [93]
 ## 算法
 
 #### 时间复杂度
@@ -108,12 +112,14 @@ Questions on LeetCode
     - 打家劫舍 | LeetCode [198]
     - 打家劫舍 II | LeetCode [213]
     - 第N个丑数 | LeetCode [264] | 剑指Offer [34]
+
 - [贪心算法](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/al/GreedAlgorithm.md)
     - 买卖股票的最佳时机 | LeetCode [121]
     - 买卖股票的最佳时机II | LeetCode [122]
     - 买卖股票的最佳时机（含手续费） | LeetCode [714]
     - 分发饼干 | LeetCode [455]
     - 连续子数组的最大和 | 剑指Offer [31]
+
 - [二分查找](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/al/Search.md)
     - 二分查找的实现 | LeetCode [704]
     - 二分求解`x`的平方根 | LeetCode [69]
@@ -124,6 +130,7 @@ Questions on LeetCode
     - 找到K个最接近的元素 | LeetCode [658]
     - 寻找比目标字母大的最小字母 | LeetCode [744]
     - 数字在排序数组中出现的次数 | LeetCode [34] | 剑指Offer [38]
+
 - [二进制](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/al/Binary.md)
     - 二进制中1的个数 | LeetCode [191] | 剑指Offer [10]
     - 数组中只出现一次的数字 | 剑指Offer [40]
