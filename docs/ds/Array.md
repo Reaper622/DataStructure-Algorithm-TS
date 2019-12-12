@@ -162,6 +162,49 @@ function ReorderOddEven(arr: number[]): number[] {
 }
 ```
 
+### 接雨水
+
+> 此部分代码在 Trap.ts 中
+
+给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。
+
+使用双指针法，从最左侧和最右侧依次向另一边遍历，如果右侧高于左侧，那么此时左侧最高处减去此时左侧的高度就是此位置能存的水，右侧同理。
+
+```typescript
+/**
+ * 给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。
+ * @param {number[]} height 
+ * @return {number}
+ */
+function trap(height: number[]): number {
+    if (!Array.isArray(height)) {
+        return 0;
+    }
+    // 定义左右指针
+    let left = 0;
+    let right = height.length - 1;
+    let result = 0;
+    // 定义左右最高处
+    let left_max = 0,
+        right_max = 0;
+    while(left < right) {
+        // 左侧较低
+        if (height[left] < height[right]) {
+            // 判断左侧是否有较高的，可以形成凹形接水
+            height[left] >= left_max ? left_max = height[left] : result += (left_max - height[left]);
+            ++left;
+        }
+        // 右侧较低
+        else {
+            // 判断右侧是否有较高的，可以形成凹形接水
+            height[right] >= right_max ? right_max = height[right] : result += (right_max - height[right]);
+            --right;
+        }
+    }
+    return result;
+}
+```
+
 
 
 

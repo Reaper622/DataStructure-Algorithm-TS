@@ -64,6 +64,7 @@ Questions on LeetCode
     - 岛屿的最大面积 | LeetCode [695]
     - 朋友圈 | LeetCode [547]
     - 合并区间 | LeetCode [56]
+    - 接雨水 | LeetCode [42]
 
 ### [字符串](./ds/String.md)
     - 最长公共前缀 | LeetCode [14]

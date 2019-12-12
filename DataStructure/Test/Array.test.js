@@ -14,6 +14,7 @@ import {IsContinuous} from '../Array/IsContinous'
 import {maxAreaOfIsland} from '../Array/MaxAreaOfIsland'
 import {findCircleNum} from '../Array/FindCircleNum'
 import {merge} from '../Array/Merge'
+import {trap} from '../Array/Trap'
 
 test('FindNumWithSum', () => {
     expect(FindNumWithSum([1,2,3,4,5,6,7,8], 11)).toEqual([3,8])
@@ -97,4 +98,8 @@ test('FindCircleNum', () => {
 test('Merge', () => {
     expect(merge([[1,3],[2,6],[8,10],[15,18]])).toEqual([[1,6],[8,10],[15,18]]);
     expect(merge([[1,4],[4,5]])).toEqual([[1,5]]);
+})
+
+test('trap', () => {
+    expect(trap([0,1,0,2,1,0,1,3,2,1,2,1])).toBe(6);
 })
