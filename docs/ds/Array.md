@@ -529,6 +529,46 @@ function dfs (M:number[][], visited: boolean[] , i: number): void {
 }
 ```
 
+### 合并区间
+
+> 此部分代码在 Merge.ts 中
+
+给出一个区间的集合，请合并所有重叠的区间。
+
+我们可以每次都循环遍历一个区间的下一个区间的起始是否在该区间内，如果在那么就合并这两个数组，一直向后遍历到没有可合并的，此时向结果中推入此次遍历合并后的新区间，之后继续向后遍历即可。
+
+```typescript
+/**
+ * 给出一个区间的集合，合并所有重叠的区间。
+ * @param {number[][]} intervals
+ * @return {number[][]}
+ */
+function merge (intervals: number[][]): number[][] {
+    let result = [];
+    let len = intervals.length;
+    if (len === 0) {
+        return [];
+    }
+    // 按照区间开始位置排序
+    intervals.sort((a,b) => a[0] - b[0]);
+    let i = 0;
+    // 遍历区间
+    while (i < len) {
+        let currentLeft = intervals[i][0];
+        let currentRight = intervals[i][1];
+        // 向右遍历 只要有起始位置小于前一个结束位置的，证明有重合
+        while(i < len -1 && intervals[i+1][0] <= currentRight) {
+            i++;
+            currentRight = Math.max(currentRight, intervals[i][1]);
+        }
+        // 向结果中推入一个与后面不会再重合的区间
+        result.push([currentLeft, currentRight]);
+        i++;
+    }
+    return result;
+}
+```
+
 
 
 ## 数据统计

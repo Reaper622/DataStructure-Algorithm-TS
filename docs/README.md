@@ -63,6 +63,7 @@ Questions on LeetCode
     - 扑克牌的顺子 | 剑指Offer [44]
     - 岛屿的最大面积 | LeetCode [695]
     - 朋友圈 | LeetCode [547]
+    - 合并区间 | LeetCode [56]
 
 ### [字符串](./ds/String.md)
     - 最长公共前缀 | LeetCode [14]
