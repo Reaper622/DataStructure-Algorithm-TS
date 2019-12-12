@@ -1,5 +1,5 @@
 import InsertSort from '../Sort/InsertSort'
-import BubbleSort from '../Sort/BubbleSort'
+import {BubbleSort, BubbleSortBetter} from '../Sort/BubbleSort'
 import SelectSort from '../Sort/SelectSort'
 import {QuickSort, QuickSort2} from '../Sort/QuickSort'
 import MergeSort from '../Sort/MergeSort'
@@ -14,6 +14,7 @@ test('InsertSort', () => {
 test('BubbleSort', () => {
     let arr = [6,5,3,2,4,1]
     expect(BubbleSort(arr)).toEqual([1,2,3,4,5,6])
+    expect(BubbleSortBetter(arr)).toEqual([1,2,3,4,5,6])
 })
 
 test('SelectSort', () => {
