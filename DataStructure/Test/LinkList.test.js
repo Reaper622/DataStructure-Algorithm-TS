@@ -8,6 +8,7 @@ import SeparateList from '../LinkList/SeparateList'
 import ReorderList from '../LinkList/ReorderList'
 import {LinkListMiddle} from '../LinkList/LinkListMiddle'
 import {FirstSameNode} from '../LinkList/FirstSameNode'
+import {listSum} from '../LinkList/ListSum'
 
 test('LinkList', () => {
     let list = new List([1,2,3])
@@ -82,4 +83,12 @@ test('FirstSameNode', () => {
     let list1 = new List([7,8,9,10,5])
     let list2 = new List([1,2,3,4,5])
     expect(FirstSameNode(list1.head, list2.head).val).toBe(5)
+})
+
+test('ListSum', () => {
+    let list1 = new List([2,4,3]);
+    let list2 = new List([5,6,4]);
+    let list = new List();
+    list.head = listSum(list1.head, list2.head);
+    expect(list.PositiveTraverse()).toEqual([7,0,8]);
 })
