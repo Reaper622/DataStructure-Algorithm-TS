@@ -30,6 +30,7 @@ Questions on LeetCode
     - 重排链表 | LeetCode [143]
     - 链表的中间结点 | LeetCode [876]
     - 两个链表的第一个公共结点 | 剑指Offer [37]
+    - 两数相加 | LeetCode [2]
 
 - [栈](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/ds/Stack.md)
     - 栈的实现
@@ -138,3 +139,16 @@ Questions on LeetCode
     - 二进制中1的个数 | LeetCode [191] | 剑指Offer [10]
     - 数组中只出现一次的数字 | 剑指Offer [40]
     - 不用加减乘除做加法 | 剑指Offer [47]
+
+
+## 测试 「使用 Jest 测试」
+
+验证数据结构相关
+```
+npm run test:ds
+```
+
+验证算法相关
+```
+npm run test:al
+```
