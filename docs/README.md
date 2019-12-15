@@ -109,6 +109,7 @@ Questions on LeetCode
     - 斐波那契数列 | LeetCode [509]
     - 爬楼梯 | LeetCode [70]
     - Pow 「求x的n次幂」 | LeetCode [50]
+    - 翻转整数变为字符串 | Bilibili 面试编程题
 
 ### [动态规划](./al/DynamicProgramming.md)
     - 斐波那契数列 ｜ LeetCode [509]
