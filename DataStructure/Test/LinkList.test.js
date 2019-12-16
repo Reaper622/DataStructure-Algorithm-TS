@@ -10,6 +10,7 @@ import {LinkListMiddle} from '../LinkList/LinkListMiddle'
 import {FirstSameNode} from '../LinkList/FirstSameNode'
 import {listSum} from '../LinkList/ListSum'
 import {sortList} from '../LinkList/SortList'
+import {MergeKList} from '../LinkList/MergeKList'
 
 test('LinkList', () => {
     let list = new List([1,2,3])
@@ -99,4 +100,14 @@ test('SortList', () => {
     let result = new List();
     result.head = sortList(list.head);
     expect(result.PositiveTraverse()).toEqual([1,2,3,4]);
+})
+
+test('MergeKList', () => {
+    let list1 = new List([1,4,5]);
+    let list2 = new List([1,3,4]);
+    let list3 = new List([2,6]);
+    let lists = [list1.head, list2.head, list3.head];
+    let result = new List();
+    result.head = MergeKList(lists);
+    expect(result.PositiveTraverse()).toEqual([1,1,2,3,4,4,5,6]);
 })

@@ -35,6 +35,7 @@ Questions on LeetCode
     - 两个链表的第一个公共结点 | 剑指Offer [37]
     - 两数相加 | LeetCode [2]
     - 链表排序 | LeetCode [148]
+    - 合并K个有序链表 | LeetCode [23]
 ### [栈](./ds/Stack.md)
     - 栈的实现
     - 栈的基础操作
