@@ -31,6 +31,8 @@ Questions on LeetCode
     - 链表的中间结点 | LeetCode [876]
     - 两个链表的第一个公共结点 | 剑指Offer [37]
     - 两数相加 | LeetCode [2]
+    - 链表排序 | LeetCode [148]
+    - 合并K个有序链表 | LeetCode [23]
 
 - [栈](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/ds/Stack.md)
     - 栈的实现
@@ -108,6 +110,7 @@ Questions on LeetCode
     - 斐波那契数列 | LeetCode [509]
     - 爬楼梯 | LeetCode [70]
     - Pow 「求x的n次幂」 | LeetCode [50]
+    - 翻转整数变为字符串 | Bilibili 面试编程题
 
 - [动态规划](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/al/DynamicProgramming.md)
     - 斐波那契数列 ｜ LeetCode [509]
