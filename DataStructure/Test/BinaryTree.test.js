@@ -5,6 +5,7 @@ import {buildTreeByPreAndIn, buildTreeByPostAndIn} from '../BinaryTree/BuildTree
 import {RouteSum, RouteSumWithRoute} from '../BinaryTree/RouteSum.js'
 import {HasSubTree} from '../BinaryTree/HasSubTree'
 import {verifySquenceOfBTS} from '../BinaryTree/VerifySquenceOfBST'
+import {zigzagLevelOrder} from '../BinaryTree/ZigzagLevelOrder'
 
 let arr = [1,2,3]
 let arr2 = [1,2,2,3,4,4,3]
@@ -95,5 +96,11 @@ test('HasSubTree', () => {
 test('VerifySquenceOfBST', () => {
     expect(verifySquenceOfBTS([5,7,6,9,11,10,8])).toBe(true)
     expect(verifySquenceOfBTS([7,4,6,5])).toBe(false)
+})
+
+test('ZigzagLevelOrder', () => {
+    let arr = [3,9,20,null,null,15,7];
+    let tree = new Tree(arr);
+    expect(zigzagLevelOrder(tree.root)).toEqual([[3],[20,9],[15,7]]);
 })
 
