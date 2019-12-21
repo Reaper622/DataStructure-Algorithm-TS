@@ -2,6 +2,7 @@ import Tribonacci from '../DynamicProgramming/Tribonacci'
 import {YanghuiTriangle} from '../DynamicProgramming/YanghuiTriangle'
 import {Rob, Rob2} from '../DynamicProgramming/Theif'
 import {TheNOfTheUglyNumber} from '../DynamicProgramming/TheNOfTheUglyNumber'
+import {maximalSquare} from '../DynamicProgramming/MaximalSquare'
 
 
 test('Tribonacci', () => {
@@ -25,4 +26,8 @@ test('Theif', () => {
 
 test('TheNOfTheUglyNumber', () => {
     expect(TheNOfTheUglyNumber(10)).toBe(12)
+})
+
+test('MaximalSquare', () => {
+    expect(maximalSquare([["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]])).toBe(4);
 })
