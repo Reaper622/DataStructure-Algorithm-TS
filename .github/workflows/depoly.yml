@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Run a one-line script
-      uses: actions/checkout@v1
+      uses: actions/checkout@master
       
     - name: Download git submodule
       uses: srt32/git-actions@v0.0.3
@@ -33,9 +33,9 @@ jobs:
     - name: Depoly
       uses: easingthemes/ssh-deploy@v2.0.7
       env:
-        SSH_PRIVATE_KEY: ${{secrets.SSH_KEY}}
-        ARGS: "-avz --delete"
-        SOURCE: "ds-al/"
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+        ARGS: "-rltgoDzvO"
+        SOURCE: "./ds-al/"
         REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
         REMOTE_USER: ${{ secrets.REMOTE_USER }}
         TARGET: ${{ secrets.REMOTE_TARGET }}
