@@ -29,7 +29,9 @@ sidebar: auto
     - 重排链表 | LeetCode [143]
     - 链表的中间结点 | LeetCode [876]
     - 两个链表的第一个公共结点 | 剑指Offer [37]
-
+    - 两数相加 | LeetCode [2]
+    - 链表排序 | LeetCode [148]
+    - 合并K个有序链表 | LeetCode [23]
 ## [栈](./Stack.md)
     - 栈的实现
     - 栈的基础操作
@@ -57,6 +59,10 @@ sidebar: auto
     - 反转字符串 | LeetCode [344]
     - 按奇偶排序数组 | LeetCode [905] | 剑指Offer [14]
     - 扑克牌的顺子 | 剑指Offer [44]
+    - 岛屿的最大面积 | LeetCode [695]
+    - 朋友圈 | LeetCode [547]
+    - 合并区间 | LeetCode [56]
+    - 接雨水 | LeetCode [42]
 
 ## [字符串](./String.md)
     - 最长公共前缀 | LeetCode [14]
@@ -64,3 +70,6 @@ sidebar: auto
     - 二进制求和 | LeetCode [67]
     - 无重复字符的最长子串 | LeetCode [3]
     - 字符串的排列 | LeetCode [567]
+    - 字符串相加 | LeetCode [415]
+    - 字符串相乘 | LeetCode [43]
+    - 复原IP地址 | LeetCode [93]

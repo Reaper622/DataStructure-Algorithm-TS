@@ -36,6 +36,7 @@ sidebar: auto
     - 斐波那契数列 | LeetCode [509]
     - 爬楼梯 | LeetCode [70]
     - Pow 「求x的n次幂」 | LeetCode [50]
+    - 翻转整数变为字符串 | Bilibili 面试编程题
 
 ### [动态规划](./DynamicProgramming.md)
     - 斐波那契数列 ｜ LeetCode [509]
@@ -44,6 +45,8 @@ sidebar: auto
     - 打家劫舍 | LeetCode [198]
     - 打家劫舍 II | LeetCode [213]
     - 第N个丑数 | LeetCode [264] | 剑指Offer [34]
+    - 最大正方形 | LeetCode [221]
+
 ### [贪心算法](./GreedAlgorithm.md)
     - 买卖股票的最佳时机 | LeetCode [121]
     - 买卖股票的最佳时机II | LeetCode [122]
@@ -61,6 +64,7 @@ sidebar: auto
     - 寻找比目标字母大的最小字母 | LeetCode [744]
     - 数字在排序数组中出现的次数 | LeetCode [34] | 剑指Offer [38]
 ### [二进制](./Binary.md)
+    - 不使用加减乘除运算符实现加减乘除 
     - 二进制中1的个数 | LeetCode [191] | 剑指Offer [10]
     - 数组中只出现一次的数字 | 剑指Offer [40]
     - 不用加减乘除做加法 | 剑指Offer [47]
