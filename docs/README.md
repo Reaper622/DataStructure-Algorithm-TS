@@ -4,7 +4,7 @@ sidebar: auto
 
 # DataStructure-Algorithm-TS
 JavaScript DataStructure and Algorithm with TypeScript
-Questions on LeetCode
+Questions Solutions on LeetCode
 
 ## 数据结构
 ### [二叉树](./ds/BinaryTree.md)
