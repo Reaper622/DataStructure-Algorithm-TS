@@ -36,6 +36,6 @@ jobs:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
         ARGS: "-rltgoDzvO"
         SOURCE: "./ds-al/"
-        REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-        REMOTE_USER: ${{ secrets.REMOTE_USER }}
-        TARGET: ${{ secrets.REMOTE_TARGET }}
+        REMOTE_HOST: "118.24.180.102"
+        REMOTE_USER: "root"
+        TARGET: "/home/ds-al"
