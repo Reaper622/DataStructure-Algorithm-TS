@@ -1,4 +1,4 @@
-name: Depoly on Server
+name: Deploy on Server
 
 on: 
   push:
@@ -30,7 +30,7 @@ jobs:
       env:
         CI: true
     
-    - name: Depoly
+    - name: Deploy
       uses: easingthemes/ssh-deploy@v2.0.7
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
