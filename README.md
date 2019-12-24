@@ -120,6 +120,7 @@ Questions on LeetCode
     - 打家劫舍 II | LeetCode [213]
     - 第N个丑数 | LeetCode [264] | 剑指Offer [34]
     - 最大正方形 | LeetCode [221]
+    - 三角形的最小路径和 | LeetCode [120]
 
 - [贪心算法](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/al/GreedAlgorithm.md)
     - 买卖股票的最佳时机 | LeetCode [121]

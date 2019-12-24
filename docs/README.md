@@ -68,7 +68,7 @@ Questions Solutions on LeetCode
     - 朋友圈 | LeetCode [547]
     - 合并区间 | LeetCode [56]
     - 接雨水 | LeetCode [42]
-    - 三角形的最小路径和 | LeetCode [120]
+    
 
 ### [字符串](./ds/String.md)
     - 最长公共前缀 | LeetCode [14]
@@ -122,7 +122,8 @@ Questions Solutions on LeetCode
     - 打家劫舍 II | LeetCode [213]
     - 第N个丑数 | LeetCode [264] | 剑指Offer [34]
     - 最大正方形 | LeetCode [221]
-
+    - 三角形的最小路径和 | LeetCode [120]
+    
 ### [贪心算法](./al/GreedAlgorithm.md)
     - 买卖股票的最佳时机 | LeetCode [121]
     - 买卖股票的最佳时机II | LeetCode [122]
