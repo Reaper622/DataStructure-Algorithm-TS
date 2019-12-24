@@ -3,6 +3,7 @@ import {YanghuiTriangle} from '../DynamicProgramming/YanghuiTriangle'
 import {Rob, Rob2} from '../DynamicProgramming/Theif'
 import {TheNOfTheUglyNumber} from '../DynamicProgramming/TheNOfTheUglyNumber'
 import {maximalSquare} from '../DynamicProgramming/MaximalSquare'
+import {minimumTotal} from '../DynamicProgramming/MinimumTotal'
 
 
 test('Tribonacci', () => {
@@ -30,4 +31,13 @@ test('TheNOfTheUglyNumber', () => {
 
 test('MaximalSquare', () => {
     expect(maximalSquare([["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]])).toBe(4);
+})
+
+test('minimumTotal', () => {
+    expect(minimumTotal([
+        [2],
+       [3,4],
+      [6,5,7],
+     [4,1,8,3]
+   ])).toBe(11)
 })

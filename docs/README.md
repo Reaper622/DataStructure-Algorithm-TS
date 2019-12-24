@@ -68,6 +68,7 @@ Questions Solutions on LeetCode
     - 朋友圈 | LeetCode [547]
     - 合并区间 | LeetCode [56]
     - 接雨水 | LeetCode [42]
+    - 三角形的最小路径和 | LeetCode [120]
 
 ### [字符串](./ds/String.md)
     - 最长公共前缀 | LeetCode [14]
