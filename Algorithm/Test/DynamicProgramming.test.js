@@ -4,6 +4,7 @@ import {Rob, Rob2} from '../DynamicProgramming/Theif'
 import {TheNOfTheUglyNumber} from '../DynamicProgramming/TheNOfTheUglyNumber'
 import {maximalSquare} from '../DynamicProgramming/MaximalSquare'
 import {minimumTotal} from '../DynamicProgramming/MinimumTotal'
+import {maxEnvelopes} from '../DynamicProgramming/MaxEnvelopes'
 
 
 test('Tribonacci', () => {
@@ -40,4 +41,9 @@ test('minimumTotal', () => {
       [6,5,7],
      [4,1,8,3]
    ])).toBe(11)
+})
+
+
+test('maxEnvelopes', () => {
+    expect(maxEnvelopes([[5,4],[6,4],[6,7],[2,3]])).toBe(3)
 })
