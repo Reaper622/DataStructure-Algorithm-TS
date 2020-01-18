@@ -102,3 +102,81 @@ function StackCheck<T> (pushOrder: Array<T>, popOrder: Array<T>): Boolean {
 }
 ```
 
+## 最小栈
+
+> 此部分代码在 MinStack.ts 中
+
+设计一个支持 push，pop，top 操作，并能在常数时间内检索到最小元素的栈。
+
+- push(x) -- 将元素 x 推入栈中。
+- pop() -- 删除栈顶的元素。
+- top() -- 获取栈顶元素。
+- getMin() -- 检索栈中的最小元素。
+
+我们在设置一个栈的时候同时在内部设立一个存放最小值的数组，只要比当前最小值小，就推入数组中，如果最小值弹出，那么最小值顺势下延。
+
+```typescript
+/**
+ * 设计一个支持 push，pop，top 操作，并能在常数时间内检索到最小元素的栈。
+ * push(x) -- 将元素 x 推入栈中。
+ * pop() -- 删除栈顶的元素。
+ * top() -- 获取栈顶元素。
+ * getMin() -- 检索栈中的最小元素。
+ */
+class MinStack<T> {
+    stack: Array<T>
+    min: Array<T>
+
+    constructor() {
+        this.stack = [];
+        this.min = [];
+    }
+
+    /** 
+     * @param {T} x
+     * @return {void}
+     */
+    public push(x: T): void {
+        this.stack.push(x);
+        let min = this.getMin();
+        if (min === undefined || min >= x) {
+            this.min.push(x);
+        }
+    };
+
+    /**
+     * @return {T}
+     */
+    public pop (): T {
+        let exit = this.stack.pop();
+        if (exit === this.getMin()) {
+            this.min.pop();
+        }
+        return exit;
+    };
+
+    /**
+     * @return {T}
+     */
+    public top (): T {
+        if (this.stack.length === 0) {
+            return;
+        }
+        return this.stack[this.stack.length - 1];
+    };
+
+    /**
+     * @return {T}
+     */
+    public getMin (): T {
+        if (this.min.length === 0) {
+            return;
+        }
+        return this.min[this.min.length - 1];
+    };
+}
+
+
+export default MinStack
+```
+

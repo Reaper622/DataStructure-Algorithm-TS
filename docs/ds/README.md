@@ -36,6 +36,7 @@ sidebar: auto
     - 栈的实现
     - 栈的基础操作
     - 栈的入序和出序序列匹配检测 ｜ LeetCode [946] ｜ 剑指Offer [22]
+    - 最小栈 | LeetCode[155]
 
 ## [队列](./Queue.md)
     - 队列的实现
