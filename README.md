@@ -76,6 +76,9 @@ Questions on LeetCode
     - 字符串相加 | LeetCode [415]
     - 字符串相乘 | LeetCode [43]
     - 复原IP地址 | LeetCode [93]
+
+- [LRU缓存结构](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/ds/LRUCache.md)
+    - LRUCache | LeetCode [146]
 ## 算法
 
 #### 时间复杂度
