@@ -15,6 +15,7 @@ import {maxAreaOfIsland} from '../Array/MaxAreaOfIsland'
 import {findCircleNum} from '../Array/FindCircleNum'
 import {merge} from '../Array/Merge'
 import {trap} from '../Array/Trap'
+import {findMedianSortedArrays} from '../Array/FindMedianSortedArrays'
 
 test('FindNumWithSum', () => {
     expect(FindNumWithSum([1,2,3,4,5,6,7,8], 11)).toEqual([3,8])
@@ -102,4 +103,9 @@ test('Merge', () => {
 
 test('trap', () => {
     expect(trap([0,1,0,2,1,0,1,3,2,1,2,1])).toBe(6);
+})
+
+test('FindMedianSortedArrays', () => {
+    expect(findMedianSortedArrays([1,3], [2,4])).toBe(2.5)
+    expect(findMedianSortedArrays([1,3], [2])).toBe(2)
 })

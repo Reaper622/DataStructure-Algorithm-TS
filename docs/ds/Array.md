@@ -785,3 +785,61 @@ function IsContinuous (numbers: number[]): boolean {
 }
 ```
 
+## 寻找两个有序数组的中位数
+
+> 此部分代码在 findMedianSortedArrays.ts
+
+给定两个大小为 m 和 n 的有序数组 `nums1` 和 `nums2`。
+
+请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。
+
+我们此时求中位数，这里对于两个有序数组也是一样的，假设两个有序数组的长度分别为m和n，由于两个数组长度之和 m+n 的奇偶不确定，因此需要分情况来讨论，对于奇数的情况，直接找到最中间的数即可，偶数的话需要求最中间两个数的平均值。为了简化代码，不分情况讨论，我们使用一个小trick，我们分别找第 (m+n+1) / 2 个，和 (m+n+2) / 2 个，然后求其平均值即可，这对奇偶数均适用。加入 m+n 为奇数的话，那么其实 (m+n+1) / 2 和 (m+n+2) / 2 的值相等，相当于两个相同的数字相加再除以2，还是其本身。
+
+之后我们要实现的其实就是在一个分开的有序数组中找到第N个数字，之后对N使用二分，每次都在两个数组中找到第 N/2 数，并且处理一些边界问题，最后得到两个数求得平均值即可。
+
+```typescript
+/**
+ * 在两个有序数组中寻找中位数
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number}
+ */
+var findMedianSortedArrays = function(nums1: number[], nums2: number[]) {
+    let len1 = nums1.length;
+    let len2 = nums2.length;
+    // 奇偶不确定 我们使用分别找到 (len1 + len2 + 1) / 2 个 和 (len1 + len2 + 2) / 2 个的情况，获得其平均数
+    // 如果是 奇数 则两个数相等， 如果为偶数则为两个数 [整数情况]
+    let left = Math.floor((len1 + len2 + 1) / 2)
+    let right = Math.floor((len1 + len2 + 2) / 2)
+    return (findHelper(nums1, 0, nums2, 0, left) + findHelper(nums1, 0, nums2, 0, right)) / 2.0;
+};
+
+/**
+ * 从两个有序数组的指定位置开始寻找目标数
+ * @param {number[]} nums1
+ * @param {number} i
+ * @param {number[]} nums2
+ * @param {number} j
+ * @param {number} target
+ * @return {number}
+ */
+var findHelper = function (nums1: number[], i: number, nums2: number[], j: number, target: number) {
+    // 超过了数组1的长度 则直接从数组2中返回
+    if (i >= nums1.length) return nums2[j + target - 1];
+    if (j >= nums2.length) return nums1[i + target - 1];
+    // 如果所找为1 则只是求数组2第一项和数组1第一项哪个小
+    if (target === 1) {
+        return nums1[i] <= nums2[j] ? nums1[i] : nums2[j];
+    }
+    // 使用二分法 对 target 二分 找到每个数组中的  target / 2 个数字
+    // 求两个数组对应的中位数 查看对应索引是否已经超过数组长度
+    let mid1 = (i + target / 2 - 1 < nums1.length) ? nums1[i + Math.floor(target / 2 ) - 1] : Number.MAX_VALUE
+    let mid2 = (j + target / 2 - 1 < nums2.length) ? nums2[j + Math.floor(target / 2 ) - 1] : Number.MAX_VALUE
+    if (mid1 < mid2) {
+        return findHelper(nums1, i +  Math.floor(target / 2), nums2, j,  target - Math.floor(target/2))
+    } else {
+        return findHelper(nums1, i, nums2, j +  Math.floor(target / 2),  target - Math.floor(target/2))
+    }
+}
+```
+
