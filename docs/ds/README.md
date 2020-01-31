@@ -64,6 +64,7 @@ sidebar: auto
     - 朋友圈 | LeetCode [547]
     - 合并区间 | LeetCode [56]
     - 接雨水 | LeetCode [42]
+    - 寻找两个有序数组的中位数 | LeetCode[4]
 
 ## [字符串](./String.md)
     - 最长公共前缀 | LeetCode [14]
@@ -74,3 +75,4 @@ sidebar: auto
     - 字符串相加 | LeetCode [415]
     - 字符串相乘 | LeetCode [43]
     - 复原IP地址 | LeetCode [93]
+    - 最长回文子串 | LeetCode [5]

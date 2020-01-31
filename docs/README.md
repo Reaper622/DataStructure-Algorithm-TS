@@ -81,6 +81,7 @@ Questions Solutions on LeetCode
     - 字符串相加 | LeetCode [415]
     - 字符串相乘 | LeetCode [43]
     - 复原IP地址 | LeetCode [93]
+    - 最长回文子串 | LeetCode [5]
 
 ### [LRU缓存结构](./ds/LRUCache.md)
     - LRUCache | LeetCode [146]

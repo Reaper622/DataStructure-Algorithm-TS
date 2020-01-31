@@ -6,6 +6,7 @@ import {CheckInclusion} from '../String/CheckInclusion'
 import {StringMultiply} from '../String/MultiplyString'
 import {StringAdd} from '../String/StringAdd'
 import {RestoreipAddress} from '../String/RestoreIpAddress'
+import {LongestPalindrome} from '../String/LongestPalindrome'
  
 test('LongestCommonPerfix', () => {
     expect(LongestCommonPerfix(["flower","flow","flight"])).toBe('fl')
@@ -41,4 +42,10 @@ test('StringAdd', () => {
 
 test('RestoreIpAddress', () => {
     expect(RestoreipAddress("25525511135")).toEqual(["255.255.11.135", "255.255.111.35"])
+})
+
+test('LongestPalindrome', () => {
+    expect(LongestPalindrome("babad")).toBe("bab");
+    expect(LongestPalindrome("cbbd")).toBe("bb");
+
 })
