@@ -349,6 +349,60 @@ function SumFourNumbers(arr: number[], target: number): number[][] {
 }
 ```
 
+### 最接近的三数之和
+
+> 此部分代码在 ThreeSumCloest.ts 中
+
+给定一个包括 *n* 个整数的数组 `nums` 和 一个目标值 `target`。找出 `nums` 中的三个整数，使得它们的和与 `target` 最接近。返回这三个数的和。假定每组输入只存在唯一答案。
+
+此处使用方法类似于三数之和，只是此处判断为得到结果与目标值差值的绝对值为判断依据进行判断。
+
+```typescript
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+var threeSumClosest = function(nums: number[], target: number): number {
+    if (nums.length < 3) {
+        return null;
+    }
+    // 排序nums数组
+    nums.sort((a,b) => (a-b));
+    let abs = Number.MAX_VALUE;
+    let result = 0;
+    const len = nums.length;
+    for(let i = 0; i < len - 2;i++) {
+        // 去除重复项
+        if (i && nums[i] === nums[i - 1]) {
+            continue;
+        }
+        let left = i + 1;
+        let right = len - 1;
+        while (left < right) {
+            let newResult = nums[i] + nums[left] + nums[right];
+            let newAbs = Math.abs(newResult - target);
+            // 如果差值比当前最小差值小 就替换为此时的值
+            if (newAbs < abs) {
+                abs = newAbs;
+                result = newResult;
+            }
+            if (newResult - target < 0) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+    }
+    return result;
+    
+};
+```
+
+
+
+
+
 ## 二维数组
 
 > 一般会利用矩阵特性使用循环或者递归。

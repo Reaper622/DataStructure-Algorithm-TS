@@ -16,6 +16,7 @@ import {findCircleNum} from '../Array/FindCircleNum'
 import {merge} from '../Array/Merge'
 import {trap} from '../Array/Trap'
 import {findMedianSortedArrays} from '../Array/FindMedianSortedArrays'
+import {threeSumClosest} from '../Array/ThreeSumCloest'
 
 test('FindNumWithSum', () => {
     expect(FindNumWithSum([1,2,3,4,5,6,7,8], 11)).toEqual([3,8])
@@ -108,4 +109,8 @@ test('trap', () => {
 test('FindMedianSortedArrays', () => {
     expect(findMedianSortedArrays([1,3], [2,4])).toBe(2.5)
     expect(findMedianSortedArrays([1,3], [2])).toBe(2)
+})
+
+test('threeSumCloest', () => {
+    expect(threeSumClosest([-1,2,1,-4], 1)).toBe(2);
 })

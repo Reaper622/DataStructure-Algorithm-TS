@@ -65,6 +65,7 @@ sidebar: auto
     - 合并区间 | LeetCode [56]
     - 接雨水 | LeetCode [42]
     - 寻找两个有序数组的中位数 | LeetCode[4]
+    - 最接近的三数之和 | LeetCode [16]
 
 ## [字符串](./String.md)
     - 最长公共前缀 | LeetCode [14]
