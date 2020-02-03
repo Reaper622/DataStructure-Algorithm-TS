@@ -1,6 +1,7 @@
 import Stack from '../Stack/Stack'
 import StackCheck from '../Stack/StackCheck'
 import MinStack from '../Stack/MinStack'
+import {isValidParentheses} from '../Stack/isValidParentheses'
 
 
 test('Stack', () => {
@@ -34,4 +35,9 @@ test('MinStack', () => {
     minStack.pop();
     expect(minStack.top()).toBe(0);      // --> 返回 0.
     expect(minStack.getMin()).toBe(-2);   // --> 返回 -2.
+})
+
+test('isValidParentheses', () => {
+    expect(isValidParentheses('([])')).toBe(true)
+    expect(isValidParentheses('([{]})')).toBe(false)
 })
