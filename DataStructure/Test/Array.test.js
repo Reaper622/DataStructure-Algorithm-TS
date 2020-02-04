@@ -17,6 +17,7 @@ import {merge} from '../Array/Merge'
 import {trap} from '../Array/Trap'
 import {findMedianSortedArrays} from '../Array/FindMedianSortedArrays'
 import {threeSumClosest} from '../Array/ThreeSumCloest'
+import {removeDuplicates} from '../Array/RemoveDuplicates'
 
 test('FindNumWithSum', () => {
     expect(FindNumWithSum([1,2,3,4,5,6,7,8], 11)).toEqual([3,8])
@@ -113,4 +114,8 @@ test('FindMedianSortedArrays', () => {
 
 test('threeSumCloest', () => {
     expect(threeSumClosest([-1,2,1,-4], 1)).toBe(2);
+})
+
+test('removeDuplicates', () => {
+    expect(removeDuplicates([1,2,2,3,3,3,4,4,5,6,6,7])).toBe(7)
 })
