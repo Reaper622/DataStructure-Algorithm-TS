@@ -70,6 +70,7 @@ Questions on LeetCode
     - 接雨水 | LeetCode [42]
     - 寻找两个有序数组的中位数 | LeetCode[4]
     - 最接近的三数之和 | LeetCode [16]
+    - 删除排序数组中的重复项 | LeetCode [26]
 
 - [字符串](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/ds/String.md)
     - 最长公共前缀 | LeetCode [14]
