@@ -68,6 +68,7 @@ sidebar: auto
     - 寻找两个有序数组的中位数 | LeetCode[4]
     - 最接近的三数之和 | LeetCode [16]
     - 删除排序数组中的重复项 | LeetCode [26]
+    - 盛最多水的容器 | LeetCode [11]
 
 ## [字符串](./String.md)
     - 最长公共前缀 | LeetCode [14]

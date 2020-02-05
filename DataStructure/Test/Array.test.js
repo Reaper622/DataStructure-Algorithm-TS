@@ -18,6 +18,7 @@ import {trap} from '../Array/Trap'
 import {findMedianSortedArrays} from '../Array/FindMedianSortedArrays'
 import {threeSumClosest} from '../Array/ThreeSumCloest'
 import {removeDuplicates} from '../Array/RemoveDuplicates'
+import {maxArea} from '../Array/MaxArea'
 
 test('FindNumWithSum', () => {
     expect(FindNumWithSum([1,2,3,4,5,6,7,8], 11)).toEqual([3,8])
@@ -118,4 +119,8 @@ test('threeSumCloest', () => {
 
 test('removeDuplicates', () => {
     expect(removeDuplicates([1,2,2,3,3,3,4,4,5,6,6,7])).toBe(7)
+})
+
+test('MaxArea', () => {
+    expect(maxArea([1,8,6,2,5,4,8,3,7])).toBe(49)
 })
