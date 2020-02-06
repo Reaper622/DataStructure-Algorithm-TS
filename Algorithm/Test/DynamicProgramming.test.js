@@ -5,6 +5,7 @@ import {TheNOfTheUglyNumber} from '../DynamicProgramming/TheNOfTheUglyNumber'
 import {maximalSquare} from '../DynamicProgramming/MaximalSquare'
 import {minimumTotal} from '../DynamicProgramming/MinimumTotal'
 import {maxEnvelopes} from '../DynamicProgramming/MaxEnvelopes'
+import {productExceptSelf} from '../DynamicProgramming/ProductExpectSelf'
 
 
 test('Tribonacci', () => {
@@ -46,4 +47,8 @@ test('minimumTotal', () => {
 
 test('maxEnvelopes', () => {
     expect(maxEnvelopes([[5,4],[6,4],[6,7],[2,3]])).toBe(3)
+})
+
+test('ProductExpectSelf', () => {
+    expect(productExceptSelf([1,2,3,4])).toEqual([24,12,8,6])
 })

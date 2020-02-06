@@ -348,3 +348,42 @@ function HeightLTS(height: number[]): number {
     return count;
 }
 ```
+
+## 除自身以外数组的乘积
+
+> 此部分代码在 ProductExpectSelf.ts 中
+
+给定长度为 n 的整数数组 nums，其中 n > 1，返回输出数组 output ，其中 output[i] 等于 nums 中除 nums[i] 之外其余各元素的乘积。
+
+**说明:** 请**不要使用除法，**且在 O(*n*) 时间复杂度内完成此题。
+
+我们通过两次O(n)的遍历完成，即除它之外的乘积等于左侧的乘积乘以右侧的乘积。
+
+```typescript
+/**
+ * 定长度为 n 的整数数组 nums，其中 n > 1，返回输出数组 output ，其中 output[i] 等于 nums 中除 nums[i] 之外其余各元素的乘积。
+ * 请不要使用除法
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var productExceptSelf = function(nums: number[]): number[] {
+    // 定义输出所用数组
+    let output = new Array(nums.length);
+    let cur = 1;
+    // 除该值之外的所有乘积 = 左侧的乘积 x 右侧的乘积
+    // 先给每一项定义为当前值左侧的乘值
+    for(let i = 0; i < nums.length; i++) {
+        output[i] = cur;
+        cur = cur * nums[i];
+    }
+    cur = 1;
+    // 再给每一项乘上右侧的乘值
+    for(let i = nums.length - 1; i >= 0; i--) {
+        output[i] = output[i] * cur;
+        cur = nums[i] * cur;
+    }
+    return output;
+    
+};
+```
+
