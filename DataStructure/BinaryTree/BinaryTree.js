@@ -48,6 +48,30 @@ var Tree = /** @class */ (function () {
         }
         return array;
     };
+    // 中序遍历非递归实现
+    Tree.prototype.inOrderTraversal2 = function (root) {
+        var arr = [];
+        var stack = [];
+        var node = root;
+        while (node || stack.length > 0) {
+            // 如果node存在
+            if (node) {
+                // node先入栈 之后访问它的左子树
+                stack.push(node);
+                node = node.left;
+            }
+            // node 不存在
+            else {
+                // 获取栈顶元素
+                node = stack.pop();
+                // 结果添加元素值
+                arr.push(node.val);
+                // 获取右子树 开始遍历
+                node = node.right;
+            }
+        }
+        return arr;
+    };
     // 先序遍历递归实现
     Tree.prototype.preOrderTraversal = function (root, array) {
         if (root) {
@@ -57,6 +81,24 @@ var Tree = /** @class */ (function () {
         }
         return array;
     };
+    // 先序遍历非递归实现
+    Tree.prototype.preOrderTraversal2 = function (root) {
+        var arr = [];
+        var stack = [];
+        // 栈内存放root根节点
+        stack.push(root);
+        while (stack.length > 0) {
+            var node = stack.pop();
+            // 首先传入根节点的值
+            arr.push(node.val);
+            // 向栈内推送 右子树和左子树 使左子树在右子树上
+            if (node.right !== undefined)
+                stack.push(node.right);
+            if (node.left !== undefined)
+                stack.push(node.left);
+        }
+        return arr;
+    };
     // 后序遍历递归实现
     Tree.prototype.postOrderTraversal = function (root, array) {
         if (root) {
@@ -65,6 +107,36 @@ var Tree = /** @class */ (function () {
             array.push(root.val);
         }
         return array;
+    };
+    // 后续遍历非递归实现
+    Tree.prototype.postOrderTraversal2 = function (root) {
+        var arr = [];
+        var stack = [];
+        var node = root;
+        var right = null;
+        while (node || stack.length > 0) {
+            if (node) {
+                // 首先推入根节点
+                stack.push(node);
+                // 优先遍历左子树
+                node = node.left;
+            }
+            else {
+                node = stack[stack.length - 1];
+                // 如果当前节点的右子树为上一次遍历的节点或者没有右子树 则直接读取
+                if (node.right === right || node.right === undefined) {
+                    arr.push(node.val);
+                    right = node;
+                    stack.pop();
+                    node = null;
+                }
+                // 否则继续访问右子树
+                else {
+                    node = node.right;
+                }
+            }
+        }
+        return arr;
     };
     // 计算二叉树的深度
     Tree.prototype.treeDepth = function (root) {

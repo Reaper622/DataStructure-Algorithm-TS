@@ -82,6 +82,37 @@ inOrderTraversal (root : TreeNode, array : T[]) : T[] {
     }
 ```
 
+## 二叉树的中序遍历(非递归写法)
+
+```typescript
+// 中序遍历非递归实现
+    public inOrderTraversal2 (root: TreeNode) : T[] {
+        let arr: T[] = [];
+        let stack: TreeNode[] = [];
+        let node = root;
+        while(node || stack.length > 0) {
+            // 如果node存在
+            if (node) {
+                // node先入栈 之后访问它的左子树
+                stack.push(node);
+                node = node.left;
+            } 
+            // node 不存在
+            else {
+                // 获取栈顶元素
+                node = stack.pop();
+                // 结果添加元素值
+                arr.push(node.val);
+                // 获取右子树 开始遍历
+                node = node.right;
+            }
+        }
+        return arr;
+    }
+```
+
+
+
 ## 二叉树的先序遍历 
 
 遍历顺序 结点 >> 左子树 >> 右子树
@@ -97,6 +128,29 @@ public preOrderTraversal (root : TreeNode, array: T[]) : T[] {
         return array
     }
 ```
+
+## 二叉树的先序遍历(非递归写法)
+
+```typescript
+// 先序遍历非递归实现
+    public preOrderTraversal2 (root: TreeNode): T[] {
+        let arr: T[] = [];
+        let stack: TreeNode[] = [];
+        // 栈内存放root根节点
+        stack.push(root);
+        while(stack.length > 0) {
+            let node = stack.pop();
+            // 首先传入根节点的值
+            arr.push(node.val);
+            // 向栈内推送 右子树和左子树 使左子树在右子树上
+            if (node.right !== undefined) stack.push(node.right);
+            if (node.left !== undefined) stack.push(node.left);
+        }
+        return arr;
+    }
+```
+
+
 
  ##  二叉树的后序遍历 
 
@@ -114,7 +168,45 @@ public postOrderTraversal (root: TreeNode, array: T[]) : T[] {
     }
 ```
 
+## 二叉树的后序遍历(非递归写法)
+
+```typescript
+// 后续遍历非递归实现
+    public postOrderTraversal2 (root: TreeNode): T[] {
+        let arr: T[] = [];
+        let stack: TreeNode[] = [];
+        let node = root;
+        let right = null;
+        while (node || stack.length > 0) {
+            if (node) {
+                // 首先推入根节点
+                stack.push(node);
+                // 优先遍历左子树
+                node = node.left;
+            } else {
+                node = stack[stack.length - 1];
+                // 如果当前节点的右子树为上一次遍历的节点或者没有右子树 则直接读取
+                if (node.right === right || node.right === undefined) {
+                    arr.push(node.val);
+                    right = node;
+                    stack.pop();
+                    node = null;
+                } 
+                // 否则继续访问右子树
+                else {
+                    node = node.right;
+                }
+                
+            }
+        }
+        return arr;
+    }
+```
+
+
+
 ## 二叉树的深度
+
 ```typescript
 // 在 Tree 类中
 public treeDepth (root: TreeNode) : number {
