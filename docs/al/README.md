@@ -54,6 +54,8 @@ sidebar: auto
     - 买卖股票的最佳时机（含手续费） | LeetCode [714]
     - 分发饼干 | LeetCode [455]
     - 连续子数组的最大和 | 剑指Offer [31]
+    - 最大正方形 | LeetCode [221]
+    
 ### [二分查找](./Search.md)
     - 二分查找的实现 | LeetCode [704]
     - 二分求解`x`的平方根 | LeetCode [69]
