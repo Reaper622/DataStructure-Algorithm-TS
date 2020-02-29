@@ -160,6 +160,9 @@ Questions on LeetCode
     - 数组中只出现一次的数字 | 剑指Offer [40]
     - 不用加减乘除做加法 | 剑指Offer [47]
 
+- [回溯算法](https://github.com/Reaper622/DataStructure-Algorithm-TS/tree/master/docs/al/Backtracking.md)
+    - 括号生成 | LeetCode [22]
+
 
 ## 测试 「使用 Jest 测试」
 
