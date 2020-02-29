@@ -71,3 +71,6 @@ sidebar: auto
     - 二进制中1的个数 | LeetCode [191] | 剑指Offer [10]
     - 数组中只出现一次的数字 | 剑指Offer [40]
     - 不用加减乘除做加法 | 剑指Offer [47]
+
+### [回溯算法](./Backtracking.md)
+    - 括号生成 | LeetCode [22]
